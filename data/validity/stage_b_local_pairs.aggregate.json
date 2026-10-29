@@ -1,0 +1,25 @@
+{
+  "route_agreement": 1.0,
+  "offload_rate_difference_pp": 0.0,
+  "mean_queue_wait_relative_error": 0.8542051128227577,
+  "p95_ttft_relative_error": 0.7069155898853504,
+  "completion_order_kendall": 0.03434343434343435,
+  "per_workload": [
+    {
+      "workload_family": "synthetic",
+      "route_agreement": 1.0,
+      "offload_rate_difference_pp": 0.0,
+      "mean_queue_wait_relative_error": 0.8542051128227577,
+      "p95_ttft_relative_error": 0.7069155898853504,
+      "completion_order_kendall": 0.09010101010101011
+    },
+    {
+      "workload_family": "reasoning_coding",
+      "route_agreement": 1.0,
+      "offload_rate_difference_pp": 0.0,
+      "mean_queue_wait_relative_error": 0.04411613620976682,
+      "p95_ttft_relative_error": 0.12037300816419316,
+      "completion_order_kendall": 0.03434343434343435
+    }
+  ]
+}

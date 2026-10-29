@@ -1,0 +1,23 @@
+{
+  "schema_version": "governor-v1",
+  "artifact_id": "apex-guarded-tail-aware-default-2026-07-13",
+  "created_utc": "2026-07-13T00:00:00Z",
+  "regime_map": {
+    "low": "tail_aware",
+    "medium": "tail_aware",
+    "high": "tail_aware",
+    "burst": "tail_aware"
+  },
+  "thresholds": {
+    "tail_aware": 1.0,
+    "ml_ttft": 0.5,
+    "ml_dual_risk": 0.5
+  },
+  "promotion_status": {
+    "status": "no_richer_expert_promoted",
+    "reason": "Existing development evidence does not satisfy the frozen joint SLA non-inferiority and P95 superiority rule. Tail-aware remains the expert in every regime.",
+    "confirmatory_data_used": false
+  },
+  "development_seeds": [7, 13, 23, 42, 101],
+  "protocol_sha256": "ba93bb5c812280942075df31eaeb328b7fb73bcef5fa04d58908f973ef14a74e"
+}

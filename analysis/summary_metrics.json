@@ -1,0 +1,38 @@
+{
+  "created_unix": 1786533032.1136417,
+  "n_rows": 4500,
+  "shadow_source": "glob=shadow_*_bursty_n300_s*.jsonl",
+  "shadow_glob": "shadow_*_bursty_n300_s*.jsonl",
+  "shadow_files": [
+    "shadow_real_sample_bursty_n300_s101.jsonl",
+    "shadow_real_sample_bursty_n300_s13.jsonl",
+    "shadow_real_sample_bursty_n300_s23.jsonl",
+    "shadow_real_sample_bursty_n300_s42.jsonl",
+    "shadow_real_sample_bursty_n300_s7.jsonl",
+    "shadow_reasoning_coding_bursty_n300_s101.jsonl",
+    "shadow_reasoning_coding_bursty_n300_s13.jsonl",
+    "shadow_reasoning_coding_bursty_n300_s23.jsonl",
+    "shadow_reasoning_coding_bursty_n300_s42.jsonl",
+    "shadow_reasoning_coding_bursty_n300_s7.jsonl",
+    "shadow_synthetic_bursty_n300_s101.jsonl",
+    "shadow_synthetic_bursty_n300_s13.jsonl",
+    "shadow_synthetic_bursty_n300_s23.jsonl",
+    "shadow_synthetic_bursty_n300_s42.jsonl",
+    "shadow_synthetic_bursty_n300_s7.jsonl"
+  ],
+  "sla_ttft_ms": 3839.5,
+  "rq0": {
+    "budget": 0.3,
+    "tail_aware_sla_violation_rate": 0.06533333333333333,
+    "ml_dual_risk_sla_violation_rate": 0.06911111111111111,
+    "difference_heuristic_minus_ml": -0.0037777777777777827,
+    "bootstrap_ci95_low": -0.009338888888888895,
+    "bootstrap_ci95_high": 0.0013333333333333391
+  },
+  "selective_label": {
+    "budget": 0.3,
+    "true_local_breach_rate": 0.35,
+    "naive_kept_local_breach_rate": 0.09333333333333334,
+    "understatement_points": 0.25666666666666665
+  }
+}

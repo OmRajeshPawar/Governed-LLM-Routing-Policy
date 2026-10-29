@@ -1,0 +1,271 @@
+{
+  "schema_version": "2",
+  "feature_version": "1",
+  "config": {
+    "seed": 257,
+    "providers": {
+      "local": {
+        "model": "llama3.1:8b",
+        "keep_alive": -1,
+        "num_gpu": null,
+        "num_ctx": 2048,
+        "cost_per_1k_tokens": 0.0,
+        "extra_latency_ms": 0.0
+      },
+      "cloud": {
+        "mode": "calibrated",
+        "calibration_model": "gemma4:e2b",
+        "base_ttft_ms": null,
+        "per_token_ms": null,
+        "network_rtt_ms": 60.0,
+        "jitter_sigma": 0.15,
+        "speed_ratio": 1.0,
+        "cost_per_1k_tokens": 0.5,
+        "est_output_tokens_source": "ingress_only",
+        "keep_alive": -1,
+        "num_gpu": 0,
+        "num_ctx": 1024
+      }
+    },
+    "local_concurrency": 2,
+    "generation": {
+      "temperature": 0.0,
+      "default_max_tokens": 256
+    },
+    "targets": {
+      "sla_ttft_ms": 3839.5,
+      "occupancy_service_ms": 4610.9
+    },
+    "rolling": {
+      "window": 50,
+      "min_samples": 8,
+      "ewma_alpha": 0.3
+    },
+    "policies": {
+      "queue_threshold": 3,
+      "tail_aware_pressure_threshold": 4.986486535529362,
+      "ml_ttft_threshold": 0.5,
+      "ml_occupancy_threshold": 0.5,
+      "semantic_embedding_threshold": 1.0,
+      "local_llm_probe_threshold": 0.75,
+      "thinking_probe_threshold": 0.85
+    },
+    "governor": {
+      "enabled": true,
+      "artifact_path": "ml/artifacts/governor_v4.json",
+      "hard_local_pending": 8,
+      "required_full_telemetry": [
+        "pending_local",
+        "active_local",
+        "roll_ttft_p95",
+        "roll_service_p95",
+        "arr_rate_5s",
+        "burst_ratio",
+        "gpu_util",
+        "vram_used_mb"
+      ],
+      "budget": {
+        "mode": "evaluation_hard",
+        "target_fraction": 0.3
+      },
+      "circuit": {
+        "consecutive_failure_limit": 3,
+        "failure_window": 20,
+        "failure_window_limit": 5,
+        "latency_success_minimum": 10,
+        "latency_window": 10,
+        "latency_breach_limit": 5,
+        "latency_multiplier": 2.0,
+        "cooldown_seconds": 30.0,
+        "cooldown_arrivals": 10,
+        "half_open_successes_to_close": 3
+      }
+    },
+    "paths": {
+      "data_dir": "data",
+      "events_dir": "data/events",
+      "traces_dir": "data/traces",
+      "models_dir": "ml/artifacts",
+      "figures_dir": "analysis/figures"
+    }
+  },
+  "run_id": "V4F_s257_synthetic_v4_governor",
+  "policy": "v4_governor",
+  "n_requests": 300,
+  "n_offloaded": 17,
+  "warm_load_s": 0.1,
+  "wall_clock_s": 798.16,
+  "t0_perf_s": 55070.0798812,
+  "t0_unix_s": 1789523520.8510149,
+  "frozen_cloud_p95_ms": 3069.585699999152,
+  "tail_aware_threshold": 4.986486535529362,
+  "gpu_samples": 791,
+  "created_unix": 1789524319.0110133,
+  "protocol_v4_sha256": "b61ca6c2e3e288ff8e54159a616017c76fd46d6e5e23727ace7a7e17ffb57766",
+  "spec": {
+    "experiment": "V4F",
+    "key": "V4F_s257_synthetic_v4_governor",
+    "trace": "bursty",
+    "n": 300,
+    "seed": 257,
+    "mix": "synthetic",
+    "arm": "v4",
+    "policy": "v4_governor",
+    "condition": "chaos",
+    "faults": {
+      "outage": [
+        96,
+        156
+      ],
+      "spike": [
+        192,
+        252
+      ]
+    }
+  },
+  "cooldown_waited_s": 10.0,
+  "gpu_temp_start_c": 48.0,
+  "environment": {
+    "ollama_version": "ollama version is 0.20.3",
+    "model": "llama3.1:8b",
+    "model_id": "46e0c10c039e"
+  },
+  "governor_artifact": {
+    "artifact_id": "apex-v4-paced-fresh-refund-2026-09-16",
+    "sha256": "d3b48bfa0f66dcfba0b4005bdb1d0ea30b60b2d773c416b8f8730996092ff27d"
+  },
+  "breaker_transitions": [
+    {
+      "perf_s": 55372.9045308,
+      "unix_s": 1789523823.6756654,
+      "from": "closed",
+      "to": "open",
+      "reason": "circuit_consecutive_failures",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 55412.3302686,
+      "unix_s": 1789523863.1014047,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_consecutive_failures",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 55432.034744,
+      "unix_s": 1789523882.8058782,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 55474.6090996,
+      "unix_s": 1789523925.380234,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 55515.2441942,
+      "unix_s": 1789523966.0153284,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 55553.2754594,
+      "unix_s": 1789524004.0465934,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 55560.7465835,
+      "unix_s": 1789524011.5177176,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 55592.3493374,
+      "unix_s": 1789524043.120473,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 55629.7603748,
+      "unix_s": 1789524080.5315087,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 55662.4502936,
+      "unix_s": 1789524113.2214293,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 55677.3765367,
+      "unix_s": 1789524128.1476705,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 55711.6710063,
+      "unix_s": 1789524162.4421413,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 55747.460306,
+      "unix_s": 1789524198.2314398,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 55778.2531989,
+      "unix_s": 1789524229.0243347,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 55842.7590237,
+      "unix_s": 1789524293.5301576,
+      "from": "half-open",
+      "to": "closed",
+      "reason": null,
+      "cause": "outcome"
+    }
+  ],
+  "budget": {
+    "cap": 90,
+    "total_cloud": 4,
+    "discretionary": 3,
+    "safety_overrides": 5,
+    "denials": 0
+  },
+  "faults_injected": {
+    "outage": 5,
+    "latency_spike": 3,
+    "degraded_phase": 0
+  }
+}

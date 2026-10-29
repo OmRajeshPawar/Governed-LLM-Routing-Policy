@@ -1,0 +1,13 @@
+% Experiment C: drift phases, 3 seeds x 2 routers
+Phase & Gov.\ viol.\ (\%) & Gov.\ cloud (\%) & Ungov.\ viol.\ (\%) & Ungov.\ cloud (\%) \\
+\midrule
+low factual & 0.0 & 0.0 & 0.0 & 0.0 \\
+short burst & 4.2 & 4.2 & 4.2 & 4.2 \\
+reasoning heavy & 13.3 & 81.7 & 12.8 & 82.2 \\
+recovery & 0.0 & 46.7 & 0.0 & 100.0 \\
+cloud degradation & 7.5 & 0.0 & 100.0 & 100.0 \\
+% live Gemini TTFT n=388 p50=629 p95=2,311 p99=11,659 slo_miss=2.6% | calibration p50=577 p95=3,070 | July n=59 p50=674 p95=5,430
+% local breaches n=51: mean TTFT 7,487 ms, queue wait 5,524 ms (71.5% of TTFT), prefill 153 ms
+% local met n=636: mean TTFT 686 ms, queue 17.8% of TTFT
+% guarded_governor: mean GPU Wh/req 0.021678227166839713, Wh per SLO-met local req 0.03353863287636547, throttled share 0.1753610867974851, max temp 73.0, spearman temp-TTFT 0.5918680464009626
+% tail_aware: mean GPU Wh/req 0.015907759918638402, Wh per SLO-met local req 0.037910963548560425, throttled share 0.08254807620297866, max temp 73.0, spearman temp-TTFT 0.6421147177133881

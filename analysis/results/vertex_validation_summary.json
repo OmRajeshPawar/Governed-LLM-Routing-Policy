@@ -1,0 +1,21 @@
+{
+  "model": "gemini-2.5-flash",
+  "location": "us-central1",
+  "n": 100,
+  "n_attempted": 100,
+  "ok": 100,
+  "stopped_reason": null,
+  "project_configured": true,
+  "project_source": "adc",
+  "max_estimated_cost_usd": 10.0,
+  "latency_wall_ms": {
+    "min": 1010.79,
+    "p50": 1230.51,
+    "p95": 7065.45,
+    "max": 29592.8
+  },
+  "estimated_cost_usd_total": 0.0163,
+  "estimated_cost_note": "Estimated from token counts for bounded validation only; not a billing claim. Gemini 2.5 Flash standard text rates assumed: input $0.3/1M, output $2.5/1M.",
+  "private_rows_file": "analysis/private/<redacted>",
+  "created_unix": 1783347783.9138885
+}

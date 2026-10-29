@@ -1,0 +1,122 @@
+{
+  "schema_version": "2",
+  "feature_version": "1",
+  "config": {
+    "seed": 999,
+    "providers": {
+      "local": {
+        "model": "llama3.1:8b",
+        "keep_alive": -1,
+        "num_gpu": null,
+        "num_ctx": 2048,
+        "cost_per_1k_tokens": 0.0,
+        "extra_latency_ms": 0.0
+      },
+      "cloud": {
+        "mode": "calibrated",
+        "calibration_model": "gemma4:e2b",
+        "base_ttft_ms": null,
+        "per_token_ms": null,
+        "network_rtt_ms": 60.0,
+        "jitter_sigma": 0.15,
+        "speed_ratio": 1.0,
+        "cost_per_1k_tokens": 0.5,
+        "est_output_tokens_source": "ingress_only",
+        "keep_alive": -1,
+        "num_gpu": 0,
+        "num_ctx": 1024
+      }
+    },
+    "local_concurrency": 2,
+    "generation": {
+      "temperature": 0.0,
+      "default_max_tokens": 256
+    },
+    "targets": {
+      "sla_ttft_ms": 3839.5,
+      "occupancy_service_ms": 4610.9
+    },
+    "rolling": {
+      "window": 50,
+      "min_samples": 8,
+      "ewma_alpha": 0.3
+    },
+    "policies": {
+      "queue_threshold": 3,
+      "tail_aware_pressure_threshold": 4.986486535529362,
+      "ml_ttft_threshold": 0.5,
+      "ml_occupancy_threshold": 0.5,
+      "semantic_embedding_threshold": 1.0,
+      "local_llm_probe_threshold": 0.75,
+      "thinking_probe_threshold": 0.85
+    },
+    "governor": {
+      "enabled": true,
+      "artifact_path": "ml/artifacts/governor_v2.json",
+      "hard_local_pending": 8,
+      "required_full_telemetry": [
+        "pending_local",
+        "active_local",
+        "roll_ttft_p95",
+        "roll_service_p95",
+        "arr_rate_5s",
+        "burst_ratio",
+        "gpu_util",
+        "vram_used_mb"
+      ],
+      "budget": {
+        "mode": "evaluation_hard",
+        "target_fraction": 0.3
+      },
+      "circuit": {
+        "consecutive_failure_limit": 3,
+        "failure_window": 20,
+        "failure_window_limit": 5,
+        "latency_success_minimum": 10,
+        "latency_window": 10,
+        "latency_breach_limit": 5,
+        "latency_multiplier": 2.0,
+        "cooldown_seconds": 30.0,
+        "cooldown_arrivals": 10,
+        "half_open_successes_to_close": 3
+      }
+    },
+    "paths": {
+      "data_dir": "data",
+      "events_dir": "data/events",
+      "traces_dir": "data/traces",
+      "models_dir": "ml/artifacts",
+      "figures_dir": "analysis/figures"
+    }
+  },
+  "run_id": "dryrun_guarded_governor",
+  "policy": "guarded_governor",
+  "n_requests": 24,
+  "n_offloaded": 1,
+  "warm_load_s": 3.6,
+  "wall_clock_s": 79.63,
+  "t0_perf_s": 16920.7687868,
+  "t0_unix_s": 1789485371.5402148,
+  "frozen_cloud_p95_ms": 3069.585699999152,
+  "tail_aware_threshold": 4.986486535529362,
+  "gpu_samples": 80,
+  "created_unix": 1789485451.1653376,
+  "dryrun": true,
+  "governor_artifact": {
+    "artifact_id": "apex-guarded-tail-aware-matched30-2026-09-15",
+    "sha256": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e"
+  },
+  "breaker_transitions": [],
+  "budget": {
+    "cap": 7,
+    "total_cloud": 1,
+    "discretionary": 1,
+    "safety_overrides": 0,
+    "denials": 0
+  },
+  "faults_injected": {
+    "outage": 0,
+    "latency_spike": 0,
+    "degraded_phase": 0
+  }
+}

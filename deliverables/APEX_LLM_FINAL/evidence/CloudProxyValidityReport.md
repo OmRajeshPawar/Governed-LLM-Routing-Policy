@@ -1,0 +1,46 @@
+# Cloud proxy validity report
+
+**Validity gate:** not cleared. Claim mode: `frozen_analytical_cloud_scenario_model`.
+
+The latency gates (P50/P95 TTFT error, interval coverage) are outside their
+thresholds, so the cloud tier is reported as a frozen analytical scenario
+model rather than a calibrated counterfactual. The failure-rate and
+concurrency-independence gates pass. Raw metrics and per-gate results below.
+
+
+
+```json
+{
+  "stage": "cloud_proxy_validity",
+  "status": "fail",
+  "provider": "Google Vertex AI",
+  "model": "gemini-2.5-flash",
+  "requested_model": "gemini-2.5-flash",
+  "region": "us-central1",
+  "created_utc": "2026-07-13T13:57:57.845850+00:00",
+  "metrics": {
+    "p50_ttft_relative_error": 0.5179972414611357,
+    "p95_ttft_relative_error": 0.9401478807745786,
+    "failure_rate_absolute_error_pp": 1.6666666666666718,
+    "median_ttft_relative_error_by_prompt_band": {
+      "short": 1.1558461538461537,
+      "medium": 1.110307692307692,
+      "long": 0.9709230769230768
+    },
+    "live_median_concurrency_difference": 0.0020757654385055837,
+    "nominal_90_interval_coverage": 0.0
+  },
+  "gates": {
+    "p50_ttft_error": false,
+    "p95_ttft_error": false,
+    "failure_rate_error": true,
+    "prompt_band_errors": false,
+    "concurrency_independence": true,
+    "predictive_interval_coverage": false,
+    "complete_cells": true,
+    "exact_model_identifier_recorded": false
+  },
+  "claim_mode": "frozen_analytical_cloud_scenario_model",
+  "freshness_rule": "Recalibrate after seven days or any model, region, SDK, output, thinking, or endpoint change."
+}
+```

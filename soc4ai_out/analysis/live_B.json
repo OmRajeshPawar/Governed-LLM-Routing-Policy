@@ -1,0 +1,449 @@
+{
+ "experiment": "B",
+ "n_runs": 6,
+ "n_requests": 1800,
+ "gemini_latency": {
+  "n_live": 622,
+  "p50_ms": 673.322199996619,
+  "p95_ms": 3957.9559000048903,
+  "p99_ms": 12043.253200001345,
+  "slo_miss_share": 0.05144694533762058,
+  "july_n": 59,
+  "july_p50_ms": 674.27,
+  "july_p95_ms": 5430.05,
+  "calibration_p50_ms": 576.5967999996064,
+  "calibration_p95_ms": 3069.585699999152
+ },
+ "breach_decomposition": {
+  "breached": {
+   "n": 181,
+   "mean_ttft_ms": 6784.858586187788,
+   "mean_queue_wait_ms": 4740.934052486188,
+   "mean_prefill_ms": 157.52627348066298,
+   "queue_share_of_ttft": 0.677660114188843,
+   "mean_decode_tps": 81.39468807615123
+  },
+  "met": {
+   "n": 620,
+   "mean_ttft_ms": 1027.135335161344,
+   "mean_queue_wait_ms": 317.54210822578426,
+   "mean_prefill_ms": 163.19303967741936,
+   "queue_share_of_ttft": 0.12431075773502373,
+   "mean_decode_tps": 81.08058856773941
+  }
+ },
+ "telemetry": {
+  "B_s13_real_sample_guarded_governor": {
+   "available": true,
+   "gpu_energy_wh": 9.417712771079607,
+   "mean_power_w": 42.69309885931558,
+   "max_temp_c": 76.0,
+   "mean_temp_c": 57.43346007604563,
+   "throttled_sample_share": 0.2813688212927757,
+   "wh_per_request": 0.03139237590359869,
+   "wh_per_slo_met_local_request": 0.044846251290855274,
+   "spearman_temp_vs_local_ttft": 0.531174023528828
+  },
+  "B_s13_real_sample_tail_aware": {
+   "available": true,
+   "gpu_energy_wh": 5.2553050918532405,
+   "mean_power_w": 23.8031582278481,
+   "max_temp_c": 73.0,
+   "mean_temp_c": 47.462025316455694,
+   "throttled_sample_share": 0.14430379746835442,
+   "wh_per_request": 0.0175176836395108,
+   "wh_per_slo_met_local_request": 0.04734509091759676,
+   "spearman_temp_vs_local_ttft": 0.5411133373275683
+  },
+  "B_s42_reasoning_coding_guarded_governor": {
+   "available": true,
+   "gpu_energy_wh": 12.606399713429179,
+   "mean_power_w": 54.34833694344164,
+   "max_temp_c": 78.0,
+   "mean_temp_c": 60.246690734055356,
+   "throttled_sample_share": 0.4969915764139591,
+   "wh_per_request": 0.04202133237809726,
+   "wh_per_slo_met_local_request": 0.11892829918329413,
+   "spearman_temp_vs_local_ttft": 0.603911578988899
+  },
+  "B_s42_reasoning_coding_tail_aware": {
+   "available": true,
+   "gpu_energy_wh": 1.4948256405976745,
+   "mean_power_w": 6.270750585480094,
+   "max_temp_c": 74.0,
+   "mean_temp_c": 39.0807962529274,
+   "throttled_sample_share": 0.02459016393442623,
+   "wh_per_request": 0.0049827521353255815,
+   "wh_per_slo_met_local_request": 0.21354652008538208,
+   "spearman_temp_vs_local_ttft": -0.14290125328865674
+  },
+  "B_s7_synthetic_guarded_governor": {
+   "available": true,
+   "gpu_energy_wh": 8.361053401394289,
+   "mean_power_w": 38.31856921086675,
+   "max_temp_c": 74.0,
+   "mean_temp_c": 56.88874514877102,
+   "throttled_sample_share": 0.22897800776196636,
+   "wh_per_request": 0.02787017800464763,
+   "wh_per_slo_met_local_request": 0.04777744800796736,
+   "spearman_temp_vs_local_ttft": 0.5078766000289539
+  },
+  "B_s7_synthetic_tail_aware": {
+   "available": true,
+   "gpu_energy_wh": 1.1900752429192598,
+   "mean_power_w": 5.517389391979301,
+   "max_temp_c": 72.0,
+   "mean_temp_c": 40.69340232858991,
+   "throttled_sample_share": 0.016817593790426907,
+   "wh_per_request": 0.003966917476397533,
+   "wh_per_slo_met_local_request": 0.10818865844720543,
+   "spearman_temp_vs_local_ttft": 0.6905451422395709
+  }
+ },
+ "B": {
+  "segments": {
+   "guarded_governor": {
+    "pre": {
+     "n": 288,
+     "violation_rate": 0.0625,
+     "p95_ttft_ms": 3833.520700005465,
+     "cloud_share": 0.59375,
+     "failed": 4,
+     "cloud_failed": 4,
+     "spend_usd": 0.050683,
+     "wasted_spend_usd": 0.0016787000000000004,
+     "budget_denials": 0
+    },
+    "outage": {
+     "n": 180,
+     "violation_rate": 0.35555555555555557,
+     "p95_ttft_ms": 7108.093499999086,
+     "cloud_share": 0.09444444444444444,
+     "failed": 17,
+     "cloud_failed": 17,
+     "spend_usd": 0.0,
+     "wasted_spend_usd": 0.0,
+     "budget_denials": 44
+    },
+    "between": {
+     "n": 108,
+     "violation_rate": 0.3425925925925926,
+     "p95_ttft_ms": 11322.15559999895,
+     "cloud_share": 0.12962962962962962,
+     "failed": 0,
+     "cloud_failed": 0,
+     "spend_usd": 0.0038527000000000006,
+     "wasted_spend_usd": 0.0005697,
+     "budget_denials": 72
+    },
+    "spike": {
+     "n": 180,
+     "violation_rate": 0.3055555555555556,
+     "p95_ttft_ms": 9664.662700000918,
+     "cloud_share": 0.06666666666666667,
+     "failed": 0,
+     "cloud_failed": 0,
+     "spend_usd": 0.0031414999999999998,
+     "wasted_spend_usd": 0.003141500000000001,
+     "budget_denials": 109
+    },
+    "post": {
+     "n": 144,
+     "violation_rate": 0.2916666666666667,
+     "p95_ttft_ms": 9569.77910000569,
+     "cloud_share": 0.1875,
+     "failed": 2,
+     "cloud_failed": 2,
+     "spend_usd": 0.0073832,
+     "wasted_spend_usd": 0.0022105,
+     "budget_denials": 51
+    },
+    "all": {
+     "n": 900,
+     "violation_rate": 0.24,
+     "p95_ttft_ms": 9359.004199999617,
+     "cloud_share": 0.2677777777777778,
+     "failed": 23,
+     "cloud_failed": 23,
+     "spend_usd": 0.0650604,
+     "wasted_spend_usd": 0.0076004,
+     "budget_denials": 276
+    }
+   },
+   "tail_aware": {
+    "pre": {
+     "n": 288,
+     "violation_rate": 0.06944444444444445,
+     "p95_ttft_ms": 4289.40589999911,
+     "cloud_share": 0.59375,
+     "failed": 2,
+     "cloud_failed": 2,
+     "spend_usd": 0.05167830000000001,
+     "wasted_spend_usd": 0.003343500000000001,
+     "budget_denials": 0
+    },
+    "outage": {
+     "n": 180,
+     "violation_rate": 0.8833333333333333,
+     "p95_ttft_ms": 4538.91239999939,
+     "cloud_share": 0.8611111111111112,
+     "failed": 155,
+     "cloud_failed": 155,
+     "spend_usd": 0.0,
+     "wasted_spend_usd": 0.0,
+     "budget_denials": 0
+    },
+    "between": {
+     "n": 108,
+     "violation_rate": 0.05555555555555555,
+     "p95_ttft_ms": 2320.6818000035128,
+     "cloud_share": 1.0,
+     "failed": 2,
+     "cloud_failed": 2,
+     "spend_usd": 0.030843500000000006,
+     "wasted_spend_usd": 0.0006774,
+     "budget_denials": 0
+    },
+    "spike": {
+     "n": 180,
+     "violation_rate": 1.0,
+     "p95_ttft_ms": 10961.09300000171,
+     "cloud_share": 1.0,
+     "failed": 2,
+     "cloud_failed": 2,
+     "spend_usd": 0.04807500000000001,
+     "wasted_spend_usd": 0.04807500000000001,
+     "budget_denials": 0
+    },
+    "post": {
+     "n": 144,
+     "violation_rate": 0.0625,
+     "p95_ttft_ms": 2841.371700000309,
+     "cloud_share": 1.0,
+     "failed": 3,
+     "cloud_failed": 3,
+     "spend_usd": 0.038223400000000005,
+     "wasted_spend_usd": 0.0016904,
+     "budget_denials": 0
+    },
+    "all": {
+     "n": 900,
+     "violation_rate": 0.41555555555555557,
+     "p95_ttft_ms": 9622.77080000058,
+     "cloud_share": 0.8422222222222222,
+     "failed": 164,
+     "cloud_failed": 164,
+     "spend_usd": 0.16882020000000003,
+     "wasted_spend_usd": 0.05378630000000001,
+     "budget_denials": 0
+    }
+   }
+  },
+  "breaker": {
+   "B_s13_real_sample_guarded_governor": {
+    "transitions": [
+     [
+      "closed",
+      "open",
+      "circuit_consecutive_failures",
+      231.3
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_consecutive_failures",
+      267.3
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      295.4
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      326.8
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      327.1
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      370.5
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      379.2
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      417.9
+     ],
+     [
+      "half-open",
+      "closed",
+      null,
+      430.3
+     ],
+     [
+      "closed",
+      "open",
+      "circuit_latency_window",
+      474.7
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_latency_window",
+      535.1
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      545.4
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      578.3
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      588.7
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      621.6
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      632.9
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      663.8
+     ],
+     [
+      "half-open",
+      "closed",
+      null,
+      692.1
+     ],
+     [
+      "closed",
+      "open",
+      "circuit_latency_window",
+      727.0
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_latency_window",
+      766.6
+     ],
+     [
+      "half-open",
+      "closed",
+      null,
+      771.2
+     ]
+    ],
+    "outage_detect_s": 1.55,
+    "outage_recover_s": 199.01,
+    "spike_detect_s": 12.37,
+    "spike_recover_s": 217.46
+   },
+   "B_s42_reasoning_coding_guarded_governor": {
+    "transitions": [
+     [
+      "closed",
+      "open",
+      "circuit_consecutive_failures",
+      236.7
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_consecutive_failures",
+      271.0
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      271.3
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      301.4
+     ]
+    ],
+    "outage_detect_s": 3.14
+   },
+   "B_s7_synthetic_guarded_governor": {
+    "transitions": [
+     [
+      "closed",
+      "open",
+      "circuit_consecutive_failures",
+      221.9
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_consecutive_failures",
+      254.9
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      255.2
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      285.3
+     ],
+     [
+      "half-open",
+      "open",
+      "circuit_half_open_failure",
+      285.5
+     ],
+     [
+      "open",
+      "half-open",
+      "circuit_half_open_failure",
+      328.6
+     ]
+    ],
+    "outage_detect_s": 3.91
+   }
+  }
+ }
+}

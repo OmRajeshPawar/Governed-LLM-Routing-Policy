@@ -1,0 +1,9 @@
+{
+ "V4N_cum_cloud_end_v4_governor": 38.2,
+ "V4N_cum_cloud_end_guarded_governor": 90.0,
+ "V4N_v2_mean_cum_reaches_89_at": 185,
+ "V4N_cum_cloud_end_tail_aware": 246.6,
+ "V4F_peak_rolling_violation_v4_governor": 25.833333333333332,
+ "V4F_peak_rolling_violation_guarded_governor": 35.83333333333333,
+ "V4F_peak_rolling_violation_tail_aware": 99.99999999999997
+}

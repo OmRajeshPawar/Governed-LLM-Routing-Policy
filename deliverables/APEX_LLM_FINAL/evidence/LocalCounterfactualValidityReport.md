@@ -1,0 +1,97 @@
+# Local counterfactual validity report
+
+**Validity gate:** Stage A cleared; Stage B not cleared. Claim mode:
+`fixed_service_time_scenario_analysis`.
+
+Stage A (event-engine fidelity) passes: queue-wait MAE 5.63 ms. Stage B
+(service times under a real contention change) is outside its per-request and
+completion-order thresholds, so queue replay is reported as
+fixed-service-time scenario analysis rather than an adaptive counterfactual.
+Raw metrics and per-gate results below.
+
+
+
+```json
+{
+  "status": "fail",
+  "stage_a": {
+    "stage": "A_event_engine_fidelity",
+    "status": "pass",
+    "metrics": {
+      "queue_wait_mae_ms": 5.6299401932513895,
+      "mean_queue_wait_relative_error": 0.004131778928480912,
+      "p95_queue_wait_relative_error": 0.00041671164380540195,
+      "p95_ttft_relative_error": 0.002842111255281149
+    },
+    "gates": {
+      "queue_wait_mae_ms": true,
+      "mean_queue_wait_relative_error": true,
+      "p95_queue_wait_relative_error": true,
+      "p95_ttft_relative_error": true
+    },
+    "interpretation": "Stage A validates discrete-event implementation fidelity. Because it reconstructs an all-local run using service times observed in that run, it does not independently validate the service-time counterfactual.",
+    "source": "data\\events\\shadow_synthetic_bursty_n300_s7.jsonl",
+    "n_requests": 300
+  },
+  "stage_b": {
+    "stage": "B_contention_change_validity",
+    "status": "fail",
+    "n_paired_local_requests": 140,
+    "metrics": {
+      "median_service_ratio": 1.0004435661763789,
+      "p90_absolute_percentage_error": 0.415463776779327,
+      "median_ratio_zero_competitor": 1.0019484638952947,
+      "median_ratio_one_competitor": 1.000303662805822,
+      "absolute_spearman_residual_correlations": {
+        "prompt_tokens": 0.09219374250331926,
+        "output_cap": 0.14394922243185426,
+        "active_local_jobs": 0.056594318056545884,
+        "gpu_util": 0.1799282611921247,
+        "gpu_temp_c": 0.23742004094101682
+      }
+    },
+    "gates": {
+      "median_ratio": true,
+      "p90_ape": false,
+      "zero_competitor": true,
+      "one_competitor": true,
+      "residual_correlations": true
+    },
+    "aggregate_metrics": {
+      "route_agreement": 1.0,
+      "offload_rate_difference_pp": 0.0,
+      "mean_queue_wait_relative_error": 0.8542051128227577,
+      "p95_ttft_relative_error": 0.7069155898853504,
+      "completion_order_kendall": 0.03434343434343435,
+      "per_workload": [
+        {
+          "workload_family": "synthetic",
+          "route_agreement": 1.0,
+          "offload_rate_difference_pp": 0.0,
+          "mean_queue_wait_relative_error": 0.8542051128227577,
+          "p95_ttft_relative_error": 0.7069155898853504,
+          "completion_order_kendall": 0.09010101010101011
+        },
+        {
+          "workload_family": "reasoning_coding",
+          "route_agreement": 1.0,
+          "offload_rate_difference_pp": 0.0,
+          "mean_queue_wait_relative_error": 0.04411613620976682,
+          "p95_ttft_relative_error": 0.12037300816419316,
+          "completion_order_kendall": 0.03434343434343435
+        }
+      ]
+    },
+    "aggregate_gates": {
+      "route_agreement": true,
+      "offload_rate_difference": true,
+      "mean_queue_wait_error": false,
+      "p95_ttft_error": false,
+      "completion_order": false
+    },
+    "claim_mode": "fixed_service_time_scenario_analysis",
+    "interpretation": "Stage B tests whether routing-induced contention changes invalidate stored local service times."
+  },
+  "claim_mode": "fixed_service_time_scenario_analysis"
+}
+```

@@ -1,0 +1,15 @@
+% Experiment B: chaos episodes, 3 seeds x 2 routers
+Router & Episode & SLO viol.\ (\%) & Failed & Cloud failed & Spend (USD) & Wasted (USD) \\
+\midrule
+Governed & outage & 35.6 & 17 & 17 & 0.000 & 0.000 \\
+Governed & spike & 30.6 & 0 & 0 & 0.003 & 0.003 \\
+Governed & all & 24.0 & 23 & 23 & 0.065 & 0.008 \\
+Ungoverned & outage & 88.3 & 155 & 155 & 0.000 & 0.000 \\
+Ungoverned & spike & 100.0 & 2 & 2 & 0.048 & 0.048 \\
+Ungoverned & all & 41.6 & 164 & 164 & 0.169 & 0.054 \\
+% breaker outage detect s: [1.55, 3.14, 3.91]; recover s: [199.01]; spike detect s: [12.37]
+% live Gemini TTFT n=622 p50=673 p95=3,958 p99=12,043 slo_miss=5.1% | calibration p50=577 p95=3,070 | July n=59 p50=674 p95=5,430
+% local breaches n=181: mean TTFT 6,785 ms, queue wait 4,741 ms (67.8% of TTFT), prefill 158 ms
+% local met n=620: mean TTFT 1,027 ms, queue 12.4% of TTFT
+% guarded_governor: mean GPU Wh/req 0.033761295428781195, Wh per SLO-met local req 0.07051733282737226, throttled share 0.335779468489567, max temp 76.0, spearman temp-TTFT 0.5476540675155603
+% tail_aware: mean GPU Wh/req 0.008822451083744638, Wh per SLO-met local req 0.12302675648339476, throttled share 0.06190385173106919, max temp 73.0, spearman temp-TTFT 0.3629190754261608

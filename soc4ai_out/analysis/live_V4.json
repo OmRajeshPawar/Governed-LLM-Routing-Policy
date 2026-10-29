@@ -1,0 +1,2280 @@
+{
+ "protocol_v4_sha256": "b61ca6c2e3e288ff8e54159a616017c76fd46d6e5e23727ace7a7e17ffb57766",
+ "missing_runs": [],
+ "V4N": {
+  "per_seed": {
+   "v4": {
+    "257": {
+     "n": 300,
+     "violation_rate": 0.06333333333333334,
+     "p95_ttft_ms": 4267.353800001729,
+     "cloud_share": 0.12666666666666668,
+     "failed": 1,
+     "cloud_failed": 1,
+     "spend_usd": 0.008030200000000001,
+     "wasted_spend_usd": 0.0007554,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 10.571836832002601,
+      "mean_power_w": 47.71866750629722,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 59.71788413098237,
+      "throttled_sample_share": 0.27581863979848864,
+      "wh_per_request": 0.03523945610667534,
+      "wh_per_slo_met_local_request": 0.04280095883401863,
+      "spearman_temp_vs_local_ttft": 0.3380602492165693
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 37,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 37,
+      "discretionary": 6,
+      "safety_overrides": 32,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 38,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 1,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 0
+     }
+    },
+    "263": {
+     "n": 300,
+     "violation_rate": 0.06333333333333334,
+     "p95_ttft_ms": 4068.5678999943775,
+     "cloud_share": 0.13,
+     "failed": 1,
+     "cloud_failed": 1,
+     "spend_usd": 0.0113294,
+     "wasted_spend_usd": 0.0008417000000000001,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 10.986414705409738,
+      "mean_power_w": 49.70392676767676,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 58.58585858585859,
+      "throttled_sample_share": 0.3068181818181818,
+      "wh_per_request": 0.03662138235136579,
+      "wh_per_slo_met_local_request": 0.04466022237971438,
+      "spearman_temp_vs_local_ttft": 0.3751396018469481
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 38,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 38,
+      "discretionary": 6,
+      "safety_overrides": 33,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 39,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 1,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 0
+     }
+    },
+    "269": {
+     "n": 300,
+     "violation_rate": 0.07333333333333333,
+     "p95_ttft_ms": 4976.2367000003,
+     "cloud_share": 0.23666666666666666,
+     "failed": 0,
+     "cloud_failed": 0,
+     "spend_usd": 0.026348200000000002,
+     "wasted_spend_usd": 0.0009043,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 13.869174205987257,
+      "mean_power_w": 60.42931873479318,
+      "max_temp_c": 74.0,
+      "mean_temp_c": 62.05596107055961,
+      "throttled_sample_share": 0.46228710462287104,
+      "wh_per_request": 0.04623058068662419,
+      "wh_per_slo_met_local_request": 0.0660436866951774,
+      "spearman_temp_vs_local_ttft": 0.3389445429088657
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 71,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 71,
+      "discretionary": 20,
+      "safety_overrides": 51,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 71,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 0,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 0
+     }
+    },
+    "271": {
+     "n": 300,
+     "violation_rate": 0.04,
+     "p95_ttft_ms": 3393.5435000021243,
+     "cloud_share": 0.05,
+     "failed": 0,
+     "cloud_failed": 0,
+     "spend_usd": 0.0034462000000000004,
+     "wasted_spend_usd": 0.0007750000000000001,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 10.628847003695832,
+      "mean_power_w": 50.87562299465241,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 59.77807486631016,
+      "throttled_sample_share": 0.29545454545454547,
+      "wh_per_request": 0.03542949001231944,
+      "wh_per_slo_met_local_request": 0.038650352740712116,
+      "spearman_temp_vs_local_ttft": 0.44865285350272854
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 15,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 15,
+      "discretionary": 5,
+      "safety_overrides": 10,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 15,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 0,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 0
+     }
+    },
+    "277": {
+     "n": 300,
+     "violation_rate": 0.08666666666666667,
+     "p95_ttft_ms": 4360.4154999993625,
+     "cloud_share": 0.09333333333333334,
+     "failed": 1,
+     "cloud_failed": 1,
+     "spend_usd": 0.0086791,
+     "wasted_spend_usd": 0.0012582000000000001,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 10.852536372655466,
+      "mean_power_w": 50.99353018372703,
+      "max_temp_c": 72.0,
+      "mean_temp_c": 57.511811023622045,
+      "throttled_sample_share": 0.2887139107611549,
+      "wh_per_request": 0.03617512124218489,
+      "wh_per_slo_met_local_request": 0.04289540068243267,
+      "spearman_temp_vs_local_ttft": 0.438721791071769
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 27,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 27,
+      "discretionary": 10,
+      "safety_overrides": 18,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 28,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 1,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 0
+     }
+    }
+   },
+   "v2": {
+    "257": {
+     "n": 300,
+     "violation_rate": 0.08666666666666667,
+     "p95_ttft_ms": 6171.461999998428,
+     "cloud_share": 0.3,
+     "failed": 1,
+     "cloud_failed": 1,
+     "spend_usd": 0.020958400000000002,
+     "wasted_spend_usd": 0.00082,
+     "budget_denials": 109,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 8.255528853247199,
+      "mean_power_w": 37.32818789407314,
+      "max_temp_c": 75.0,
+      "mean_temp_c": 53.58007566204287,
+      "throttled_sample_share": 0.2080706179066835,
+      "wh_per_request": 0.027518429510823998,
+      "wh_per_slo_met_local_request": 0.04368004684257777,
+      "spearman_temp_vs_local_ttft": 0.22992548806252414
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 3,
+      "safety_overrides": 87,
+      "denials": 109
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 1,
+      "budget_denied": 109,
+      "first_budget_denial_pos": 165,
+      "breaker_opens": 0
+     }
+    },
+    "263": {
+     "n": 300,
+     "violation_rate": 0.1,
+     "p95_ttft_ms": 6040.592299999844,
+     "cloud_share": 0.3,
+     "failed": 0,
+     "cloud_failed": 0,
+     "spend_usd": 0.0247671,
+     "wasted_spend_usd": 0.0015017000000000001,
+     "budget_denials": 133,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 11.535553430239027,
+      "mean_power_w": 51.186883928571426,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 54.125,
+      "throttled_sample_share": 0.27040816326530615,
+      "wh_per_request": 0.038451844767463425,
+      "wh_per_slo_met_local_request": 0.06269322516434253,
+      "spearman_temp_vs_local_ttft": 0.41397088788272424
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 0,
+      "safety_overrides": 90,
+      "denials": 133
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 0,
+      "budget_denied": 133,
+      "first_budget_denial_pos": 144,
+      "breaker_opens": 0
+     }
+    },
+    "269": {
+     "n": 300,
+     "violation_rate": 0.30666666666666664,
+     "p95_ttft_ms": 11654.875599997467,
+     "cloud_share": 0.3,
+     "failed": 0,
+     "cloud_failed": 0,
+     "spend_usd": 0.0334397,
+     "wasted_spend_usd": 0.0012885000000000001,
+     "budget_denials": 201,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 12.69493449672093,
+      "mean_power_w": 54.9855199516324,
+      "max_temp_c": 74.0,
+      "mean_temp_c": 58.71342200725514,
+      "throttled_sample_share": 0.4727932285368803,
+      "wh_per_request": 0.0423164483224031,
+      "wh_per_slo_met_local_request": 0.10491681402248702,
+      "spearman_temp_vs_local_ttft": 0.5287114195759565
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 2,
+      "safety_overrides": 88,
+      "denials": 201
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 0,
+      "budget_denied": 201,
+      "first_budget_denial_pos": 99,
+      "breaker_opens": 0
+     }
+    },
+    "271": {
+     "n": 300,
+     "violation_rate": 0.04,
+     "p95_ttft_ms": 3502.293699995789,
+     "cloud_share": 0.3,
+     "failed": 0,
+     "cloud_failed": 0,
+     "spend_usd": 0.017919900000000002,
+     "wasted_spend_usd": 0.0003599,
+     "budget_denials": 59,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 8.061386226931413,
+      "mean_power_w": 38.64783823529412,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 53.60828877005348,
+      "throttled_sample_share": 0.24732620320855614,
+      "wh_per_request": 0.026871287423104708,
+      "wh_per_slo_met_local_request": 0.04030693113465707,
+      "spearman_temp_vs_local_ttft": 0.4338737854943062
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 1,
+      "safety_overrides": 89,
+      "denials": 59
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 0,
+      "budget_denied": 59,
+      "first_budget_denial_pos": 191,
+      "breaker_opens": 0
+     }
+    },
+    "277": {
+     "n": 300,
+     "violation_rate": 0.09333333333333334,
+     "p95_ttft_ms": 5093.984900006035,
+     "cloud_share": 0.3,
+     "failed": 1,
+     "cloud_failed": 1,
+     "spend_usd": 0.022538700000000002,
+     "wasted_spend_usd": 0.0005538000000000001,
+     "budget_denials": 140,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 12.526400860290725,
+      "mean_power_w": 57.19392042440318,
+      "max_temp_c": 74.0,
+      "mean_temp_c": 52.40583554376658,
+      "throttled_sample_share": 0.253315649867374,
+      "wh_per_request": 0.041754669534302416,
+      "wh_per_slo_met_local_request": 0.06771027492049041,
+      "spearman_temp_vs_local_ttft": 0.42915661120241766
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 2,
+      "safety_overrides": 88,
+      "denials": 140
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 1,
+      "budget_denied": 140,
+      "first_budget_denial_pos": 118,
+      "breaker_opens": 0
+     }
+    }
+   },
+   "ungoverned": {
+    "257": {
+     "n": 300,
+     "violation_rate": 0.03333333333333333,
+     "p95_ttft_ms": 2726.7729000013787,
+     "cloud_share": 0.75,
+     "failed": 1,
+     "cloud_failed": 1,
+     "spend_usd": 0.049828300000000006,
+     "wasted_spend_usd": 0.0014524,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 3.3531854418963194,
+      "mean_power_w": 15.122803526448362,
+      "max_temp_c": 71.0,
+      "mean_temp_c": 43.86649874055416,
+      "throttled_sample_share": 0.06801007556675064,
+      "wh_per_request": 0.011177284806321065,
+      "wh_per_slo_met_local_request": 0.0472279639703707,
+      "spearman_temp_vs_local_ttft": 0.3886138620152782
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 225,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null
+    },
+    "263": {
+     "n": 300,
+     "violation_rate": 0.05,
+     "p95_ttft_ms": 3121.4985999977216,
+     "cloud_share": 0.82,
+     "failed": 3,
+     "cloud_failed": 3,
+     "spend_usd": 0.0639662,
+     "wasted_spend_usd": 0.0021195,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 3.0451790173119635,
+      "mean_power_w": 13.767963383838383,
+      "max_temp_c": 72.0,
+      "mean_temp_c": 41.542929292929294,
+      "throttled_sample_share": 0.06565656565656566,
+      "wh_per_request": 0.010150596724373212,
+      "wh_per_slo_met_local_request": 0.05970939249631301,
+      "spearman_temp_vs_local_ttft": 0.48403637279688444
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 246,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null
+    },
+    "269": {
+     "n": 300,
+     "violation_rate": 0.04,
+     "p95_ttft_ms": 2370.099500003562,
+     "cloud_share": 0.97,
+     "failed": 4,
+     "cloud_failed": 4,
+     "spend_usd": 0.10637390000000001,
+     "wasted_spend_usd": 0.0018056,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 1.3610202158015636,
+      "mean_power_w": 5.933182260024301,
+      "max_temp_c": 71.0,
+      "mean_temp_c": 37.754556500607535,
+      "throttled_sample_share": 0.02187120291616039,
+      "wh_per_request": 0.004536734052671879,
+      "wh_per_slo_met_local_request": 0.22683670263359393,
+      "spearman_temp_vs_local_ttft": 0.5333333333333333
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 291,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null
+    },
+    "271": {
+     "n": 300,
+     "violation_rate": 0.023333333333333334,
+     "p95_ttft_ms": 2813.11330000608,
+     "cloud_share": 0.6633333333333333,
+     "failed": 2,
+     "cloud_failed": 2,
+     "spend_usd": 0.0409441,
+     "wasted_spend_usd": 0.00033800000000000003,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 9.889257604898974,
+      "mean_power_w": 44.71055342465753,
+      "max_temp_c": 72.0,
+      "mean_temp_c": 44.8027397260274,
+      "throttled_sample_share": 0.0958904109589041,
+      "wh_per_request": 0.03296419201632991,
+      "wh_per_slo_met_local_request": 0.10091079188672422,
+      "spearman_temp_vs_local_ttft": 0.4320121168598568
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 199,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null
+    },
+    "277": {
+     "n": 300,
+     "violation_rate": 0.04,
+     "p95_ttft_ms": 3072.2145000036107,
+     "cloud_share": 0.9066666666666666,
+     "failed": 2,
+     "cloud_failed": 2,
+     "spend_usd": 0.0690115,
+     "wasted_spend_usd": 0.0017284000000000002,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 11.012153422314459,
+      "mean_power_w": 47.34461904761905,
+      "max_temp_c": 72.0,
+      "mean_temp_c": 37.85442176870748,
+      "throttled_sample_share": 0.04217687074829932,
+      "wh_per_request": 0.03670717807438153,
+      "wh_per_slo_met_local_request": 0.42354436239670995,
+      "spearman_temp_vs_local_ttft": 0.5778516587838997
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 272,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null
+    }
+   }
+  },
+  "v4_vs_v2": {
+   "violation_diff_pp": -6.0,
+   "violation_diff_ci95": [
+    -14.866666666666667,
+    -0.7333333333333331
+   ],
+   "p95_ratio": 0.6132725043956878,
+   "p95_ratio_ci95": [
+    0.4709651659841032,
+    0.9579581738886038
+   ],
+   "per_seed_diff_pp": {
+    "257": -2.333333333333333,
+    "263": -3.6666666666666665,
+    "269": -23.333333333333332,
+    "271": 0.0,
+    "277": -0.6666666666666667
+   },
+   "seed_support": 5,
+   "decision_ms_added": 0.005599998985417187,
+   "sign_flip_permutation_p_two_sided": 0.125,
+   "gates": {
+    "G1_seed_support": true,
+    "G2_slo_bound": true,
+    "G3_tail_gain": true,
+    "G4_no_regression": true,
+    "G5_decision_cap": true
+   },
+   "promote": true
+  },
+  "v4_vs_ungoverned": {
+   "violation_diff_pp": 2.799999999999999,
+   "violation_diff_ci95": [
+    1.8000000000000003,
+    3.8000000000000007
+   ],
+   "p95_ratio": 1.4082439743724788,
+   "p95_ratio_ci95": [
+    1.2745999360407039,
+    1.6116116961354008
+   ],
+   "per_seed_diff_pp": {
+    "257": 3.0000000000000004,
+    "263": 1.3333333333333335,
+    "269": 3.3333333333333335,
+    "271": 1.6666666666666667,
+    "277": 4.666666666666667
+   },
+   "seed_support": 0,
+   "decision_ms_added": 0.020999992557335645,
+   "sign_flip_permutation_p_two_sided": 0.0625,
+   "gates": {
+    "G1_seed_support": false,
+    "G2_slo_bound": false,
+    "G3_tail_gain": false,
+    "G4_no_regression": true,
+    "G5_decision_cap": true
+   },
+   "promote": false
+  },
+  "pooled": {
+   "v4": {
+    "violation_rate": 0.06533333333333333,
+    "p95_ttft_ms": 4244.130850005239,
+    "spend_usd": 0.057833100000000005,
+    "failed": 3,
+    "usd_per_slo_met_x1e4": 0.4125042796005707,
+    "wh_per_slo_met": 0.04059116199696925,
+    "cloud_share": 0.12733333333333335,
+    "quota_compliant_runs": 5,
+    "slo_guarantee_runs": 5,
+    "violation_ci95_over_seeds": {
+     "point": 0.06533333333333333,
+     "ci95": [
+      0.051333333333333335,
+      0.07733333333333334
+     ]
+    }
+   },
+   "v2": {
+    "violation_rate": 0.12533333333333332,
+    "p95_ttft_ms": 6920.464915001138,
+    "spend_usd": 0.1196238,
+    "failed": 2,
+    "usd_per_slo_met_x1e4": 0.911766768292683,
+    "wh_per_slo_met": 0.04045259441115037,
+    "cloud_share": 0.3,
+    "quota_compliant_runs": 5,
+    "slo_guarantee_runs": 4,
+    "violation_ci95_over_seeds": {
+     "point": 0.12533333333333332,
+     "ci95": [
+      0.06266666666666666,
+      0.22133333333333333
+     ]
+    }
+   },
+   "ungoverned": {
+    "violation_rate": 0.037333333333333336,
+    "p95_ttft_ms": 3013.7752599981454,
+    "spend_usd": 0.33012400000000003,
+    "failed": 12,
+    "usd_per_slo_met_x1e4": 2.28617728531856,
+    "wh_per_slo_met": 0.01984819646968371,
+    "cloud_share": 0.8219999999999998,
+    "quota_compliant_runs": 0,
+    "slo_guarantee_runs": 5,
+    "violation_ci95_over_seeds": {
+     "point": 0.037333333333333336,
+     "ci95": [
+      0.029333333333333333,
+      0.04466666666666667
+     ]
+    }
+   }
+  }
+ },
+ "V4F": {
+  "per_seed": {
+   "v4": {
+    "257": {
+     "n": 300,
+     "violation_rate": 0.12333333333333334,
+     "p95_ttft_ms": 5720.187099999748,
+     "cloud_share": 0.056666666666666664,
+     "failed": 6,
+     "cloud_failed": 6,
+     "spend_usd": 0.0022752000000000002,
+     "wasted_spend_usd": 0.0007876000000000001,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 11.633001782271098,
+      "mean_power_w": 52.483280657395696,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 58.4070796460177,
+      "throttled_sample_share": 0.2629582806573957,
+      "wh_per_request": 0.038776672607570326,
+      "wh_per_slo_met_local_request": 0.04526459837459571,
+      "spearman_temp_vs_local_ttft": 0.43325157035708445
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 4,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 4,
+      "discretionary": 3,
+      "safety_overrides": 5,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 17,
+      "exempt_probes": 9,
+      "failed_cloud_calls": 6,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 7
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.21666666666666667,
+      "p95_ttft_ms": 4822.359799996775,
+      "cloud_share": 0.08333333333333333,
+      "failed": 5,
+      "cloud_failed": 5,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.16666666666666666,
+      "p95_ttft_ms": 6477.329200002714,
+      "cloud_share": 0.05,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.0003776,
+      "wasted_spend_usd": 0.00037759999999999996,
+      "budget_denials": 0
+     }
+    },
+    "263": {
+     "n": 300,
+     "violation_rate": 0.11666666666666667,
+     "p95_ttft_ms": 7213.3786999984295,
+     "cloud_share": 0.09666666666666666,
+     "failed": 7,
+     "cloud_failed": 7,
+     "spend_usd": 0.006359200000000001,
+     "wasted_spend_usd": 0.0026927,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 12.560891965164775,
+      "mean_power_w": 56.50032784810127,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 58.244303797468355,
+      "throttled_sample_share": 0.2949367088607595,
+      "wh_per_request": 0.041869639883882585,
+      "wh_per_slo_met_local_request": 0.04925839986339127,
+      "spearman_temp_vs_local_ttft": 0.4048269305600518
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 18,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 18,
+      "discretionary": 1,
+      "safety_overrides": 22,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 29,
+      "exempt_probes": 6,
+      "failed_cloud_calls": 7,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 4
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.2,
+      "p95_ttft_ms": 7422.268399997847,
+      "cloud_share": 0.1,
+      "failed": 6,
+      "cloud_failed": 6,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.25,
+      "p95_ttft_ms": 10104.048900000635,
+      "cloud_share": 0.18333333333333332,
+      "failed": 1,
+      "cloud_failed": 1,
+      "spend_usd": 0.0024207,
+      "wasted_spend_usd": 0.0024206999999999996,
+      "budget_denials": 0
+     }
+    },
+    "269": {
+     "n": 300,
+     "violation_rate": 0.20333333333333334,
+     "p95_ttft_ms": 9519.501300004777,
+     "cloud_share": 0.18,
+     "failed": 9,
+     "cloud_failed": 9,
+     "spend_usd": 0.017244500000000003,
+     "wasted_spend_usd": 0.004063300000000001,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 16.415737478146518,
+      "mean_power_w": 70.95787941534714,
+      "max_temp_c": 76.0,
+      "mean_temp_c": 62.49573690621194,
+      "throttled_sample_share": 0.49086479902557856,
+      "wh_per_request": 0.05471912492715506,
+      "wh_per_slo_met_local_request": 0.07930307960457256,
+      "spearman_temp_vs_local_ttft": 0.41943172436280707
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 39,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 39,
+      "discretionary": 8,
+      "safety_overrides": 37,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 54,
+      "exempt_probes": 9,
+      "failed_cloud_calls": 9,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 5
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.45,
+      "p95_ttft_ms": 9019.974000002549,
+      "cloud_share": 0.13333333333333333,
+      "failed": 8,
+      "cloud_failed": 8,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.21666666666666667,
+      "p95_ttft_ms": 9985.907500005851,
+      "cloud_share": 0.2,
+      "failed": 1,
+      "cloud_failed": 1,
+      "spend_usd": 0.0034144000000000006,
+      "wasted_spend_usd": 0.0034144000000000006,
+      "budget_denials": 0
+     }
+    },
+    "271": {
+     "n": 300,
+     "violation_rate": 0.06,
+     "p95_ttft_ms": 3677.4934999994002,
+     "cloud_share": 0.04,
+     "failed": 5,
+     "cloud_failed": 5,
+     "spend_usd": 0.0016505,
+     "wasted_spend_usd": 0.0007025000000000001,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 10.287501892646882,
+      "mean_power_w": 49.29462516733601,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 59.111111111111114,
+      "throttled_sample_share": 0.27309236947791166,
+      "wh_per_request": 0.03429167297548961,
+      "wh_per_slo_met_local_request": 0.03713899600233531,
+      "spearman_temp_vs_local_ttft": 0.4605254995769383
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 3,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 3,
+      "discretionary": 1,
+      "safety_overrides": 6,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 12,
+      "exempt_probes": 5,
+      "failed_cloud_calls": 5,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 3
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.13333333333333333,
+      "p95_ttft_ms": 4089.377299998887,
+      "cloud_share": 0.08333333333333333,
+      "failed": 5,
+      "cloud_failed": 5,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.08333333333333333,
+      "p95_ttft_ms": 4352.215600003547,
+      "cloud_share": 0.016666666666666666,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.0005685000000000001,
+      "wasted_spend_usd": 0.0005685000000000001,
+      "budget_denials": 0
+     }
+    },
+    "277": {
+     "n": 300,
+     "violation_rate": 0.10666666666666667,
+     "p95_ttft_ms": 4668.024200000218,
+     "cloud_share": 0.056666666666666664,
+     "failed": 5,
+     "cloud_failed": 5,
+     "spend_usd": 0.0038849,
+     "wasted_spend_usd": 0.0004604000000000001,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 13.219682850520213,
+      "mean_power_w": 62.13574770039423,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 59.37450722733246,
+      "throttled_sample_share": 0.328515111695138,
+      "wh_per_request": 0.04406560950173404,
+      "wh_per_slo_met_local_request": 0.051041246527105066,
+      "spearman_temp_vs_local_ttft": 0.43738477901463857
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "billable",
+      "limit": 90,
+      "observed": 8,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 8,
+      "discretionary": 5,
+      "safety_overrides": 6,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 17,
+      "exempt_probes": 6,
+      "failed_cloud_calls": 5,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 6
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.15,
+      "p95_ttft_ms": 4355.96169999917,
+      "cloud_share": 0.06666666666666667,
+      "failed": 4,
+      "cloud_failed": 4,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.15,
+      "p95_ttft_ms": 8050.450800001272,
+      "cloud_share": 0.05,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.0004604000000000001,
+      "wasted_spend_usd": 0.0004604000000000001,
+      "budget_denials": 0
+     }
+    }
+   },
+   "v2": {
+    "257": {
+     "n": 300,
+     "violation_rate": 0.16666666666666666,
+     "p95_ttft_ms": 7462.144700002682,
+     "cloud_share": 0.3,
+     "failed": 12,
+     "cloud_failed": 12,
+     "spend_usd": 0.0171099,
+     "wasted_spend_usd": 0.0032008,
+     "budget_denials": 5,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 12.548555327074098,
+      "mean_power_w": 54.84294132653061,
+      "max_temp_c": 72.0,
+      "mean_temp_c": 53.55994897959184,
+      "throttled_sample_share": 0.1951530612244898,
+      "wh_per_request": 0.04182851775691366,
+      "wh_per_slo_met_local_request": 0.06783002879499513,
+      "spearman_temp_vs_local_ttft": 0.530690193090718
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 3,
+      "safety_overrides": 87,
+      "denials": 5
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 12,
+      "budget_denied": 5,
+      "first_budget_denial_pos": 295,
+      "breaker_opens": 9
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.3,
+      "p95_ttft_ms": 5315.88069999998,
+      "cloud_share": 0.15,
+      "failed": 9,
+      "cloud_failed": 9,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.25,
+      "p95_ttft_ms": 9396.740600001067,
+      "cloud_share": 0.18333333333333332,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.0030249000000000005,
+      "wasted_spend_usd": 0.0030249000000000005,
+      "budget_denials": 0
+     }
+    },
+    "263": {
+     "n": 300,
+     "violation_rate": 0.15,
+     "p95_ttft_ms": 8222.348800001782,
+     "cloud_share": 0.3,
+     "failed": 6,
+     "cloud_failed": 6,
+     "spend_usd": 0.023756700000000002,
+     "wasted_spend_usd": 0.005370700000000001,
+     "budget_denials": 12,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 13.360284690588845,
+      "mean_power_w": 58.262221938775525,
+      "max_temp_c": 72.0,
+      "mean_temp_c": 52.75127551020408,
+      "throttled_sample_share": 0.22448979591836735,
+      "wh_per_request": 0.04453428230196282,
+      "wh_per_slo_met_local_request": 0.07106534409887684,
+      "spearman_temp_vs_local_ttft": 0.4206876265936595
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 0,
+      "safety_overrides": 90,
+      "denials": 12
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 6,
+      "budget_denied": 12,
+      "first_budget_denial_pos": 280,
+      "breaker_opens": 9
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.26666666666666666,
+      "p95_ttft_ms": 7370.581099996343,
+      "cloud_share": 0.1,
+      "failed": 6,
+      "cloud_failed": 6,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.2833333333333333,
+      "p95_ttft_ms": 9453.56349999929,
+      "cloud_share": 0.23333333333333334,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.0046312,
+      "wasted_spend_usd": 0.0046312,
+      "budget_denials": 0
+     }
+    },
+    "269": {
+     "n": 300,
+     "violation_rate": 0.31,
+     "p95_ttft_ms": 11634.129099998972,
+     "cloud_share": 0.3,
+     "failed": 4,
+     "cloud_failed": 4,
+     "spend_usd": 0.0319136,
+     "wasted_spend_usd": 0.0,
+     "budget_denials": 201,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 19.277326056997545,
+      "mean_power_w": 80.45986813186813,
+      "max_temp_c": 76.0,
+      "mean_temp_c": 58.643467643467645,
+      "throttled_sample_share": 0.4627594627594628,
+      "wh_per_request": 0.06425775352332515,
+      "wh_per_slo_met_local_request": 0.15931674427270698,
+      "spearman_temp_vs_local_ttft": 0.520902274599033
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 2,
+      "safety_overrides": 88,
+      "denials": 201
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 4,
+      "budget_denied": 201,
+      "first_budget_denial_pos": 99,
+      "breaker_opens": 0
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.5333333333333333,
+      "p95_ttft_ms": 10439.421400005813,
+      "cloud_share": 0.05,
+      "failed": 3,
+      "cloud_failed": 3,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 57
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.23333333333333334,
+      "p95_ttft_ms": 7013.8587999972515,
+      "cloud_share": 0.0,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 60
+     }
+    },
+    "271": {
+     "n": 300,
+     "violation_rate": 0.11666666666666667,
+     "p95_ttft_ms": 6235.710200002359,
+     "cloud_share": 0.27666666666666667,
+     "failed": 8,
+     "cloud_failed": 8,
+     "spend_usd": 0.013807900000000003,
+     "wasted_spend_usd": 0.0026453000000000006,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 14.592891262521908,
+      "mean_power_w": 66.80280862533692,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 55.33827493261455,
+      "throttled_sample_share": 0.2183288409703504,
+      "wh_per_request": 0.04864297087507303,
+      "wh_per_slo_met_local_request": 0.07188616385478773,
+      "spearman_temp_vs_local_ttft": 0.43002879685892437
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 83,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 83,
+      "discretionary": 2,
+      "safety_overrides": 81,
+      "denials": 0
+     },
+     "mechanism": {
+      "cloud_calls": 83,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 8,
+      "budget_denied": 0,
+      "first_budget_denial_pos": null,
+      "breaker_opens": 7
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.25,
+      "p95_ttft_ms": 5472.381899999164,
+      "cloud_share": 0.11666666666666667,
+      "failed": 7,
+      "cloud_failed": 7,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.25,
+      "p95_ttft_ms": 9486.062199997832,
+      "cloud_share": 0.2,
+      "failed": 1,
+      "cloud_failed": 1,
+      "spend_usd": 0.0024235000000000003,
+      "wasted_spend_usd": 0.0024235000000000003,
+      "budget_denials": 0
+     }
+    },
+    "277": {
+     "n": 300,
+     "violation_rate": 0.12333333333333334,
+     "p95_ttft_ms": 5104.561000000103,
+     "cloud_share": 0.3,
+     "failed": 9,
+     "cloud_failed": 9,
+     "spend_usd": 0.0213889,
+     "wasted_spend_usd": 0.0017749,
+     "budget_denials": 65,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 15.544729080554777,
+      "mean_power_w": 69.95286887417218,
+      "max_temp_c": 73.0,
+      "mean_temp_c": 52.40662251655629,
+      "throttled_sample_share": 0.23973509933774834,
+      "wh_per_request": 0.05181576360184926,
+      "wh_per_slo_met_local_request": 0.08224724381245914,
+      "spearman_temp_vs_local_ttft": 0.48985540685115503
+     },
+     "quota": {
+      "enforced": true,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 90,
+      "compliant": true
+     },
+     "artifact_hash_ok": true,
+     "budget": {
+      "cap": 90,
+      "total_cloud": 90,
+      "discretionary": 4,
+      "safety_overrides": 86,
+      "denials": 65
+     },
+     "mechanism": {
+      "cloud_calls": 90,
+      "exempt_probes": 0,
+      "failed_cloud_calls": 9,
+      "budget_denied": 65,
+      "first_budget_denial_pos": 187,
+      "breaker_opens": 5
+     },
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.18333333333333332,
+      "p95_ttft_ms": 3455.0900000031106,
+      "cloud_share": 0.15,
+      "failed": 9,
+      "cloud_failed": 9,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 0.13333333333333333,
+      "p95_ttft_ms": 6512.093899997126,
+      "cloud_share": 0.0,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 54
+     }
+    }
+   },
+   "ungoverned": {
+    "257": {
+     "n": 300,
+     "violation_rate": 0.44333333333333336,
+     "p95_ttft_ms": 8624.199400001089,
+     "cloud_share": 0.75,
+     "failed": 63,
+     "cloud_failed": 63,
+     "spend_usd": 0.035376000000000005,
+     "wasted_spend_usd": 0.014599400000000002,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 13.155833549438515,
+      "mean_power_w": 55.1536025974026,
+      "max_temp_c": 68.0,
+      "mean_temp_c": 42.164935064935065,
+      "throttled_sample_share": 0.06103896103896104,
+      "wh_per_request": 0.04385277849812839,
+      "wh_per_slo_met_local_request": 0.1852934302737819,
+      "spearman_temp_vs_local_ttft": 0.395373326954863
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 225,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null,
+     "outage": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": null,
+      "cloud_share": 1.0,
+      "failed": 60,
+      "cloud_failed": 60,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": 9565.900699999474,
+      "cloud_share": 1.0,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.013599800000000002,
+      "wasted_spend_usd": 0.013599800000000002,
+      "budget_denials": 0
+     }
+    },
+    "263": {
+     "n": 300,
+     "violation_rate": 0.4266666666666667,
+     "p95_ttft_ms": 9502.021599997533,
+     "cloud_share": 0.82,
+     "failed": 60,
+     "cloud_failed": 60,
+     "spend_usd": 0.0495906,
+     "wasted_spend_usd": 0.016353600000000003,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 18.92841621855875,
+      "mean_power_w": 78.29072845953002,
+      "max_temp_c": 70.0,
+      "mean_temp_c": 41.315926892950394,
+      "throttled_sample_share": 0.06919060052219321,
+      "wh_per_request": 0.06309472072852916,
+      "wh_per_slo_met_local_request": 0.37114541605017154,
+      "spearman_temp_vs_local_ttft": 0.5348762007282477
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 246,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null,
+     "outage": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": null,
+      "cloud_share": 1.0,
+      "failed": 60,
+      "cloud_failed": 60,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": 9615.59490000218,
+      "cloud_share": 1.0,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.015490500000000003,
+      "wasted_spend_usd": 0.015490500000000003,
+      "budget_denials": 0
+     }
+    },
+    "269": {
+     "n": 300,
+     "violation_rate": 0.44,
+     "p95_ttft_ms": 9525.312000005215,
+     "cloud_share": 0.97,
+     "failed": 63,
+     "cloud_failed": 63,
+     "spend_usd": 0.0859097,
+     "wasted_spend_usd": 0.023278600000000003,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 21.988039111838372,
+      "mean_power_w": 86.60344866920154,
+      "max_temp_c": 70.0,
+      "mean_temp_c": 35.949302915082384,
+      "throttled_sample_share": 0.020278833967046894,
+      "wh_per_request": 0.07329346370612791,
+      "wh_per_slo_met_local_request": 4.397607822367674,
+      "spearman_temp_vs_local_ttft": 0.7949860383179369
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 291,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null,
+     "outage": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": null,
+      "cloud_share": 1.0,
+      "failed": 60,
+      "cloud_failed": 60,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": 9873.898100006045,
+      "cloud_share": 1.0,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.021049300000000003,
+      "wasted_spend_usd": 0.021049300000000003,
+      "budget_denials": 0
+     }
+    },
+    "271": {
+     "n": 300,
+     "violation_rate": 0.3933333333333333,
+     "p95_ttft_ms": 9573.582599994552,
+     "cloud_share": 0.6633333333333333,
+     "failed": 54,
+     "cloud_failed": 54,
+     "spend_usd": 0.030014199999999998,
+     "wasted_spend_usd": 0.014014300000000002,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 14.743561154627802,
+      "mean_power_w": 65.31732373113854,
+      "max_temp_c": 72.0,
+      "mean_temp_c": 45.242798353909464,
+      "throttled_sample_share": 0.09602194787379972,
+      "wh_per_request": 0.04914520384875934,
+      "wh_per_slo_met_local_request": 0.1504445015778347,
+      "spearman_temp_vs_local_ttft": 0.29828413703372475
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 199,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null,
+     "outage": {
+      "n": 60,
+      "violation_rate": 0.9166666666666666,
+      "p95_ttft_ms": 5208.9970000015455,
+      "cloud_share": 0.9,
+      "failed": 54,
+      "cloud_failed": 54,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": 14330.748200001835,
+      "cloud_share": 1.0,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.0138803,
+      "wasted_spend_usd": 0.0138803,
+      "budget_denials": 0
+     }
+    },
+    "277": {
+     "n": 300,
+     "violation_rate": 0.4266666666666667,
+     "p95_ttft_ms": 9504.723499994725,
+     "cloud_share": 0.9066666666666666,
+     "failed": 61,
+     "cloud_failed": 61,
+     "spend_usd": 0.05428000000000001,
+     "wasted_spend_usd": 0.0159987,
+     "budget_denials": 0,
+     "energy": {
+      "available": true,
+      "gpu_energy_wh": 27.979488954216077,
+      "mean_power_w": 118.9007016348774,
+      "max_temp_c": 72.0,
+      "mean_temp_c": 37.32561307901907,
+      "throttled_sample_share": 0.043596730245231606,
+      "wh_per_request": 0.09326496318072025,
+      "wh_per_slo_met_local_request": 1.0761341905467723,
+      "spearman_temp_vs_local_ttft": 0.5047365545546654
+     },
+     "quota": {
+      "enforced": false,
+      "counts": "all_dispatches",
+      "limit": 90,
+      "observed": 272,
+      "compliant": false
+     },
+     "artifact_hash_ok": null,
+     "budget": null,
+     "outage": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": null,
+      "cloud_share": 1.0,
+      "failed": 60,
+      "cloud_failed": 60,
+      "spend_usd": 0.0,
+      "wasted_spend_usd": 0.0,
+      "budget_denials": 0
+     },
+     "spike": {
+      "n": 60,
+      "violation_rate": 1.0,
+      "p95_ttft_ms": 11186.424999992596,
+      "cloud_share": 1.0,
+      "failed": 0,
+      "cloud_failed": 0,
+      "spend_usd": 0.014832000000000001,
+      "wasted_spend_usd": 0.014832000000000001,
+      "budget_denials": 0
+     }
+    }
+   }
+  },
+  "v4_vs_v2": {
+   "violation_diff_pp": -5.133333333333335,
+   "violation_diff_ci95": [
+    -8.133333333333331,
+    -2.8
+   ],
+   "p95_ratio": 0.7250689619170197,
+   "p95_ratio_ci95": [
+    0.5938330293350974,
+    0.911860453454602
+   ],
+   "per_seed_diff_pp": {
+    "257": -4.333333333333332,
+    "263": -3.3333333333333326,
+    "269": -10.666666666666666,
+    "271": -5.666666666666667,
+    "277": -1.6666666666666663
+   },
+   "seed_support": 5,
+   "decision_ms_added": 0.0011000010999850929,
+   "sign_flip_permutation_p_two_sided": 0.0625,
+   "gates": {
+    "G1_seed_support": true,
+    "G2_slo_bound": true,
+    "G3_tail_gain": true,
+    "G4_no_regression": true,
+    "G5_decision_cap": true
+   },
+   "promote": true
+  },
+  "v4_vs_ungoverned": {
+   "violation_diff_pp": -30.4,
+   "violation_diff_ci95": [
+    -32.599999999999994,
+    -27.0
+   ],
+   "p95_ratio": 0.6247268994996859,
+   "p95_ratio_ci95": [
+    0.43748366792854904,
+    0.8683249835094159
+   ],
+   "per_seed_diff_pp": {
+    "257": -32.0,
+    "263": -31.000000000000007,
+    "269": -23.666666666666668,
+    "271": -33.33333333333333,
+    "277": -32.0
+   },
+   "seed_support": 5,
+   "decision_ms_added": 0.011100004485342652,
+   "sign_flip_permutation_p_two_sided": 0.0625,
+   "gates": {
+    "G1_seed_support": true,
+    "G2_slo_bound": true,
+    "G3_tail_gain": true,
+    "G4_no_regression": true,
+    "G5_decision_cap": true
+   },
+   "promote": true
+  },
+  "pooled": {
+   "v4": {
+    "violation_rate": 0.122,
+    "p95_ttft_ms": 5903.686979998382,
+    "spend_usd": 0.031414300000000006,
+    "failed": 32,
+    "usd_per_slo_met_x1e4": 0.23852923310554297,
+    "wh_per_slo_met": 0.04868399086465412,
+    "cloud_share": 0.086,
+    "quota_compliant_runs": 5,
+    "slo_guarantee_runs": 1,
+    "violation_ci95_over_seeds": {
+     "point": 0.122,
+     "ci95": [
+      0.084,
+      0.168
+     ]
+    }
+   },
+   "v2": {
+    "violation_rate": 0.17333333333333334,
+    "p95_ttft_ms": 8142.242035005255,
+    "spend_usd": 0.107977,
+    "failed": 39,
+    "usd_per_slo_met_x1e4": 0.8707822580645161,
+    "wh_per_slo_met": 0.06074498904656223,
+    "cloud_share": 0.29533333333333334,
+    "quota_compliant_runs": 5,
+    "slo_guarantee_runs": 0,
+    "violation_ci95_over_seeds": {
+     "point": 0.17333333333333334,
+     "ci95": [
+      0.126,
+      0.244
+     ]
+    }
+   },
+   "ungoverned": {
+    "violation_rate": 0.426,
+    "p95_ttft_ms": 9450.028459998066,
+    "spend_usd": 0.2551705,
+    "failed": 301,
+    "usd_per_slo_met_x1e4": 2.9636527293844366,
+    "wh_per_slo_met": 0.11242199650253136,
+    "cloud_share": 0.8219999999999998,
+    "quota_compliant_runs": 0,
+    "slo_guarantee_runs": 0,
+    "violation_ci95_over_seeds": {
+     "point": 0.426,
+     "ci95": [
+      0.4093333333333333,
+      0.43933333333333335
+     ]
+    }
+   }
+  },
+  "breaker": {
+   "V4F_s257_synthetic_v4_governor": {
+    "n_transitions": 15,
+    "outage_detect_s": 2.53,
+    "outage_recover_s": 469.85,
+    "final_state": "closed"
+   },
+   "V4F_s257_synthetic_guarded_governor": {
+    "n_transitions": 20,
+    "outage_detect_s": 2.53,
+    "outage_recover_s": 227.51,
+    "final_state": "closed"
+   },
+   "V4F_s263_real_sample_guarded_governor": {
+    "n_transitions": 20,
+    "outage_detect_s": 0.72,
+    "outage_recover_s": 185.88,
+    "final_state": "closed"
+   },
+   "V4F_s263_real_sample_v4_governor": {
+    "n_transitions": 9,
+    "outage_detect_s": 1.82,
+    "outage_recover_s": 175.01,
+    "final_state": "half-open"
+   },
+   "V4F_s269_reasoning_coding_v4_governor": {
+    "n_transitions": 12,
+    "outage_detect_s": 5.85,
+    "outage_recover_s": 213.31,
+    "final_state": "closed"
+   },
+   "V4F_s269_reasoning_coding_guarded_governor": {
+    "n_transitions": 0,
+    "final_state": "closed"
+   },
+   "V4F_s271_synthetic_v4_governor": {
+    "n_transitions": 7,
+    "outage_detect_s": 66.7,
+    "outage_recover_s": 337.96,
+    "final_state": "closed"
+   },
+   "V4F_s271_synthetic_guarded_governor": {
+    "n_transitions": 16,
+    "outage_detect_s": 19.73,
+    "outage_recover_s": 137.52,
+    "final_state": "closed"
+   },
+   "V4F_s277_real_sample_guarded_governor": {
+    "n_transitions": 11,
+    "outage_detect_s": 1.89,
+    "outage_recover_s": 233.83,
+    "final_state": "closed"
+   },
+   "V4F_s277_real_sample_v4_governor": {
+    "n_transitions": 12,
+    "outage_detect_s": 79.52,
+    "final_state": "half-open"
+   }
+  }
+ },
+ "B5": {
+  "guarded_governor": {
+   "seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+   ],
+   "violation": {
+    "point": 0.21066666666666667,
+    "ci95": [
+     0.16066666666666668,
+     0.2946666666666667
+    ]
+   },
+   "failed_per_run": {
+    "point": 7.6,
+    "ci95": [
+     6.6,
+     8.4
+    ]
+   },
+   "wasted_usd_per_run": {
+    "point": 0.00212984,
+    "ci95": [
+     0.0007617200000000001,
+     0.004081340000000001
+    ]
+   }
+  },
+  "tail_aware": {
+   "seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+   ],
+   "violation": {
+    "point": 0.42333333333333334,
+    "ci95": [
+     0.398,
+     0.44066666666666665
+    ]
+   },
+   "failed_per_run": {
+    "point": 57.6,
+    "ci95": [
+     48.2,
+     62.6
+    ]
+   },
+   "wasted_usd_per_run": {
+    "point": 0.016792060000000004,
+    "ci95": [
+     0.014440920000000001,
+     0.020881300000000002
+    ]
+   }
+  }
+ },
+ "C5": {
+  "guarded_governor": {
+   "seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+   ],
+   "violation": {
+    "point": 0.12,
+    "ci95": [
+     0.058,
+     0.223
+    ]
+   },
+   "failed_per_run": {
+    "point": 1.0,
+    "ci95": [
+     0.2,
+     1.8
+    ]
+   },
+   "wasted_usd_per_run": {
+    "point": 0.0011337600000000001,
+    "ci95": [
+     0.00029710000000000007,
+     0.00197042
+    ]
+   },
+   "degraded_phase_violation": {
+    "point": 0.13,
+    "ci95": [
+     0.055,
+     0.2
+    ]
+   }
+  },
+  "tail_aware": {
+   "seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+   ],
+   "violation": {
+    "point": 0.252,
+    "ci95": [
+     0.246,
+     0.261
+    ]
+   },
+   "failed_per_run": {
+    "point": 1.0,
+    "ci95": [
+     0.2,
+     2.0
+    ]
+   },
+   "wasted_usd_per_run": {
+    "point": 0.010460720000000001,
+    "ci95": [
+     0.009075040000000003,
+     0.01179154
+    ]
+   },
+   "degraded_phase_violation": {
+    "point": 1.0,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   }
+  }
+ },
+ "V4D": {
+  "v4": {
+   "seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+   ],
+   "violation": {
+    "point": 0.12,
+    "ci95": [
+     0.063,
+     0.211
+    ]
+   },
+   "degraded_phase_violation": {
+    "point": 0.15,
+    "ci95": [
+     0.07,
+     0.21
+    ]
+   },
+   "per_seed": {
+    "101": {
+     "violation": 0.295,
+     "degraded_violation": 0.2,
+     "cloud_share": 0.2,
+     "failed": 3
+    },
+    "13": {
+     "violation": 0.045,
+     "degraded_violation": 0.0,
+     "cloud_share": 0.2,
+     "failed": 1
+    },
+    "23": {
+     "violation": 0.085,
+     "degraded_violation": 0.2,
+     "cloud_share": 0.135,
+     "failed": 1
+    },
+    "42": {
+     "violation": 0.075,
+     "degraded_violation": 0.125,
+     "cloud_share": 0.14,
+     "failed": 1
+    },
+    "7": {
+     "violation": 0.1,
+     "degraded_violation": 0.225,
+     "cloud_share": 0.21,
+     "failed": 1
+    }
+   },
+   "mechanism": {
+    "101": {
+     "cloud_calls": 40,
+     "exempt_probes": 3,
+     "failed_cloud_calls": 3,
+     "budget_denied": 0,
+     "first_budget_denial_pos": null,
+     "breaker_opens": 2,
+     "breaker_opened_in_degraded_phase": true,
+     "degraded_detect_s": 70.02
+    },
+    "13": {
+     "cloud_calls": 40,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 1,
+     "budget_denied": 0,
+     "first_budget_denial_pos": null,
+     "breaker_opens": 0,
+     "breaker_opened_in_degraded_phase": false,
+     "degraded_detect_s": null
+    },
+    "23": {
+     "cloud_calls": 27,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 1,
+     "budget_denied": 0,
+     "first_budget_denial_pos": null,
+     "breaker_opens": 1,
+     "breaker_opened_in_degraded_phase": true,
+     "degraded_detect_s": 77.72
+    },
+    "42": {
+     "cloud_calls": 28,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 1,
+     "budget_denied": 0,
+     "first_budget_denial_pos": null,
+     "breaker_opens": 1,
+     "breaker_opened_in_degraded_phase": true,
+     "degraded_detect_s": 23.08
+    },
+    "7": {
+     "cloud_calls": 42,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 1,
+     "budget_denied": 0,
+     "first_budget_denial_pos": null,
+     "breaker_opens": 1,
+     "breaker_opened_in_degraded_phase": true,
+     "degraded_detect_s": 18.81
+    }
+   }
+  },
+  "v2": {
+   "seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+   ],
+   "violation": {
+    "point": 0.12,
+    "ci95": [
+     0.058,
+     0.223
+    ]
+   },
+   "degraded_phase_violation": {
+    "point": 0.13,
+    "ci95": [
+     0.055,
+     0.2
+    ]
+   },
+   "per_seed": {
+    "13": {
+     "violation": 0.045,
+     "degraded_violation": 0.0,
+     "cloud_share": 0.3,
+     "failed": 1
+    },
+    "42": {
+     "violation": 0.08,
+     "degraded_violation": 0.15,
+     "cloud_share": 0.3,
+     "failed": 0
+    },
+    "7": {
+     "violation": 0.065,
+     "degraded_violation": 0.075,
+     "cloud_share": 0.3,
+     "failed": 2
+    },
+    "101": {
+     "violation": 0.32,
+     "degraded_violation": 0.2,
+     "cloud_share": 0.215,
+     "failed": 2
+    },
+    "23": {
+     "violation": 0.09,
+     "degraded_violation": 0.225,
+     "cloud_share": 0.3,
+     "failed": 0
+    }
+   },
+   "mechanism": {
+    "13": {
+     "cloud_calls": 60,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 1,
+     "budget_denied": 48,
+     "first_budget_denial_pos": 147,
+     "breaker_opens": 0,
+     "breaker_opened_in_degraded_phase": false,
+     "degraded_detect_s": null
+    },
+    "42": {
+     "cloud_calls": 60,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 0,
+     "budget_denied": 46,
+     "first_budget_denial_pos": 154,
+     "breaker_opens": 0,
+     "breaker_opened_in_degraded_phase": false,
+     "degraded_detect_s": null
+    },
+    "7": {
+     "cloud_calls": 60,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 2,
+     "budget_denied": 53,
+     "first_budget_denial_pos": 147,
+     "breaker_opens": 0,
+     "breaker_opened_in_degraded_phase": false,
+     "degraded_detect_s": null
+    },
+    "101": {
+     "cloud_calls": 43,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 2,
+     "budget_denied": 0,
+     "first_budget_denial_pos": null,
+     "breaker_opens": 3,
+     "breaker_opened_in_degraded_phase": true,
+     "degraded_detect_s": 17.52
+    },
+    "23": {
+     "cloud_calls": 60,
+     "exempt_probes": 0,
+     "failed_cloud_calls": 0,
+     "budget_denied": 49,
+     "first_budget_denial_pos": 151,
+     "breaker_opens": 0,
+     "breaker_opened_in_degraded_phase": false,
+     "degraded_detect_s": null
+    }
+   }
+  },
+  "ungoverned": {
+   "seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+   ],
+   "violation": {
+    "point": 0.252,
+    "ci95": [
+     0.246,
+     0.261
+    ]
+   },
+   "degraded_phase_violation": {
+    "point": 1.0,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "per_seed": {
+    "13": {
+     "violation": 0.245,
+     "degraded_violation": 1.0,
+     "cloud_share": 0.57,
+     "failed": 0
+    },
+    "42": {
+     "violation": 0.245,
+     "degraded_violation": 1.0,
+     "cloud_share": 0.53,
+     "failed": 1
+    },
+    "7": {
+     "violation": 0.25,
+     "degraded_violation": 1.0,
+     "cloud_share": 0.565,
+     "failed": 1
+    },
+    "101": {
+     "violation": 0.27,
+     "degraded_violation": 1.0,
+     "cloud_share": 0.595,
+     "failed": 3
+    },
+    "23": {
+     "violation": 0.25,
+     "degraded_violation": 1.0,
+     "cloud_share": 0.545,
+     "failed": 0
+    }
+   }
+  },
+  "v4_minus_v2_pp_per_seed": {
+   "7": 3.5000000000000004,
+   "13": 0.0,
+   "23": -0.49999999999999906,
+   "42": -0.5000000000000004,
+   "101": -2.500000000000002
+  },
+  "v4_minus_v2_sign_flip_p": 1.0,
+  "v4_minus_ungoverned_pp_per_seed": {
+   "7": -15.0,
+   "13": -20.0,
+   "23": -16.499999999999996,
+   "42": -17.0,
+   "101": 2.4999999999999964
+  },
+  "v4_minus_ungoverned_sign_flip_p": 0.125
+ }
+}

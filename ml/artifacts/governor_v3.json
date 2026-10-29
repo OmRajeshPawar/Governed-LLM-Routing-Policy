@@ -1,0 +1,34 @@
+{
+  "schema_version": "governor-v1",
+  "artifact_id": "apex-paced-fresh-exploratory-2026-09-15",
+  "created_utc": "2026-09-15T19:09:57.681252+00:00",
+  "regime_map": {
+    "low": "tail_aware",
+    "medium": "tail_aware",
+    "high": "tail_aware",
+    "burst": "tail_aware"
+  },
+  "thresholds": {
+    "tail_aware": 4.986486535529362,
+    "ml_ttft": 0.5,
+    "ml_dual_risk": 0.5
+  },
+  "promotion_status": {
+    "status": "exploratory_candidate_not_promoted",
+    "reason": "Candidate designed from the diagnosis of preregistered live experiment A; exploratory evidence cannot promote it (3 seeds < 5 required by the bar).",
+    "changes": {
+      "budget": "paced: released = min(cap, floor(0.30 * arrivals) + ceil(0.05 * episode))",
+      "hard_override": "rolling-P95 hard breach applies only when the local tier is busy (pending >= 1 or all concurrency slots active); queue hard cap unchanged"
+    },
+    "derived_from_artifact_sha256": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+    "confirmatory_data_used": "diagnosis used preregistered experiment A outcomes"
+  },
+  "development_seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+  ],
+  "protocol_sha256": "ba93bb5c812280942075df31eaeb328b7fb73bcef5fa04d58908f973ef14a74e"
+}

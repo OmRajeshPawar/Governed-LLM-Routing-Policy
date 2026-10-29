@@ -1,0 +1,37 @@
+# Routing agreement for the APEX-LLM local-first gateway.
+# Structure modelled on SLA4OAI (Gamez-Diaz, Fernandez, Ruiz-Cortes, ICSOC 2019):
+# context, metrics, plans with guarantees and quotas, plus a governance block
+# that binds the agreement to the frozen routing artifact and its promotion bar.
+context:
+  id: apex-llm-routing-agreement-v4
+  version: 1.0.0
+  api: local-first LLM gateway (llama3.1:8b local tier, Gemini 2.5 Flash cloud tier)
+  provider: APEX-LLM governor
+metrics:
+  ttft_ms: {type: float, unit: ms, description: end-to-end time to first token per request, all routes}
+  ttft_violation: {type: boolean, description: "ttft_ms above threshold, or request failed"}
+  cloud_calls: {type: integer, description: requests dispatched to the cloud tier per episode}
+  cloud_spend_usd: {type: float, unit: USD, description: estimated Gemini spend across the study}
+  cloud_dispatch_while_open: {type: integer, description: cloud dispatches while the breaker is open}
+plans:
+  local_first:
+    guarantees:
+      ttft_slo: {metric: ttft_violation, threshold_ms: 3839.5, max_violation_rate: 0.10, scope: episode}
+    quotas:
+      cloud_calls: {metric: cloud_calls, max_fraction_of_episode: 0.30, enforcement: hard, counts: billable}
+      cloud_spend: {metric: cloud_spend_usd, max_usd_study: 20.0, enforcement: kill_switch}
+governance:
+  artifact:
+    path: ml/artifacts/governor_v4.json
+    sha256: d3b48bfa0f66dcfba0b4005bdb1d0ea30b60b2d773c416b8f8730996092ff27d
+  breaker:
+    rule: no cloud dispatch while open
+    open_on: {consecutive_failures: 3, latency_multiplier_of_frozen_p95: 2.0}
+    cooldown: {seconds: 30, arrivals: 10}
+    close_after_half_open_successes: 3
+  promotion_bar:
+    seed_support: at least as good in >= 4 of 5 seeds
+    slo_bound: upper 95% CI of violation difference <= +1.0 point
+    tail_gain: P95 TTFT ratio <= 0.95 with CI upper bound < 1.00
+    no_regression: no seed x mix cell more than 5 points worse
+    decision_cap_ms: 5

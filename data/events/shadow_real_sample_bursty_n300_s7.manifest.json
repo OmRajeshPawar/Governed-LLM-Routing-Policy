@@ -1,0 +1,76 @@
+{
+  "schema_version": "1",
+  "feature_version": "1",
+  "config": {
+    "seed": 7,
+    "providers": {
+      "local": {
+        "model": "llama3.1:8b",
+        "keep_alive": -1,
+        "num_gpu": null,
+        "cost_per_1k_tokens": 0.0,
+        "extra_latency_ms": 0.0
+      },
+      "cloud": {
+        "mode": "calibrated",
+        "calibration_model": "gemma4:e2b",
+        "base_ttft_ms": null,
+        "per_token_ms": null,
+        "network_rtt_ms": 60.0,
+        "jitter_sigma": 0.15,
+        "speed_ratio": 1.0,
+        "cost_per_1k_tokens": 0.5,
+        "est_output_tokens_source": "ingress_only",
+        "keep_alive": -1,
+        "num_gpu": 0
+      }
+    },
+    "local_concurrency": 2,
+    "generation": {
+      "temperature": 0.0,
+      "default_max_tokens": 256
+    },
+    "targets": {
+      "sla_ttft_ms": 1800.0,
+      "occupancy_service_ms": 3000.0
+    },
+    "rolling": {
+      "window": 50,
+      "min_samples": 8,
+      "ewma_alpha": 0.3
+    },
+    "policies": {
+      "queue_threshold": 3,
+      "tail_aware_pressure_threshold": 1.0,
+      "ml_ttft_threshold": 0.5,
+      "ml_occupancy_threshold": 0.5,
+      "semantic_embedding_threshold": 1.0,
+      "local_llm_probe_threshold": 0.75,
+      "thinking_probe_threshold": 0.85
+    },
+    "paths": {
+      "data_dir": "data",
+      "events_dir": "data/events",
+      "traces_dir": "data/traces",
+      "models_dir": "ml/artifacts",
+      "figures_dir": "analysis/figures"
+    }
+  },
+  "run_id": "shadow_real_sample_bursty_n300_s7",
+  "mode": "shadow",
+  "policy": "always_local",
+  "n_requests": 300,
+  "n_offloaded": 0,
+  "warm_load_s": 0.4,
+  "calibration": {
+    "mode": "calibrated",
+    "calibration_model": "gemma4:e2b",
+    "base_ttft_ms": 280.05,
+    "per_token_ms": 36.0986,
+    "jitter_sigma": 0.0692,
+    "n_samples": 10,
+    "fallback": false
+  },
+  "wall_clock_s": 779.85,
+  "created_unix": 1783354088.269218
+}

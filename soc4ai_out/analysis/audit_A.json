@@ -1,0 +1,582 @@
+{
+ "agreement_sha256": "b913fe0a1d7e6bb0ae756a67bacc0ce971606936e7acda34eac169be2adcaccc",
+ "n_runs": 16,
+ "reports": [
+  {
+   "run_id": "A_s211_synthetic_guarded_governor",
+   "policy": "guarded_governor",
+   "n_requests": 300,
+   "terms": {
+    "artifact_hash": {
+     "enforced": true,
+     "expected": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "observed": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "compliant": true
+    },
+    "cloud_call_quota": {
+     "enforced": true,
+     "limit": 90,
+     "observed": 90,
+     "compliant": true
+    },
+    "breaker_rule": {
+     "enforced": true,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 0,
+     "compliant": true
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.09666666666666666,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s211_synthetic_tail_aware",
+   "policy": "tail_aware",
+   "n_requests": 300,
+   "terms": {
+    "cloud_call_quota": {
+     "enforced": false,
+     "limit": 90,
+     "observed": 264,
+     "compliant": false
+    },
+    "breaker_rule": {
+     "enforced": false,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 0,
+     "compliant": null
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.03,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s223_real_sample_guarded_governor",
+   "policy": "guarded_governor",
+   "n_requests": 300,
+   "terms": {
+    "artifact_hash": {
+     "enforced": true,
+     "expected": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "observed": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "compliant": true
+    },
+    "cloud_call_quota": {
+     "enforced": true,
+     "limit": 90,
+     "observed": 90,
+     "compliant": true
+    },
+    "breaker_rule": {
+     "enforced": true,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 0,
+     "compliant": true
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.08666666666666667,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s223_real_sample_tail_aware",
+   "policy": "tail_aware",
+   "n_requests": 300,
+   "terms": {
+    "cloud_call_quota": {
+     "enforced": false,
+     "limit": 90,
+     "observed": 239,
+     "compliant": false
+    },
+    "breaker_rule": {
+     "enforced": false,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 1,
+     "compliant": null
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.02,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s227_reasoning_coding_guarded_governor",
+   "policy": "guarded_governor",
+   "n_requests": 300,
+   "terms": {
+    "artifact_hash": {
+     "enforced": true,
+     "expected": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "observed": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "compliant": true
+    },
+    "cloud_call_quota": {
+     "enforced": true,
+     "limit": 90,
+     "observed": 90,
+     "compliant": true
+    },
+    "breaker_rule": {
+     "enforced": true,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 0,
+     "compliant": true
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.53,
+     "met": false
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s227_reasoning_coding_tail_aware",
+   "policy": "tail_aware",
+   "n_requests": 300,
+   "terms": {
+    "cloud_call_quota": {
+     "enforced": false,
+     "limit": 90,
+     "observed": 290,
+     "compliant": false
+    },
+    "breaker_rule": {
+     "enforced": false,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 2,
+     "compliant": null
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.043333333333333335,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s229_synthetic_guarded_governor",
+   "policy": "guarded_governor",
+   "n_requests": 300,
+   "terms": {
+    "artifact_hash": {
+     "enforced": true,
+     "expected": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "observed": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "compliant": true
+    },
+    "cloud_call_quota": {
+     "enforced": true,
+     "limit": 90,
+     "observed": 90,
+     "compliant": true
+    },
+    "breaker_rule": {
+     "enforced": true,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 0,
+     "compliant": true
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.043333333333333335,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s229_synthetic_tail_aware",
+   "policy": "tail_aware",
+   "n_requests": 300,
+   "terms": {
+    "cloud_call_quota": {
+     "enforced": false,
+     "limit": 90,
+     "observed": 270,
+     "compliant": false
+    },
+    "breaker_rule": {
+     "enforced": false,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 3,
+     "compliant": null
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.056666666666666664,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s233_real_sample_guarded_governor",
+   "policy": "guarded_governor",
+   "n_requests": 300,
+   "terms": {
+    "artifact_hash": {
+     "enforced": true,
+     "expected": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "observed": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "compliant": true
+    },
+    "cloud_call_quota": {
+     "enforced": true,
+     "limit": 90,
+     "observed": 90,
+     "compliant": true
+    },
+    "breaker_rule": {
+     "enforced": true,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 3,
+     "compliant": true
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.13666666666666666,
+     "met": false
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s233_real_sample_tail_aware",
+   "policy": "tail_aware",
+   "n_requests": 300,
+   "terms": {
+    "cloud_call_quota": {
+     "enforced": false,
+     "limit": 90,
+     "observed": 270,
+     "compliant": false
+    },
+    "breaker_rule": {
+     "enforced": false,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 6,
+     "compliant": null
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.056666666666666664,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s239_reasoning_coding_guarded_governor",
+   "policy": "guarded_governor",
+   "n_requests": 300,
+   "terms": {
+    "artifact_hash": {
+     "enforced": true,
+     "expected": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "observed": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "compliant": true
+    },
+    "cloud_call_quota": {
+     "enforced": true,
+     "limit": 90,
+     "observed": 90,
+     "compliant": true
+    },
+    "breaker_rule": {
+     "enforced": true,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 0,
+     "compliant": true
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.36333333333333334,
+     "met": false
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s239_reasoning_coding_tail_aware",
+   "policy": "tail_aware",
+   "n_requests": 300,
+   "terms": {
+    "cloud_call_quota": {
+     "enforced": false,
+     "limit": 90,
+     "observed": 293,
+     "compliant": false
+    },
+    "breaker_rule": {
+     "enforced": false,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 2,
+     "compliant": null
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.07333333333333333,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s241_synthetic_guarded_governor",
+   "policy": "guarded_governor",
+   "n_requests": 300,
+   "terms": {
+    "artifact_hash": {
+     "enforced": true,
+     "expected": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "observed": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "compliant": true
+    },
+    "cloud_call_quota": {
+     "enforced": true,
+     "limit": 90,
+     "observed": 90,
+     "compliant": true
+    },
+    "breaker_rule": {
+     "enforced": true,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 1,
+     "compliant": true
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.11666666666666667,
+     "met": false
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s241_synthetic_tail_aware",
+   "policy": "tail_aware",
+   "n_requests": 300,
+   "terms": {
+    "cloud_call_quota": {
+     "enforced": false,
+     "limit": 90,
+     "observed": 267,
+     "compliant": false
+    },
+    "breaker_rule": {
+     "enforced": false,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 1,
+     "compliant": null
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.04666666666666667,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s251_real_sample_guarded_governor",
+   "policy": "guarded_governor",
+   "n_requests": 300,
+   "terms": {
+    "artifact_hash": {
+     "enforced": true,
+     "expected": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "observed": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+     "compliant": true
+    },
+    "cloud_call_quota": {
+     "enforced": true,
+     "limit": 90,
+     "observed": 90,
+     "compliant": true
+    },
+    "breaker_rule": {
+     "enforced": true,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 0,
+     "compliant": true
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.10666666666666667,
+     "met": false
+    }
+   },
+   "enforced_terms_compliant": true
+  },
+  {
+   "run_id": "A_s251_real_sample_tail_aware",
+   "policy": "tail_aware",
+   "n_requests": 300,
+   "terms": {
+    "cloud_call_quota": {
+     "enforced": false,
+     "limit": 90,
+     "observed": 269,
+     "compliant": false
+    },
+    "breaker_rule": {
+     "enforced": false,
+     "cloud_dispatch_while_open": 0,
+     "failed_cloud_calls": 3,
+     "compliant": null
+    },
+    "spend_quota": {
+     "enforced": true,
+     "limit_usd": 20.0,
+     "observed_usd": 0.807365300000009,
+     "compliant": true
+    },
+    "ttft_slo": {
+     "enforced": false,
+     "threshold_ms": 3839.5,
+     "max_violation_rate": 0.1,
+     "observed_violation_rate": 0.04666666666666667,
+     "met": true
+    }
+   },
+   "enforced_terms_compliant": true
+  }
+ ]
+}

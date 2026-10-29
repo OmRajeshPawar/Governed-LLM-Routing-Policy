@@ -1,0 +1,77 @@
+{
+  "schema_version": "1",
+  "feature_version": "1",
+  "config": {
+    "seed": 42,
+    "providers": {
+      "local": {
+        "model": "llama3.1:8b",
+        "keep_alive": -1,
+        "num_gpu": null,
+        "cost_per_1k_tokens": 0.0,
+        "extra_latency_ms": 0.0
+      },
+      "cloud": {
+        "mode": "calibrated",
+        "calibration_model": "gemma4:e2b",
+        "base_ttft_ms": null,
+        "per_token_ms": null,
+        "network_rtt_ms": 60.0,
+        "jitter_sigma": 0.15,
+        "speed_ratio": 1.0,
+        "cost_per_1k_tokens": 0.5,
+        "est_output_tokens_source": "ingress_only",
+        "keep_alive": -1,
+        "num_gpu": 0
+      }
+    },
+    "local_concurrency": 2,
+    "generation": {
+      "temperature": 0.0,
+      "default_max_tokens": 256
+    },
+    "targets": {
+      "sla_ttft_ms": 3839.5,
+      "occupancy_service_ms": 4610.9
+    },
+    "rolling": {
+      "window": 50,
+      "min_samples": 8,
+      "ewma_alpha": 0.3
+    },
+    "policies": {
+      "queue_threshold": 3,
+      "tail_aware_pressure_threshold": 1.0,
+      "ml_ttft_threshold": 0.5,
+      "ml_occupancy_threshold": 0.5,
+      "semantic_embedding_threshold": 1.0,
+      "local_llm_probe_threshold": 0.75,
+      "thinking_probe_threshold": 0.85
+    },
+    "paths": {
+      "data_dir": "data",
+      "events_dir": "data/events",
+      "traces_dir": "data/traces",
+      "models_dir": "ml/artifacts",
+      "figures_dir": "analysis/figures"
+    }
+  },
+  "audit": "probe_interference",
+  "seeds": [
+    7,
+    13,
+    42
+  ],
+  "n": 6,
+  "spacing_s": 0.25,
+  "max_tokens": 24,
+  "probe_tokens": 8,
+  "elapsed_s": 21.74,
+  "outputs": [
+    "analysis/probe_interference_rows.csv",
+    "analysis/probe_interference_summary.csv",
+    "analysis/probe_interference_deltas.csv",
+    "analysis/probe_interference_summary.md",
+    "analysis/figures/probe_interference_ab.png"
+  ]
+}

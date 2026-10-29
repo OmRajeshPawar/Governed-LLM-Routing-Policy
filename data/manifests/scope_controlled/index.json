@@ -1,0 +1,172 @@
+{
+  "schema": "apex-workload-manifest-v1",
+  "created_utc": "2026-07-13T14:00:15.693853+00:00",
+  "iid": [
+    {
+      "path": "data/manifests/scope_controlled/iid_synthetic_n100_s211.json",
+      "seed": 211,
+      "family": "synthetic",
+      "sha256": "31377ecb9aa5d1435ef1a97f07075a966c38bb5251f6f04e16097fad064f34a0"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_real_sample_n100_s211.json",
+      "seed": 211,
+      "family": "real_sample",
+      "sha256": "720c95cd92b66a8676e48dc5c93547bfd1b6c6a567eb110c1737fd51c4bd3ece"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_reasoning_coding_n100_s211.json",
+      "seed": 211,
+      "family": "reasoning_coding",
+      "sha256": "8b808be0c27edaeffc083ada74a31652ded6255fd6ff0332509d9d9d11c4f08d"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_synthetic_n100_s223.json",
+      "seed": 223,
+      "family": "synthetic",
+      "sha256": "45529301361715e4c4764f10ad06fb57c4f1adc081b6ee780987c844dbc413b9"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_real_sample_n100_s223.json",
+      "seed": 223,
+      "family": "real_sample",
+      "sha256": "ca675d4d18af6bf88a3d6ec69db04ac31df224e5a9bd798429b7610ecd69f904"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_reasoning_coding_n100_s223.json",
+      "seed": 223,
+      "family": "reasoning_coding",
+      "sha256": "917ed2da6f7c3bcbb00733a1ddd051fec57e0b32010e22d12588d7c90cbb04a7"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_synthetic_n100_s227.json",
+      "seed": 227,
+      "family": "synthetic",
+      "sha256": "f2bd14a34176330bb02391066c49ac2d6b71b6602e5d4552c657f532599b7b0f"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_real_sample_n100_s227.json",
+      "seed": 227,
+      "family": "real_sample",
+      "sha256": "77e40a0288c489184a577dd37bdd9544aa2929a352ba25ab7353204f599a0124"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_reasoning_coding_n100_s227.json",
+      "seed": 227,
+      "family": "reasoning_coding",
+      "sha256": "26aab81f5042be17da80af57474c06aa2fe258f905007a02cdc93a391c74bbae"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_synthetic_n100_s229.json",
+      "seed": 229,
+      "family": "synthetic",
+      "sha256": "7d9dfe500aecb3923cae2a1eae14562f05ad45c92f72333d40b2fef7d68b49b2"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_real_sample_n100_s229.json",
+      "seed": 229,
+      "family": "real_sample",
+      "sha256": "abd6d63eb34fda30e774cdba3bc0c295ac3080871ff7ea1f57b154686ba19903"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_reasoning_coding_n100_s229.json",
+      "seed": 229,
+      "family": "reasoning_coding",
+      "sha256": "09c4d6eac5e2c04dc481eb0d8c1698e715ed60205f743331492b9950cab41b28"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_synthetic_n100_s233.json",
+      "seed": 233,
+      "family": "synthetic",
+      "sha256": "751b09e81ca399f485b62c57a3015e04df1a0e2ed32e4e845d44e32cd59d4a9d"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_real_sample_n100_s233.json",
+      "seed": 233,
+      "family": "real_sample",
+      "sha256": "0ef705d277e4f0ed480dfcf112762c461ee04012fedb534e0eb7c1a78658f7dd"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_reasoning_coding_n100_s233.json",
+      "seed": 233,
+      "family": "reasoning_coding",
+      "sha256": "1e8842e1f61a1dc3404741049031df45103747b15dd51df2142fab1b31a85ee3"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_synthetic_n100_s239.json",
+      "seed": 239,
+      "family": "synthetic",
+      "sha256": "f6a0d844dc8c2767dfdff3259a0824343a0c296481bc5040e3e54b63b4af1530"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_real_sample_n100_s239.json",
+      "seed": 239,
+      "family": "real_sample",
+      "sha256": "73e6285c63a396740264a1c3522d8ad2be99f96a36bd358920a4ec3e704e7d18"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_reasoning_coding_n100_s239.json",
+      "seed": 239,
+      "family": "reasoning_coding",
+      "sha256": "b32aabeabf4eebfc9cf32bd180f495111b7bc968a723850eed64a78161576c15"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_synthetic_n100_s241.json",
+      "seed": 241,
+      "family": "synthetic",
+      "sha256": "ea9409ee52803cd06aad821e685b82f5795a320f4a0febb8cae0188fd06be68c"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_real_sample_n100_s241.json",
+      "seed": 241,
+      "family": "real_sample",
+      "sha256": "c3c4e5ca66e36234b6fc1f9224c7addb052d8054c2cab1a5db6ed571c70cea20"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_reasoning_coding_n100_s241.json",
+      "seed": 241,
+      "family": "reasoning_coding",
+      "sha256": "a433d55005c04cfcb2e610a9e71a3526974bdc9963b7b0488c5131b9e97683e0"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_synthetic_n100_s251.json",
+      "seed": 251,
+      "family": "synthetic",
+      "sha256": "aeb3e7d8b337f9cad0346e4c6a7530e3fec3ffac8ea24c08b18d63c06f860fd1"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_real_sample_n100_s251.json",
+      "seed": 251,
+      "family": "real_sample",
+      "sha256": "5238034fcd8b56a4d5bef68d2f8b4bff5f2535a1dd32dfe8e548213a0c28ee8f"
+    },
+    {
+      "path": "data/manifests/scope_controlled/iid_reasoning_coding_n100_s251.json",
+      "seed": 251,
+      "family": "reasoning_coding",
+      "sha256": "f2ea7614eeecf3a71a0f6f913b0be405d8dce272e948b4bde68eaed5cb974ca0"
+    }
+  ],
+  "transition": [
+    {
+      "path": "data/manifests/scope_controlled/transition_n200_s307.json",
+      "seed": 307,
+      "sha256": "f702d4a2b826925d950c9dc91fa36a28eb4f82d789f925921b556ca2b5f5e3d5"
+    },
+    {
+      "path": "data/manifests/scope_controlled/transition_n200_s311.json",
+      "seed": 311,
+      "sha256": "acc6d9fa945135ace907918ba89f800e4f87bc93e1155b35901676796cc45550"
+    },
+    {
+      "path": "data/manifests/scope_controlled/transition_n200_s313.json",
+      "seed": 313,
+      "sha256": "3c3b6d19bd362fa96988ac49073ba8ff1492de902cfa49c1c56b0098e2547f73"
+    },
+    {
+      "path": "data/manifests/scope_controlled/transition_n200_s317.json",
+      "seed": 317,
+      "sha256": "f1240f51bc3deff8f3b0f91e08a8e6ddc3bc3e8c1cd4ac0a07fac3f1576a88a6"
+    }
+  ]
+}

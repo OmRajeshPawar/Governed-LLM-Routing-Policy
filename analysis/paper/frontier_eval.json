@@ -1,0 +1,546 @@
+{
+ "sla_ttft_ms": 3839.5,
+ "slo_target_violation_rate": 0.1,
+ "n_requests": 4500,
+ "n_runs": 15,
+ "bootstrap_resamples": 500,
+ "budgets": [
+  0.1,
+  0.15,
+  0.2,
+  0.25,
+  0.3,
+  0.35,
+  0.4,
+  0.45,
+  0.5,
+  0.55,
+  0.6,
+  0.65,
+  0.7
+ ],
+ "corpus": "July shadow corpus, bursty n=300 runs (offline replay; cloud tier is the calibrated model)",
+ "prompt_static_definition": "z(max_output_tokens) + 0.5 z(prompt_chars) + is_code; no telemetry, no labels",
+ "frontier": {
+  "tail_aware": [
+   {
+    "budget": 0.1,
+    "violation_rate": 0.25,
+    "violation_ci95": [
+     0.22610555555555556,
+     0.2717888888888889
+    ],
+    "cost_share_of_always_cloud": 0.13630491438243744
+   },
+   {
+    "budget": 0.15,
+    "violation_rate": 0.20022222222222222,
+    "violation_ci95": [
+     0.1794388888888889,
+     0.22078333333333333
+    ],
+    "cost_share_of_always_cloud": 0.20321750758930196
+   },
+   {
+    "budget": 0.2,
+    "violation_rate": 0.1511111111111111,
+    "violation_ci95": [
+     0.13487777777777776,
+     0.16667777777777779
+    ],
+    "cost_share_of_always_cloud": 0.261671241294333
+   },
+   {
+    "budget": 0.25,
+    "violation_rate": 0.10644444444444444,
+    "violation_ci95": [
+     0.09577777777777778,
+     0.11755555555555555
+    ],
+    "cost_share_of_always_cloud": 0.32077815231552725
+   },
+   {
+    "budget": 0.3,
+    "violation_rate": 0.06533333333333333,
+    "violation_ci95": [
+     0.056994444444444445,
+     0.07377777777777778
+    ],
+    "cost_share_of_always_cloud": 0.3691763370065926
+   },
+   {
+    "budget": 0.35,
+    "violation_rate": 0.03844444444444445,
+    "violation_ci95": [
+     0.032994444444444444,
+     0.04377777777777778
+    ],
+    "cost_share_of_always_cloud": 0.42984703495123183
+   },
+   {
+    "budget": 0.4,
+    "violation_rate": 0.019333333333333334,
+    "violation_ci95": [
+     0.016666666666666666,
+     0.022222222222222223
+    ],
+    "cost_share_of_always_cloud": 0.47284020781640596
+   },
+   {
+    "budget": 0.45,
+    "violation_rate": 0.012666666666666666,
+    "violation_ci95": [
+     0.010222222222222223,
+     0.014888888888888889
+    ],
+    "cost_share_of_always_cloud": 0.5409369895624154
+   },
+   {
+    "budget": 0.5,
+    "violation_rate": 0.006888888888888889,
+    "violation_ci95": [
+     0.004994444444444445,
+     0.008666666666666666
+    ],
+    "cost_share_of_always_cloud": 0.5807512544492754
+   },
+   {
+    "budget": 0.55,
+    "violation_rate": 0.0017777777777777779,
+    "violation_ci95": [
+     0.0008888888888888889,
+     0.0026666666666666666
+    ],
+    "cost_share_of_always_cloud": 0.6331745224897571
+   },
+   {
+    "budget": 0.6,
+    "violation_rate": 0.00022222222222222223,
+    "violation_ci95": [
+     0.0,
+     0.0006666666666666666
+    ],
+    "cost_share_of_always_cloud": 0.6912561218236626
+   },
+   {
+    "budget": 0.65,
+    "violation_rate": 0.00022222222222222223,
+    "violation_ci95": [
+     0.0,
+     0.0006666666666666666
+    ],
+    "cost_share_of_always_cloud": 0.734524853869093
+   },
+   {
+    "budget": 0.7,
+    "violation_rate": 0.0,
+    "violation_ci95": [
+     0.0,
+     0.0
+    ],
+    "cost_share_of_always_cloud": 0.7726671798048785
+   }
+  ],
+  "queue_threshold": [
+   {
+    "budget": 0.1,
+    "violation_rate": 0.25,
+    "violation_ci95": [
+     0.2165388888888889,
+     0.27722777777777774
+    ],
+    "cost_share_of_always_cloud": 0.12351525164463438
+   },
+   {
+    "budget": 0.15,
+    "violation_rate": 0.2011111111111111,
+    "violation_ci95": [
+     0.17444444444444446,
+     0.2225722222222222
+    ],
+    "cost_share_of_always_cloud": 0.18029186728740854
+   },
+   {
+    "budget": 0.2,
+    "violation_rate": 0.154,
+    "violation_ci95": [
+     0.13653888888888888,
+     0.1691111111111111
+    ],
+    "cost_share_of_always_cloud": 0.2405017766636257
+   },
+   {
+    "budget": 0.25,
+    "violation_rate": 0.10911111111111112,
+    "violation_ci95": [
+     0.09353333333333334,
+     0.12411666666666667
+    ],
+    "cost_share_of_always_cloud": 0.2948065853312643
+   },
+   {
+    "budget": 0.3,
+    "violation_rate": 0.0791111111111111,
+    "violation_ci95": [
+     0.06754444444444445,
+     0.08888888888888889
+    ],
+    "cost_share_of_always_cloud": 0.3392627047786288
+   },
+   {
+    "budget": 0.35,
+    "violation_rate": 0.04133333333333333,
+    "violation_ci95": [
+     0.03477222222222222,
+     0.04711111111111111
+    ],
+    "cost_share_of_always_cloud": 0.40144829274408045
+   },
+   {
+    "budget": 0.4,
+    "violation_rate": 0.029111111111111112,
+    "violation_ci95": [
+     0.024,
+     0.033555555555555554
+    ],
+    "cost_share_of_always_cloud": 0.4430482847012255
+   },
+   {
+    "budget": 0.45,
+    "violation_rate": 0.027555555555555555,
+    "violation_ci95": [
+     0.022222222222222223,
+     0.0325611111111111
+    ],
+    "cost_share_of_always_cloud": 0.4825688635186912
+   },
+   {
+    "budget": 0.5,
+    "violation_rate": 0.02666666666666667,
+    "violation_ci95": [
+     0.02143888888888889,
+     0.03167222222222222
+    ],
+    "cost_share_of_always_cloud": 0.5242203419340598
+   },
+   {
+    "budget": 0.55,
+    "violation_rate": 0.025777777777777778,
+    "violation_ci95": [
+     0.020888888888888887,
+     0.030444444444444444
+    ],
+    "cost_share_of_always_cloud": 0.5660156168481362
+   },
+   {
+    "budget": 0.6,
+    "violation_rate": 0.024444444444444446,
+    "violation_ci95": [
+     0.01976666666666667,
+     0.028888888888888888
+    ],
+    "cost_share_of_always_cloud": 0.6089912721313703
+   },
+   {
+    "budget": 0.65,
+    "violation_rate": 0.02,
+    "violation_ci95": [
+     0.01108888888888889,
+     0.02678333333333333
+    ],
+    "cost_share_of_always_cloud": 0.6661171731253483
+   },
+   {
+    "budget": 0.7,
+    "violation_rate": 0.011555555555555555,
+    "violation_ci95": [
+     0.003777777777777778,
+     0.01900555555555555
+    ],
+    "cost_share_of_always_cloud": 0.7348077247357244
+   }
+  ],
+  "ml_dual_risk": [
+   {
+    "budget": 0.1,
+    "violation_rate": 0.25022222222222223,
+    "violation_ci95": [
+     0.22743888888888888,
+     0.2705611111111111
+    ],
+    "cost_share_of_always_cloud": 0.13325883537326844
+   },
+   {
+    "budget": 0.15,
+    "violation_rate": 0.20044444444444445,
+    "violation_ci95": [
+     0.17588333333333334,
+     0.22279444444444443
+    ],
+    "cost_share_of_always_cloud": 0.20027242124818714
+   },
+   {
+    "budget": 0.2,
+    "violation_rate": 0.15133333333333332,
+    "violation_ci95": [
+     0.1322222222222222,
+     0.1700111111111111
+    ],
+    "cost_share_of_always_cloud": 0.2610214151677583
+   },
+   {
+    "budget": 0.25,
+    "violation_rate": 0.10511111111111111,
+    "violation_ci95": [
+     0.09143888888888889,
+     0.11845555555555555
+    ],
+    "cost_share_of_always_cloud": 0.3188361379489775
+   },
+   {
+    "budget": 0.3,
+    "violation_rate": 0.06933333333333333,
+    "violation_ci95": [
+     0.05977777777777778,
+     0.07977777777777778
+    ],
+    "cost_share_of_always_cloud": 0.3836566748918061
+   },
+   {
+    "budget": 0.35,
+    "violation_rate": 0.04666666666666667,
+    "violation_ci95": [
+     0.03877222222222222,
+     0.05644444444444444
+    ],
+    "cost_share_of_always_cloud": 0.4396634308900166
+   },
+   {
+    "budget": 0.4,
+    "violation_rate": 0.02688888888888889,
+    "violation_ci95": [
+     0.020444444444444446,
+     0.03422222222222222
+    ],
+    "cost_share_of_always_cloud": 0.4928359944571324
+   },
+   {
+    "budget": 0.45,
+    "violation_rate": 0.013111111111111112,
+    "violation_ci95": [
+     0.009555555555555555,
+     0.016888888888888887
+    ],
+    "cost_share_of_always_cloud": 0.5396486094924274
+   },
+   {
+    "budget": 0.5,
+    "violation_rate": 0.0064444444444444445,
+    "violation_ci95": [
+     0.0044444444444444444,
+     0.008888888888888889
+    ],
+    "cost_share_of_always_cloud": 0.5889744643923158
+   },
+   {
+    "budget": 0.55,
+    "violation_rate": 0.004,
+    "violation_ci95": [
+     0.0024444444444444444,
+     0.0057777777777777775
+    ],
+    "cost_share_of_always_cloud": 0.6431924467842518
+   },
+   {
+    "budget": 0.6,
+    "violation_rate": 0.0006666666666666666,
+    "violation_ci95": [
+     0.00022222222222222223,
+     0.0013333333333333333
+    ],
+    "cost_share_of_always_cloud": 0.6945201804828851
+   },
+   {
+    "budget": 0.65,
+    "violation_rate": 0.00044444444444444447,
+    "violation_ci95": [
+     0.0,
+     0.0008888888888888889
+    ],
+    "cost_share_of_always_cloud": 0.7416860413661703
+   },
+   {
+    "budget": 0.7,
+    "violation_rate": 0.00044444444444444447,
+    "violation_ci95": [
+     0.0,
+     0.0008888888888888889
+    ],
+    "cost_share_of_always_cloud": 0.7891090298869751
+   }
+  ],
+  "prompt_static": [
+   {
+    "budget": 0.1,
+    "violation_rate": 0.28844444444444445,
+    "violation_ci95": [
+     0.26875,
+     0.31034999999999996
+    ],
+    "cost_share_of_always_cloud": 0.1767143200748595
+   },
+   {
+    "budget": 0.15,
+    "violation_rate": 0.2768888888888889,
+    "violation_ci95": [
+     0.2576388888888889,
+     0.2983611111111111
+    ],
+    "cost_share_of_always_cloud": 0.26571902133687175
+   },
+   {
+    "budget": 0.2,
+    "violation_rate": 0.25377777777777777,
+    "violation_ci95": [
+     0.2228888888888889,
+     0.2811111111111111
+    ],
+    "cost_share_of_always_cloud": 0.3540761813743015
+   },
+   {
+    "budget": 0.25,
+    "violation_rate": 0.22066666666666668,
+    "violation_ci95": [
+     0.18622222222222223,
+     0.2578944444444444
+    ],
+    "cost_share_of_always_cloud": 0.44243334141173124
+   },
+   {
+    "budget": 0.3,
+    "violation_rate": 0.19333333333333333,
+    "violation_ci95": [
+     0.17765,
+     0.21155555555555555
+    ],
+    "cost_share_of_always_cloud": 0.530790501449161
+   },
+   {
+    "budget": 0.35,
+    "violation_rate": 0.18577777777777776,
+    "violation_ci95": [
+     0.17066666666666666,
+     0.2029
+    ],
+    "cost_share_of_always_cloud": 0.5960902585031485
+   },
+   {
+    "budget": 0.4,
+    "violation_rate": 0.15777777777777777,
+    "violation_ci95": [
+     0.13832777777777777,
+     0.18068888888888887
+    ],
+    "cost_share_of_always_cloud": 0.6335855001947498
+   },
+   {
+    "budget": 0.45,
+    "violation_rate": 0.14422222222222222,
+    "violation_ci95": [
+     0.12954444444444443,
+     0.15977777777777777
+    ],
+    "cost_share_of_always_cloud": 0.671080741886351
+   },
+   {
+    "budget": 0.5,
+    "violation_rate": 0.13244444444444445,
+    "violation_ci95": [
+     0.11911111111111111,
+     0.14633888888888888
+    ],
+    "cost_share_of_always_cloud": 0.7150733308829028
+   },
+   {
+    "budget": 0.55,
+    "violation_rate": 0.12577777777777777,
+    "violation_ci95": [
+     0.11255,
+     0.13967222222222223
+    ],
+    "cost_share_of_always_cloud": 0.754545012797736
+   },
+   {
+    "budget": 0.6,
+    "violation_rate": 0.11577777777777777,
+    "violation_ci95": [
+     0.10388333333333333,
+     0.12934444444444446
+    ],
+    "cost_share_of_always_cloud": 0.7927947291271538
+   },
+   {
+    "budget": 0.65,
+    "violation_rate": 0.10711111111111112,
+    "violation_ci95": [
+     0.09376666666666666,
+     0.12433888888888889
+    ],
+    "cost_share_of_always_cloud": 0.8302899708187551
+   },
+   {
+    "budget": 0.7,
+    "violation_rate": 0.08844444444444445,
+    "violation_ci95": [
+     0.06707777777777778,
+     0.10389444444444444
+    ],
+    "cost_share_of_always_cloud": 0.8677852125103563
+   }
+  ]
+ },
+ "feasible_quota": {
+  "tail_aware": {
+   "budget": 0.3,
+   "violation_rate": 0.06533333333333333,
+   "violation_ci95": [
+    0.056994444444444445,
+    0.07377777777777778
+   ],
+   "cost_share_of_always_cloud": 0.3691763370065926
+  },
+  "queue_threshold": {
+   "budget": 0.3,
+   "violation_rate": 0.0791111111111111,
+   "violation_ci95": [
+    0.06754444444444445,
+    0.08888888888888889
+   ],
+   "cost_share_of_always_cloud": 0.3392627047786288
+  },
+  "ml_dual_risk": {
+   "budget": 0.3,
+   "violation_rate": 0.06933333333333333,
+   "violation_ci95": [
+    0.05977777777777778,
+    0.07977777777777778
+   ],
+   "cost_share_of_always_cloud": 0.3836566748918061
+  },
+  "prompt_static": {
+   "budget": 0.7,
+   "violation_rate": 0.08844444444444445,
+   "violation_ci95": [
+    0.06707777777777778,
+    0.10389444444444444
+   ],
+   "cost_share_of_always_cloud": 0.8677852125103563
+  }
+ },
+ "latex_rows": [
+  "Telemetry heuristic (T0) & 30 & 6.5 & 0.37 \\\\",
+  "Queue threshold & 30 & 7.9 & 0.34 \\\\",
+  "Tabular ML dual-risk (T1) & 30 & 6.9 & 0.38 \\\\",
+  "Prompt-only static & 70 & 8.8 & 0.87 \\\\"
+ ]
+}

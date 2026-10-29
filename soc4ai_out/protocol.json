@@ -1,0 +1,481 @@
+{
+ "created_utc": "2026-09-15T15:21:16.494410+00:00",
+ "purpose": "SOC4AI 2026 live validation of the governed routing policy",
+ "sla_ttft_ms": 3839.5,
+ "sla_violation_rule": "apex.core.ttft_breach(end_to_end_ttft_ms, sla, ok) for every route; failed requests violate",
+ "confirmatory_ttft_rule": "failed requests use end_to_end_ttft_ms = max(end_to_end_ms or 0, sla_ttft_ms)",
+ "confirmatory_analysis": "analysis/confirmatory_statistics.py unchanged; seeds 211..251 preregistered July 2026",
+ "blind_rule": "progress log carries no outcome metrics; no experiment analysed before its full corpus completes",
+ "heuristic_weights": "tuned",
+ "heuristic_weights_values": {
+  "queue": 1.819875177716568,
+  "active": 1.23338239807058,
+  "ttft_tail": 0.022982278207114293,
+  "service_tail": 1.5896378933294235,
+  "burst": 0.10174387258949813,
+  "vram": 0.9929725626375048,
+  "work": 1.8853362600406736
+ },
+ "governor_artifact": {
+  "path": "ml/artifacts/governor_v2.json",
+  "sha256": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+  "derived_from_sha256": "55a51a14f3146b9dba9250480fefad34e8ada1f220e319693d22660650b08a77",
+  "threshold_recalibration": {
+   "from": 1.0,
+   "to": 4.986486535529362,
+   "rule": "70th percentile of the tuned tail-aware score on the 4,500-request July development shadow corpus (matched 30% offload)",
+   "v1_offload_share_on_development_corpus": 1.0,
+   "v2_offload_share_on_development_corpus": 0.3,
+   "heuristic_weights": "tuned",
+   "n_rows": 4500
+  }
+ },
+ "tail_aware_threshold": 4.986486535529362,
+ "cloud_tier": {
+  "provider": "Vertex AI",
+  "model": "gemini-2.5-flash",
+  "region": "us-central1",
+  "project": "withheld",
+  "thinking_budget": 0,
+  "temperature": 0.0
+ },
+ "calibration": {
+  "created_utc": "2026-09-15T15:14:09.465317+00:00",
+  "n_calls": 30,
+  "n_ok": 30,
+  "ttft_p50_ms": 576.5967999996064,
+  "ttft_p95_ms": 3069.585699999152,
+  "ttft_max_ms": 9675.877100002253,
+  "spend_usd": 0.009068900000000001
+ },
+ "frozen_cloud_p95_ms": 3069.585699999152,
+ "breaker": {
+  "consecutive_failure_limit": 3,
+  "failure_window": 20,
+  "failure_window_limit": 5,
+  "latency_success_minimum": 10,
+  "latency_window": 10,
+  "latency_breach_limit": 5,
+  "latency_multiplier": 2.0,
+  "cooldown_seconds": 30.0,
+  "cooldown_arrivals": 10,
+  "half_open_successes_to_close": 3,
+  "latency_limit_ms": 6139.171399998304
+ },
+ "fault_model": {
+  "outage_latency_ms": 250.0,
+  "spike_delay_ms": 7673.96424999788,
+  "degraded_delay_ms": 7673.96424999788,
+  "spike_exceeds_breaker_limit_by_ms": 1534.792849999576,
+  "window_rationale": "bursty cycle is 24 requests (positions i%24<6 arrive at 1.5/s); outage [96,156) and spike [192,252) both start at a burst boundary; drift degradation applies to the transition trace's cloud_degradation phase, which is otherwise only a label"
+ },
+ "cooldown": {
+  "gpu_temp_c_below": 58.0,
+  "max_wait_s": 180.0
+ },
+ "spend_kill_switch_usd": 20.0,
+ "environment": {
+  "ollama_version": "ollama version is 0.20.3",
+  "model": "llama3.1:8b",
+  "model_id": "46e0c10c039e",
+  "gpu_driver": "592.15, NVIDIA GeForce RTX 5060 Laptop GPU",
+  "python": "3.13.12"
+ },
+ "original_repo": {
+  "head": "3696f34",
+  "clean": true
+ },
+ "code_sha256": {
+  "soc4ai/__init__.py": "80fad8555519c8a2cdd74c7be39b59e8d3cc77c47df7d39931a4242a28eefcd4",
+  "soc4ai/audit.py": "a1ec2699c95a2542fb5fb5a15f0a174cf56108f4500074127a6e359c613cac7c",
+  "soc4ai/creds.py": "bd226f9f22abd24bbc3282dab69572ddb7b406db9e204bf2c59fe3b11f353ee5",
+  "soc4ai/ledger.py": "7676b24198178fad4e1aedcdbe371cf7d3c78a1b2cf42c6e6eb329e2f5b86c50",
+  "soc4ai/providers.py": "e4739e5ddfa02285e3d73e64a5aec8668a58aace3c709f4f89b88f3134f0e663",
+  "soc4ai/study.py": "3e5b511b75b9290100b2c6ab9415aa6085e0657e63e5e518565712fc768fff45",
+  "soc4ai/telemetry.py": "cfb1c7fd2b719043885133eb5f454b9ed799ff7605dba3ed9f18c78559e48837",
+  "apex/gateway.py": "ed58070cc9a5673613b9182ab78bf8d4a454a77235415509b690dffd8db19123",
+  "apex/providers.py": "62b3e953038564ec545654b70252ff4156751bbe7af46cdfb1983c1dc26c6a46",
+  "apex/policies.py": "ae4c5520eb7d7a8aeb383019e77c66c545f459db209e71f51240f8d450b404cc",
+  "apex/workload.py": "b5c56d8a7af810ad9ead106d5f100e321704b4b1abbfda942270f3314914c09c",
+  "config.yaml": "0481429f113d38fa885c914dfd230208cfec665744ba4c3b395b27546cc82eea",
+  "ml/artifacts/governor_v1.json": "55a51a14f3146b9dba9250480fefad34e8ada1f220e319693d22660650b08a77",
+  "ml/artifacts/governor_v2.json": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+  "ml/artifacts/meta.json": "d77c9a027b5c2853e544c3d24c6d83e61c53636e8087896da5e0f1bfc1f65ae8"
+ },
+ "runs": [
+  {
+   "experiment": "A",
+   "key": "A_s211_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 211,
+   "mix": "synthetic",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s211_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 211,
+   "mix": "synthetic",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s223_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 223,
+   "mix": "real_sample",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s223_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 223,
+   "mix": "real_sample",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s227_reasoning_coding_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 227,
+   "mix": "reasoning_coding",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s227_reasoning_coding_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 227,
+   "mix": "reasoning_coding",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s229_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 229,
+   "mix": "synthetic",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s229_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 229,
+   "mix": "synthetic",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s233_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 233,
+   "mix": "real_sample",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s233_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 233,
+   "mix": "real_sample",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s239_reasoning_coding_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 239,
+   "mix": "reasoning_coding",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s239_reasoning_coding_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 239,
+   "mix": "reasoning_coding",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s241_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 241,
+   "mix": "synthetic",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s241_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 241,
+   "mix": "synthetic",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s251_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 251,
+   "mix": "real_sample",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "A",
+   "key": "A_s251_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 251,
+   "mix": "real_sample",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "B",
+   "key": "B_s7_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 7,
+   "mix": "synthetic",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "B",
+   "key": "B_s7_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 7,
+   "mix": "synthetic",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "B",
+   "key": "B_s13_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 13,
+   "mix": "real_sample",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "B",
+   "key": "B_s13_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 13,
+   "mix": "real_sample",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "B",
+   "key": "B_s42_reasoning_coding_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 42,
+   "mix": "reasoning_coding",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "B",
+   "key": "B_s42_reasoning_coding_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 42,
+   "mix": "reasoning_coding",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "C",
+   "key": "C_s7_transition_guarded_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 7,
+   "mix": "phased",
+   "policy": "guarded_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "C",
+   "key": "C_s7_transition_tail_aware",
+   "trace": "transition",
+   "n": 200,
+   "seed": 7,
+   "mix": "phased",
+   "policy": "tail_aware",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "C",
+   "key": "C_s13_transition_tail_aware",
+   "trace": "transition",
+   "n": 200,
+   "seed": 13,
+   "mix": "phased",
+   "policy": "tail_aware",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "C",
+   "key": "C_s13_transition_guarded_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 13,
+   "mix": "phased",
+   "policy": "guarded_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "C",
+   "key": "C_s42_transition_guarded_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 42,
+   "mix": "phased",
+   "policy": "guarded_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "C",
+   "key": "C_s42_transition_tail_aware",
+   "trace": "transition",
+   "n": 200,
+   "seed": 42,
+   "mix": "phased",
+   "policy": "tail_aware",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  }
+ ]
+}

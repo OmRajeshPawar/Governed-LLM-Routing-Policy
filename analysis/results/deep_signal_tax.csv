@@ -1,0 +1,7 @@
+policy,median_decision_overhead_ms,adj_sla_violation_pct,adj_p99_ttft_ms
+tail_aware,0.08,6.5,5812.0
+ml_ttft,0.85,6.6,5812.0
+ml_dual_risk,1.1,6.9,6182.0
+semantic_embedding,11.42,6.7,5999.0
+local_llm_probe,229.6,8.2,6328.0
+thinking_probe,683.6,11.2,6868.0

@@ -1,0 +1,5 @@
+2026-09-16 01:01:22  ADDENDUM START 3 runs, protocol_x 99019c5e480b577c, ledger $1.1784
+2026-09-16 01:14:38  [X 1/3] done X_s211_synthetic_paced_governor wall 794s ledger $1.1839
+2026-09-16 01:29:01  [X 2/3] done X_s223_real_sample_paced_governor wall 853s ledger $1.1911
+2026-09-16 01:41:20  [X 3/3] done X_s227_reasoning_coding_paced_governor wall 715s ledger $1.2239
+2026-09-16 01:41:20  ADDENDUM END ledger $1.2239, original repo clean=True

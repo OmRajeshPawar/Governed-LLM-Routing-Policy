@@ -1,0 +1,92 @@
+2026-09-15 19:12:43  recalibrate: 15 shadow files, 4500 rows, v1 threshold 1.0 offloads 100.0%; v2 threshold 4.9865 offloads 30.0%; sha256 eb1d60530925b935
+2026-09-15 19:14:09  calibration: 30/30 ok, p50=577ms p95=3070ms, ledger $0.0094
+2026-09-15 19:17:33  dryrun guarded_governor: 24 reqs, offloaded 1, wall 79.63s, gpu samples 80, ledger $0.0095
+2026-09-15 19:18:51  dryrun tail_aware: 24 reqs, offloaded 16, wall 77.42s, gpu samples 77, ledger $0.0132
+2026-09-15 19:21:16  protocol frozen: 28 runs, sha256 647b314d2aafff10, weights=tuned, threshold 4.9865, frozen p95 3070ms, spike 7674ms vs breaker limit 6139ms
+2026-09-15 19:21:36  BATCH START 28 runs, protocol 647b314d2aafff10, ledger $0.0132
+2026-09-15 19:34:52  [1/28] done A_s211_synthetic_guarded_governor attempt 1 wall 794s cooldown 0s ledger $0.0317
+2026-09-15 19:48:16  [2/28] done A_s211_synthetic_tail_aware attempt 1 wall 793s cooldown 10s ledger $0.0879
+2026-09-15 20:02:29  [3/28] done A_s223_real_sample_tail_aware attempt 1 wall 852s cooldown 0s ledger $0.1486
+2026-09-15 20:16:41  [4/28] done A_s223_real_sample_guarded_governor attempt 1 wall 851s cooldown 0s ledger $0.1716
+2026-09-15 20:28:43  [5/28] done A_s227_reasoning_coding_guarded_governor attempt 1 wall 711s cooldown 10s ledger $0.2062
+2026-09-15 20:40:45  [6/28] done A_s227_reasoning_coding_tail_aware attempt 1 wall 710s cooldown 10s ledger $0.3154
+2026-09-15 20:55:05  [7/28] done A_s229_synthetic_tail_aware attempt 1 wall 859s cooldown 0s ledger $0.3696
+2026-09-15 21:09:29  [8/28] done A_s229_synthetic_guarded_governor attempt 1 wall 862s cooldown 0s ledger $0.3910
+2026-09-15 21:22:53  [9/28] done A_s233_real_sample_guarded_governor attempt 1 wall 793s cooldown 10s ledger $0.4128
+2026-09-15 21:36:16  [10/28] done A_s233_real_sample_tail_aware attempt 1 wall 792s cooldown 10s ledger $0.4813
+2026-09-15 21:50:19  [11/28] done A_s239_reasoning_coding_tail_aware attempt 1 wall 842s cooldown 0s ledger $0.5903
+2026-09-15 22:04:42  [12/28] done A_s239_reasoning_coding_guarded_governor attempt 1 wall 862s cooldown 0s ledger $0.6271
+2026-09-15 22:16:57  [13/28] done A_s241_synthetic_guarded_governor attempt 1 wall 723s cooldown 10s ledger $0.6462
+2026-09-15 22:29:09  [14/28] done A_s241_synthetic_tail_aware attempt 1 wall 721s cooldown 10s ledger $0.7043
+2026-09-15 22:44:47  [15/28] done A_s251_real_sample_tail_aware attempt 1 wall 936s cooldown 0s ledger $0.7726
+2026-09-15 23:00:23  [16/28] done A_s251_real_sample_guarded_governor attempt 1 wall 936s cooldown 0s ledger $0.7961
+2026-09-15 23:09:57  exploratory artifact v3 written, sha256 84aa5b721d31044f; agreement_v3 pins it
+2026-09-15 23:09:59  exploratory protocol frozen: 3 runs, sha256 99019c5e480b577c, parent 647b314d2aafff10
+2026-09-15 23:13:32  [17/28] done B_s7_synthetic_guarded_governor attempt 1 wall 777s cooldown 10s ledger $0.8136
+2026-09-15 23:26:40  [18/28] done B_s7_synthetic_tail_aware attempt 1 wall 777s cooldown 10s ledger $0.8591
+2026-09-15 23:39:56  [19/28] done B_s13_real_sample_tail_aware attempt 1 wall 795s cooldown 0s ledger $0.8935
+2026-09-15 23:53:11  [20/28] done B_s13_real_sample_guarded_governor attempt 1 wall 794s cooldown 0s ledger $0.9082
+2026-09-16 00:07:09  [21/28] done B_s42_reasoning_coding_guarded_governor attempt 1 wall 836s cooldown 0s ledger $0.9411
+2026-09-16 00:21:39  [22/28] done B_s42_reasoning_coding_tail_aware attempt 1 wall 859s cooldown 10s ledger $1.0300
+2026-09-16 00:27:15  [23/28] done C_s7_transition_guarded_governor attempt 1 wall 335s cooldown 0s ledger $1.0498
+2026-09-16 00:33:04  [24/28] done C_s7_transition_tail_aware attempt 1 wall 338s cooldown 10s ledger $1.0787
+2026-09-16 00:39:23  [25/28] done C_s13_transition_tail_aware attempt 1 wall 377s cooldown 0s ledger $1.1102
+2026-09-16 00:45:35  [26/28] done C_s13_transition_guarded_governor attempt 1 wall 371s cooldown 0s ledger $1.1312
+2026-09-16 00:53:15  [27/28] done C_s42_transition_guarded_governor attempt 1 wall 449s cooldown 10s ledger $1.1496
+2026-09-16 01:01:03  [28/28] done C_s42_transition_tail_aware attempt 1 wall 457s cooldown 10s ledger $1.1784
+2026-09-16 01:01:03  BATCH END ledger $1.1784, original repo clean=True
+2026-09-16 01:01:22  ADDENDUM START 3 runs, protocol_x 99019c5e480b577c, ledger $1.1784
+2026-09-16 01:14:38  [X 1/3] done X_s211_synthetic_paced_governor wall 794s ledger $1.1839
+2026-09-16 01:29:01  [X 2/3] done X_s223_real_sample_paced_governor wall 853s ledger $1.1911
+2026-09-16 01:41:20  [X 3/3] done X_s227_reasoning_coding_paced_governor wall 715s ledger $1.2239
+2026-09-16 01:41:20  ADDENDUM END ledger $1.2239, original repo clean=True
+2026-09-16 02:24:08  v4 artifact written, sha256 d3b48bfa0f66dcfb; agreement_v4 pins it with billable quota counting
+2026-09-16 02:26:11  dryrun_v4_nominal: offloaded 0, wall 88.84s, budget {'cap': 7, 'total_cloud': 0, 'discretionary': 0, 'safety_overrides': 0, 'denials': 0}, transitions 0, ledger $1.2239
+2026-09-16 02:27:41  dryrun_v4_outage: offloaded 0, wall 88.96s, budget {'cap': 7, 'total_cloud': 0, 'discretionary': 0, 'safety_overrides': 0, 'denials': 0}, transitions 0, ledger $1.2239
+2026-09-16 02:32:08  dryrun_v4_outage96: offloaded 15, wall 197.16s, budget {'cap': 28, 'total_cloud': 6, 'discretionary': 2, 'safety_overrides': 7, 'denials': 0}, transitions 9, ledger $1.2270
+2026-09-16 02:32:41  v4 protocol frozen: 43 runs, sha256 b61ca6c2e3e288ff
+2026-09-16 02:32:52  V4 BATCH START 43 runs, protocol_v4 b61ca6c2e3e288ff, ledger $1.2270
+2026-09-16 02:46:12  [V4 1/43] done V4N_s257_synthetic_v4_governor wall 798s ledger $1.2350
+2026-09-16 02:59:42  [V4 2/43] done V4N_s257_synthetic_guarded_governor wall 798s ledger $1.2559
+2026-09-16 03:13:10  [V4 3/43] done V4N_s257_synthetic_tail_aware wall 797s ledger $1.3058
+2026-09-16 03:26:29  [V4 4/43] done V4N_s263_real_sample_guarded_governor wall 797s ledger $1.3305
+2026-09-16 03:39:56  [V4 5/43] done V4N_s263_real_sample_tail_aware wall 797s ledger $1.3945
+2026-09-16 03:53:14  [V4 6/43] done V4N_s263_real_sample_v4_governor wall 797s ledger $1.4058
+2026-09-16 04:07:12  [V4 7/43] done V4N_s269_reasoning_coding_tail_aware wall 826s ledger $1.5122
+2026-09-16 04:21:00  [V4 8/43] done V4N_s269_reasoning_coding_v4_governor wall 827s ledger $1.5386
+2026-09-16 04:35:03  [V4 9/43] done V4N_s269_reasoning_coding_guarded_governor wall 832s ledger $1.5720
+2026-09-16 04:47:47  [V4 10/43] done V4N_s271_synthetic_v4_governor wall 752s ledger $1.5754
+2026-09-16 05:00:30  [V4 11/43] done V4N_s271_synthetic_guarded_governor wall 752s ledger $1.5934
+2026-09-16 05:13:14  [V4 12/43] done V4N_s271_synthetic_tail_aware wall 752s ledger $1.6343
+2026-09-16 05:26:02  [V4 13/43] done V4N_s277_real_sample_guarded_governor wall 767s ledger $1.6568
+2026-09-16 05:39:01  [V4 14/43] done V4N_s277_real_sample_tail_aware wall 768s ledger $1.7259
+2026-09-16 05:51:49  [V4 15/43] done V4N_s277_real_sample_v4_governor wall 767s ledger $1.7345
+2026-09-16 06:05:19  [V4 16/43] done V4F_s257_synthetic_v4_governor wall 798s ledger $1.7368
+2026-09-16 06:18:48  [V4 17/43] done V4F_s257_synthetic_guarded_governor wall 798s ledger $1.7539
+2026-09-16 06:32:07  [V4 18/43] done V4F_s257_synthetic_tail_aware wall 798s ledger $1.7893
+2026-09-16 06:45:25  [V4 19/43] done V4F_s263_real_sample_guarded_governor wall 797s ledger $1.8130
+2026-09-16 06:58:53  [V4 20/43] done V4F_s263_real_sample_tail_aware wall 796s ledger $1.8626
+2026-09-16 07:12:11  [V4 21/43] done V4F_s263_real_sample_v4_governor wall 797s ledger $1.8690
+2026-09-16 07:26:07  [V4 22/43] done V4F_s269_reasoning_coding_tail_aware wall 825s ledger $1.9549
+2026-09-16 07:39:55  [V4 23/43] done V4F_s269_reasoning_coding_v4_governor wall 827s ledger $1.9722
+2026-09-16 07:53:58  [V4 24/43] done V4F_s269_reasoning_coding_guarded_governor wall 832s ledger $2.0041
+2026-09-16 08:06:42  [V4 25/43] done V4F_s271_synthetic_v4_governor wall 752s ledger $2.0057
+2026-09-16 08:19:25  [V4 26/43] done V4F_s271_synthetic_guarded_governor wall 752s ledger $2.0195
+2026-09-16 08:31:58  [V4 27/43] done V4F_s271_synthetic_tail_aware wall 752s ledger $2.0495
+2026-09-16 08:44:47  [V4 28/43] done V4F_s277_real_sample_guarded_governor wall 767s ledger $2.0709
+2026-09-16 08:57:46  [V4 29/43] done V4F_s277_real_sample_tail_aware wall 768s ledger $2.1252
+2026-09-16 09:10:34  [V4 30/43] done V4F_s277_real_sample_v4_governor wall 767s ledger $2.1291
+2026-09-16 09:16:20  [V4 31/43] done V4D_s7_transition_v4_governor wall 335s ledger $2.1418
+2026-09-16 09:22:42  [V4 32/43] done V4D_s13_transition_v4_governor wall 371s ledger $2.1543
+2026-09-16 09:30:23  [V4 33/43] done V4D_s42_transition_v4_governor wall 449s ledger $2.1663
+2026-09-16 09:37:20  [V4 34/43] done V4D_s23_transition_v4_governor wall 406s ledger $2.1751
+2026-09-16 09:42:45  [V4 35/43] done V4D_s101_transition_v4_governor wall 313s ledger $2.1827
+2026-09-16 09:55:22  [V4 36/43] done B_s23_synthetic_guarded_governor wall 746s ledger $2.2013
+2026-09-16 10:07:58  [V4 37/43] done B_s23_synthetic_tail_aware wall 745s ledger $2.2416
+2026-09-16 10:20:38  [V4 38/43] done B_s101_real_sample_tail_aware wall 759s ledger $2.2925
+2026-09-16 10:33:24  [V4 39/43] done B_s101_real_sample_guarded_governor wall 765s ledger $2.3138
+2026-09-16 10:40:22  [V4 40/43] done C_s23_transition_guarded_governor wall 407s ledger $2.3315
+2026-09-16 10:47:24  [V4 41/43] done C_s23_transition_tail_aware wall 412s ledger $2.3605
+2026-09-16 10:52:46  [V4 42/43] done C_s101_transition_tail_aware wall 321s ledger $2.3930
+2026-09-16 10:58:01  [V4 43/43] done C_s101_transition_guarded_governor wall 313s ledger $2.4004
+2026-09-16 10:58:01  V4 BATCH END ledger $2.4004, original repo clean=True

@@ -1,0 +1,219 @@
+{
+ "experiment": "C",
+ "n_runs": 6,
+ "n_requests": 1200,
+ "gemini_latency": {
+  "n_live": 388,
+  "p50_ms": 628.9239999969141,
+  "p95_ms": 2311.3916000002064,
+  "p99_ms": 11659.340100006375,
+  "slo_miss_share": 0.02577319587628866,
+  "july_n": 59,
+  "july_p50_ms": 674.27,
+  "july_p95_ms": 5430.05,
+  "calibration_p50_ms": 576.5967999996064,
+  "calibration_p95_ms": 3069.585699999152
+ },
+ "breach_decomposition": {
+  "breached": {
+   "n": 51,
+   "mean_ttft_ms": 7486.900772548859,
+   "mean_queue_wait_ms": 5523.872080392275,
+   "mean_prefill_ms": 152.90922352941178,
+   "queue_share_of_ttft": 0.7151980097975841,
+   "mean_decode_tps": 80.6531896696615
+  },
+  "met": {
+   "n": 636,
+   "mean_ttft_ms": 685.7094355345336,
+   "mean_queue_wait_ms": 299.3216011007393,
+   "mean_prefill_ms": 133.39950518867926,
+   "queue_share_of_ttft": 0.1777183001424911,
+   "mean_decode_tps": 82.49595978724768
+  }
+ },
+ "telemetry": {
+  "C_s13_transition_guarded_governor": {
+   "available": true,
+   "gpu_energy_wh": 3.3913997500913675,
+   "mean_power_w": 33.10853260869565,
+   "max_temp_c": 72.0,
+   "mean_temp_c": 49.80978260869565,
+   "throttled_sample_share": 0.16032608695652173,
+   "wh_per_request": 0.016956998750456836,
+   "wh_per_slo_met_local_request": 0.02549924624128848,
+   "spearman_temp_vs_local_ttft": 0.6124408742337184
+  },
+  "C_s13_transition_tail_aware": {
+   "available": true,
+   "gpu_energy_wh": 1.83960361826496,
+   "mean_power_w": 17.525422872340425,
+   "max_temp_c": 72.0,
+   "mean_temp_c": 44.662234042553195,
+   "throttled_sample_share": 0.07446808510638298,
+   "wh_per_request": 0.0091980180913248,
+   "wh_per_slo_met_local_request": 0.023286121750189365,
+   "spearman_temp_vs_local_ttft": 0.7768890612055236
+  },
+  "C_s42_transition_guarded_governor": {
+   "available": true,
+   "gpu_energy_wh": 6.33426302370876,
+   "mean_power_w": 49.41312217194571,
+   "max_temp_c": 74.0,
+   "mean_temp_c": 51.16968325791855,
+   "throttled_sample_share": 0.16515837104072398,
+   "wh_per_request": 0.0316713151185438,
+   "wh_per_slo_met_local_request": 0.04987608680085638,
+   "spearman_temp_vs_local_ttft": 0.5161302317956394
+  },
+  "C_s42_transition_tail_aware": {
+   "available": true,
+   "gpu_energy_wh": 5.832863064464198,
+   "mean_power_w": 43.62122297297297,
+   "max_temp_c": 74.0,
+   "mean_temp_c": 45.86036036036036,
+   "throttled_sample_share": 0.09009009009009009,
+   "wh_per_request": 0.02916431532232099,
+   "wh_per_slo_met_local_request": 0.06704440303981837,
+   "spearman_temp_vs_local_ttft": 0.5197934919204977
+  },
+  "C_s7_transition_guarded_governor": {
+   "available": true,
+   "gpu_energy_wh": 3.281273526303702,
+   "mean_power_w": 35.319239520958085,
+   "max_temp_c": 73.0,
+   "mean_temp_c": 50.58682634730539,
+   "throttled_sample_share": 0.20059880239520958,
+   "wh_per_request": 0.01640636763151851,
+   "wh_per_slo_met_local_request": 0.025240565586951553,
+   "spearman_temp_vs_local_ttft": 0.64703303317353
+  },
+  "C_s7_transition_tail_aware": {
+   "available": true,
+   "gpu_energy_wh": 1.8721892684538828,
+   "mean_power_w": 19.90280415430267,
+   "max_temp_c": 73.0,
+   "mean_temp_c": 47.8160237388724,
+   "throttled_sample_share": 0.0830860534124629,
+   "wh_per_request": 0.009360946342269414,
+   "wh_per_slo_met_local_request": 0.023402365855673533,
+   "spearman_temp_vs_local_ttft": 0.6296616000141431
+  }
+ },
+ "C": {
+  "guarded_governor": {
+   "low_factual": {
+    "n": 120,
+    "violation_rate": 0.0,
+    "p95_ttft_ms": 496.6268999996828,
+    "cloud_share": 0.0,
+    "failed": 0,
+    "cloud_failed": 0,
+    "spend_usd": 0.0,
+    "wasted_spend_usd": 0.0,
+    "budget_denials": 0
+   },
+   "short_burst": {
+    "n": 120,
+    "violation_rate": 0.041666666666666664,
+    "p95_ttft_ms": 2254.1984999988927,
+    "cloud_share": 0.041666666666666664,
+    "failed": 3,
+    "cloud_failed": 3,
+    "spend_usd": 0.00017380000000000002,
+    "wasted_spend_usd": 0.00017380000000000002,
+    "budget_denials": 0
+   },
+   "reasoning_heavy": {
+    "n": 180,
+    "violation_rate": 0.13333333333333333,
+    "p95_ttft_ms": 8301.078100004815,
+    "cloud_share": 0.8166666666666667,
+    "failed": 0,
+    "cloud_failed": 0,
+    "spend_usd": 0.056749100000000004,
+    "wasted_spend_usd": 0.0017073000000000004,
+    "budget_denials": 0
+   },
+   "recovery": {
+    "n": 60,
+    "violation_rate": 0.0,
+    "p95_ttft_ms": 779.4807000027504,
+    "cloud_share": 0.4666666666666667,
+    "failed": 0,
+    "cloud_failed": 0,
+    "spend_usd": 0.0023463000000000004,
+    "wasted_spend_usd": 0.0,
+    "budget_denials": 32
+   },
+   "cloud_degradation": {
+    "n": 120,
+    "violation_rate": 0.075,
+    "p95_ttft_ms": 4452.003700003843,
+    "cloud_share": 0.0,
+    "failed": 0,
+    "cloud_failed": 0,
+    "spend_usd": 0.0,
+    "wasted_spend_usd": 0.0,
+    "budget_denials": 115
+   }
+  },
+  "tail_aware": {
+   "low_factual": {
+    "n": 120,
+    "violation_rate": 0.0,
+    "p95_ttft_ms": 522.0396000004257,
+    "cloud_share": 0.0,
+    "failed": 0,
+    "cloud_failed": 0,
+    "spend_usd": 0.0,
+    "wasted_spend_usd": 0.0,
+    "budget_denials": 0
+   },
+   "short_burst": {
+    "n": 120,
+    "violation_rate": 0.041666666666666664,
+    "p95_ttft_ms": 2364.193300003535,
+    "cloud_share": 0.041666666666666664,
+    "failed": 1,
+    "cloud_failed": 1,
+    "spend_usd": 0.00032570000000000006,
+    "wasted_spend_usd": 0.00032570000000000006,
+    "budget_denials": 0
+   },
+   "reasoning_heavy": {
+    "n": 180,
+    "violation_rate": 0.12777777777777777,
+    "p95_ttft_ms": 8782.871099996555,
+    "cloud_share": 0.8222222222222222,
+    "failed": 1,
+    "cloud_failed": 1,
+    "spend_usd": 0.05644070000000001,
+    "wasted_spend_usd": 0.0005685000000000001,
+    "budget_denials": 0
+   },
+   "recovery": {
+    "n": 60,
+    "violation_rate": 0.0,
+    "p95_ttft_ms": 1939.7653999985778,
+    "cloud_share": 1.0,
+    "failed": 0,
+    "cloud_failed": 0,
+    "spend_usd": 0.0049762,
+    "wasted_spend_usd": 0.0,
+    "budget_denials": 0
+   },
+   "cloud_degradation": {
+    "n": 120,
+    "violation_rate": 1.0,
+    "p95_ttft_ms": 9793.194700003369,
+    "cloud_share": 1.0,
+    "failed": 0,
+    "cloud_failed": 0,
+    "spend_usd": 0.027389200000000002,
+    "wasted_spend_usd": 0.027389200000000002,
+    "budget_denials": 0
+   }
+  }
+ }
+}

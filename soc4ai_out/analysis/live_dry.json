@@ -1,0 +1,83 @@
+{
+ "experiment": "dry",
+ "n_runs": 2,
+ "n_requests": 48,
+ "gemini_latency": {
+  "n_live": 17,
+  "p50_ms": 1848.9784999983385,
+  "p95_ms": 8957.85419999811,
+  "p99_ms": 8957.85419999811,
+  "slo_miss_share": 0.11764705882352941,
+  "july_n": 59,
+  "july_p50_ms": 674.27,
+  "july_p95_ms": 5430.05,
+  "calibration_p50_ms": 576.5967999996064,
+  "calibration_p95_ms": 3069.585699999152
+ },
+ "breach_decomposition": {
+  "breached": {
+   "n": 2,
+   "mean_ttft_ms": 3986.710300001505,
+   "mean_queue_wait_ms": 3067.0595499996125,
+   "mean_prefill_ms": 100.73675,
+   "queue_share_of_ttft": 0.769214144078666,
+   "mean_decode_tps": 86.05785441948981
+  },
+  "met": {
+   "n": 29,
+   "mean_ttft_ms": 1112.3510206899514,
+   "mean_queue_wait_ms": 280.66927586217486,
+   "mean_prefill_ms": 157.21882068965513,
+   "queue_share_of_ttft": 0.10550931048977806,
+   "mean_decode_tps": 82.46195643965454
+  }
+ },
+ "telemetry": {
+  "dryrun_guarded_governor": {
+   "available": true,
+   "gpu_energy_wh": 0.9367434481276075,
+   "mean_power_w": 42.530312499999994,
+   "max_temp_c": 68.0,
+   "mean_temp_c": 56.4375,
+   "throttled_sample_share": 0.25,
+   "wh_per_request": 0.03903097700531698,
+   "wh_per_slo_met_local_request": 0.042579247642163975,
+   "spearman_temp_vs_local_ttft": 0.28811466162492694
+  },
+  "dryrun_tail_aware": {
+   "available": true,
+   "gpu_energy_wh": 0.40837826667222704,
+   "mean_power_w": 19.06881818181818,
+   "max_temp_c": 71.0,
+   "mean_temp_c": 51.72727272727273,
+   "throttled_sample_share": 0.11688311688311688,
+   "wh_per_request": 0.017015761111342793,
+   "wh_per_slo_met_local_request": 0.05833975238174672,
+   "spearman_temp_vs_local_ttft": 0.36596252735569995
+  }
+ },
+ "per_policy": {
+  "guarded_governor": {
+   "n": 24,
+   "violation_rate": 0.041666666666666664,
+   "p95_ttft_ms": 3497.054899999057,
+   "cloud_share": 0.041666666666666664,
+   "failed": 0,
+   "cloud_failed": 0,
+   "spend_usd": 0.0001625,
+   "wasted_spend_usd": 0.0,
+   "budget_denials": 0
+  },
+  "tail_aware": {
+   "n": 24,
+   "violation_rate": 0.125,
+   "p95_ttft_ms": 6228.655999999319,
+   "cloud_share": 0.6666666666666666,
+   "failed": 0,
+   "cloud_failed": 0,
+   "spend_usd": 0.0036583000000000006,
+   "wasted_spend_usd": 0.0002965,
+   "budget_denials": 0
+  }
+ }
+}

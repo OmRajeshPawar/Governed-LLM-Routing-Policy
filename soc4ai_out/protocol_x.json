@@ -1,0 +1,86 @@
+{
+ "created_utc": "2026-09-15T19:09:59.013000+00:00",
+ "status": "exploratory addendum, not preregistered",
+ "parent_protocol_sha256": "647b314d2aafff10af6d0e20689b3e6964e4bb9735ff2af062bef66b05f2402c",
+ "motivation": "Preregistered experiment A rejected the v2 governed runtime (adaptive_governor_failed_sla_noninferiority); the quota was exhausted by request 96-144 through sticky hard-override offloads.",
+ "candidate": {
+  "budget": "paced: released = min(cap, floor(0.30 * arrivals) + ceil(0.05 * episode))",
+  "hard_override": "rolling-P95 hard breach applies only when the local tier is busy (pending >= 1 or all concurrency slots active); queue hard cap unchanged"
+ },
+ "allowance": 15,
+ "governor_artifact": {
+  "path": "ml/artifacts/governor_v3.json",
+  "sha256": "84aa5b721d31044f11c951f612d1972cd1982bb03bdcf9a474aeeb1698aee007"
+ },
+ "agreement_sha256": "e151583f1d2fc7571408235cfcac66d32118bf4a78d681c76bf507256a2b7c44",
+ "heuristic_weights_values": {
+  "queue": 1.819875177716568,
+  "active": 1.23338239807058,
+  "ttft_tail": 0.022982278207114293,
+  "service_tail": 1.5896378933294235,
+  "burst": 0.10174387258949813,
+  "vram": 0.9929725626375048,
+  "work": 1.8853362600406736
+ },
+ "frozen_cloud_p95_ms": 3069.585699999152,
+ "sla_ttft_ms": 3839.5,
+ "analysis_plan": "per seed: SLO violation, P95 TTFT, cloud share, spend, failures, quota audit; paired differences vs A governed (v2) and A ungoverned on identical traces; gates reported descriptively only (3 seeds cannot satisfy G1)",
+ "blind_rule": "no X outcome inspected before all X runs complete",
+ "environment": {
+  "ollama_version": "ollama version is 0.20.3",
+  "model": "llama3.1:8b",
+  "model_id": "46e0c10c039e",
+  "gpu_driver": "592.15, NVIDIA GeForce RTX 5060 Laptop GPU"
+ },
+ "code_sha256": {
+  "soc4ai/paced.py": "0fbf398924441230ef49d56e98a5372498f39459da2c3b0437f121c2b9b6e890",
+  "soc4ai/exploratory.py": "5fdc3a0436e0edcef0fdcbdd3bd612717505c4c4ded8bc15cb856dfbe74c4a9d"
+ },
+ "runs": [
+  {
+   "experiment": "X",
+   "key": "X_s211_synthetic_paced_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 211,
+   "mix": "synthetic",
+   "policy": "paced_governor",
+   "condition": "nominal",
+   "faults": {},
+   "paired_with": [
+    "A_s211_synthetic_guarded_governor",
+    "A_s211_synthetic_tail_aware"
+   ]
+  },
+  {
+   "experiment": "X",
+   "key": "X_s223_real_sample_paced_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 223,
+   "mix": "real_sample",
+   "policy": "paced_governor",
+   "condition": "nominal",
+   "faults": {},
+   "paired_with": [
+    "A_s223_real_sample_guarded_governor",
+    "A_s223_real_sample_tail_aware"
+   ]
+  },
+  {
+   "experiment": "X",
+   "key": "X_s227_reasoning_coding_paced_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 227,
+   "mix": "reasoning_coding",
+   "policy": "paced_governor",
+   "condition": "nominal",
+   "faults": {},
+   "paired_with": [
+    "A_s227_reasoning_coding_guarded_governor",
+    "A_s227_reasoning_coding_tail_aware"
+   ]
+  }
+ ]
+}

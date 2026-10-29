@@ -1,0 +1,11 @@
+% Experiment A: nominal, 8 seeds x 2 routers
+Router & SLO viol.\ (\%) & P95 TTFT (ms) & Cloud (\%) & Failed & Spend (USD) & GPU Wh/req \\
+\midrule
+Governed & 18.5 & 13,119 & 30.0 & 4 & 0.199 & 0.034 \\
+Ungoverned & 4.7 & 3,129 & 90.1 & 18 & 0.584 & 0.009 \\
+% confirmatory: branch=adaptive_governor_failed_sla_noninferiority; governor-minus-ungoverned +13.83 pp CI [+4.75, +25.58] pass=False; P95 ratio 3.735 CI [1.483, 8.226] pass=False; catastrophic_seed=True
+% live Gemini TTFT n=2860 p50=665 p95=2,221 p99=10,162 slo_miss=2.9% | calibration p50=577 p95=3,070 | July n=59 p50=674 p95=5,430
+% local breaches n=452: mean TTFT 10,973 ms, queue wait 8,920 ms (73.1% of TTFT), prefill 158 ms
+% local met n=1466: mean TTFT 921 ms, queue 10.0% of TTFT
+% guarded_governor: mean GPU Wh/req 0.033825500383052244, Wh per SLO-met local req 0.08304105258647171, throttled share 0.30585362099372493, max temp 76.375, spearman temp-TTFT 0.5292156661489529
+% tail_aware: mean GPU Wh/req 0.009323669952237938, Wh per SLO-met local req 0.17387746605667806, throttled share 0.05098968047532174, max temp 71.375, spearman temp-TTFT 0.4296579884084144

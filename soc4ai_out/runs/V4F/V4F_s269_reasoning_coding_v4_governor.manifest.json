@@ -1,0 +1,247 @@
+{
+  "schema_version": "2",
+  "feature_version": "1",
+  "config": {
+    "seed": 269,
+    "providers": {
+      "local": {
+        "model": "llama3.1:8b",
+        "keep_alive": -1,
+        "num_gpu": null,
+        "num_ctx": 2048,
+        "cost_per_1k_tokens": 0.0,
+        "extra_latency_ms": 0.0
+      },
+      "cloud": {
+        "mode": "calibrated",
+        "calibration_model": "gemma4:e2b",
+        "base_ttft_ms": null,
+        "per_token_ms": null,
+        "network_rtt_ms": 60.0,
+        "jitter_sigma": 0.15,
+        "speed_ratio": 1.0,
+        "cost_per_1k_tokens": 0.5,
+        "est_output_tokens_source": "ingress_only",
+        "keep_alive": -1,
+        "num_gpu": 0,
+        "num_ctx": 1024
+      }
+    },
+    "local_concurrency": 2,
+    "generation": {
+      "temperature": 0.0,
+      "default_max_tokens": 256
+    },
+    "targets": {
+      "sla_ttft_ms": 3839.5,
+      "occupancy_service_ms": 4610.9
+    },
+    "rolling": {
+      "window": 50,
+      "min_samples": 8,
+      "ewma_alpha": 0.3
+    },
+    "policies": {
+      "queue_threshold": 3,
+      "tail_aware_pressure_threshold": 4.986486535529362,
+      "ml_ttft_threshold": 0.5,
+      "ml_occupancy_threshold": 0.5,
+      "semantic_embedding_threshold": 1.0,
+      "local_llm_probe_threshold": 0.75,
+      "thinking_probe_threshold": 0.85
+    },
+    "governor": {
+      "enabled": true,
+      "artifact_path": "ml/artifacts/governor_v4.json",
+      "hard_local_pending": 8,
+      "required_full_telemetry": [
+        "pending_local",
+        "active_local",
+        "roll_ttft_p95",
+        "roll_service_p95",
+        "arr_rate_5s",
+        "burst_ratio",
+        "gpu_util",
+        "vram_used_mb"
+      ],
+      "budget": {
+        "mode": "evaluation_hard",
+        "target_fraction": 0.3
+      },
+      "circuit": {
+        "consecutive_failure_limit": 3,
+        "failure_window": 20,
+        "failure_window_limit": 5,
+        "latency_success_minimum": 10,
+        "latency_window": 10,
+        "latency_breach_limit": 5,
+        "latency_multiplier": 2.0,
+        "cooldown_seconds": 30.0,
+        "cooldown_arrivals": 10,
+        "half_open_successes_to_close": 3
+      }
+    },
+    "paths": {
+      "data_dir": "data",
+      "events_dir": "data/events",
+      "traces_dir": "data/traces",
+      "models_dir": "ml/artifacts",
+      "figures_dir": "analysis/figures"
+    }
+  },
+  "run_id": "V4F_s269_reasoning_coding_v4_governor",
+  "policy": "v4_governor",
+  "n_requests": 300,
+  "n_offloaded": 54,
+  "warm_load_s": 0.1,
+  "wall_clock_s": 826.82,
+  "t0_perf_s": 60717.8592602,
+  "t0_unix_s": 1789529168.6303942,
+  "frozen_cloud_p95_ms": 3069.585699999152,
+  "tail_aware_threshold": 4.986486535529362,
+  "gpu_samples": 821,
+  "created_unix": 1789529995.4545388,
+  "protocol_v4_sha256": "b61ca6c2e3e288ff8e54159a616017c76fd46d6e5e23727ace7a7e17ffb57766",
+  "spec": {
+    "experiment": "V4F",
+    "key": "V4F_s269_reasoning_coding_v4_governor",
+    "trace": "bursty",
+    "n": 300,
+    "seed": 269,
+    "mix": "reasoning_coding",
+    "arm": "v4",
+    "policy": "v4_governor",
+    "condition": "chaos",
+    "faults": {
+      "outage": [
+        96,
+        156
+      ],
+      "spike": [
+        192,
+        252
+      ]
+    }
+  },
+  "cooldown_waited_s": 0.0,
+  "gpu_temp_start_c": 33.0,
+  "environment": {
+    "ollama_version": "ollama version is 0.20.3",
+    "model": "llama3.1:8b",
+    "model_id": "46e0c10c039e"
+  },
+  "governor_artifact": {
+    "artifact_id": "apex-v4-paced-fresh-refund-2026-09-16",
+    "sha256": "d3b48bfa0f66dcfba0b4005bdb1d0ea30b60b2d773c416b8f8730996092ff27d"
+  },
+  "breaker_transitions": [
+    {
+      "perf_s": 60970.4705995,
+      "unix_s": 1789529421.2417336,
+      "from": "closed",
+      "to": "open",
+      "reason": "circuit_consecutive_failures",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 61008.373916,
+      "unix_s": 1789529459.1450503,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_consecutive_failures",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 61009.2298527,
+      "unix_s": 1789529460.0009868,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 61040.3570337,
+      "unix_s": 1789529491.1281676,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 61047.6650796,
+      "unix_s": 1789529498.436214,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 61078.4587136,
+      "unix_s": 1789529529.2298477,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 61078.710336,
+      "unix_s": 1789529529.48147,
+      "from": "half-open",
+      "to": "open",
+      "reason": "circuit_half_open_failure",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 61111.490538,
+      "unix_s": 1789529562.261674,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_half_open_failure",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 61183.7809982,
+      "unix_s": 1789529634.5521326,
+      "from": "half-open",
+      "to": "closed",
+      "reason": null,
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 61401.205736,
+      "unix_s": 1789529851.9768698,
+      "from": "closed",
+      "to": "open",
+      "reason": "circuit_latency_window",
+      "cause": "outcome"
+    },
+    {
+      "perf_s": 61444.0964519,
+      "unix_s": 1789529894.8675866,
+      "from": "open",
+      "to": "half-open",
+      "reason": "circuit_latency_window",
+      "cause": "arrival"
+    },
+    {
+      "perf_s": 61452.4754172,
+      "unix_s": 1789529903.2465513,
+      "from": "half-open",
+      "to": "closed",
+      "reason": null,
+      "cause": "outcome"
+    }
+  ],
+  "budget": {
+    "cap": 90,
+    "total_cloud": 39,
+    "discretionary": 8,
+    "safety_overrides": 37,
+    "denials": 0
+  },
+  "faults_injected": {
+    "outage": 8,
+    "latency_spike": 12,
+    "degraded_phase": 0
+  }
+}

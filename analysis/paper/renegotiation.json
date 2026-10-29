@@ -1,0 +1,1040 @@
+{
+ "base_agreement": "governance/agreement.yaml",
+ "n_runs": 74,
+ "quotas": [
+  0.2,
+  0.3,
+  0.4,
+  0.5
+ ],
+ "counts_rules": [
+  "all_dispatches",
+  "billable"
+ ],
+ "cells": {
+  "1.1.0-quota20-all_dispatches": {
+   "A:v2 governed": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 3,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "A:ungoverned": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 8,
+    "max_cloud_calls": 293,
+    "limit": 60
+   },
+   "B:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "B:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 290,
+    "limit": 60
+   },
+   "C:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 3,
+    "max_cloud_calls": 60,
+    "limit": 40
+   },
+   "C:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 114,
+    "limit": 40
+   },
+   "X:v3 governed": {
+    "runs": 3,
+    "quota_compliant": 2,
+    "slo_met": 2,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "V4N:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 4,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "V4N:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 5,
+    "max_cloud_calls": 291,
+    "limit": 60
+   },
+   "V4N:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 4,
+    "slo_met": 5,
+    "max_cloud_calls": 71,
+    "limit": 60
+   },
+   "V4F:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "V4F:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 291,
+    "limit": 60
+   },
+   "V4F:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 1,
+    "max_cloud_calls": 54,
+    "limit": 60
+   },
+   "V4D:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 4,
+    "slo_met": 4,
+    "max_cloud_calls": 42,
+    "limit": 40
+   },
+   "B_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "B_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 270,
+    "limit": 60
+   },
+   "C_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 1,
+    "max_cloud_calls": 60,
+    "limit": 40
+   },
+   "C_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 119,
+    "limit": 40
+   }
+  },
+  "1.1.0-quota20-billable": {
+   "A:v2 governed": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 3,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "A:ungoverned": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 8,
+    "max_cloud_calls": 291,
+    "limit": 60
+   },
+   "B:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 1,
+    "slo_met": 0,
+    "max_cloud_calls": 84,
+    "limit": 60
+   },
+   "B:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 227,
+    "limit": 60
+   },
+   "C:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 3,
+    "max_cloud_calls": 60,
+    "limit": 40
+   },
+   "C:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 114,
+    "limit": 40
+   },
+   "X:v3 governed": {
+    "runs": 3,
+    "quota_compliant": 2,
+    "slo_met": 2,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "V4N:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 4,
+    "max_cloud_calls": 90,
+    "limit": 60
+   },
+   "V4N:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 5,
+    "max_cloud_calls": 287,
+    "limit": 60
+   },
+   "V4N:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 4,
+    "slo_met": 5,
+    "max_cloud_calls": 71,
+    "limit": 60
+   },
+   "V4F:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 86,
+    "limit": 60
+   },
+   "V4F:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 228,
+    "limit": 60
+   },
+   "V4F:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 1,
+    "max_cloud_calls": 39,
+    "limit": 60
+   },
+   "V4D:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 4,
+    "slo_met": 4,
+    "max_cloud_calls": 41,
+    "limit": 40
+   },
+   "B_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 83,
+    "limit": 60
+   },
+   "B_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 208,
+    "limit": 60
+   },
+   "C_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 1,
+    "max_cloud_calls": 60,
+    "limit": 40
+   },
+   "C_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 116,
+    "limit": 40
+   }
+  },
+  "1.1.0-quota30-all_dispatches": {
+   "A:v2 governed": {
+    "runs": 8,
+    "quota_compliant": 8,
+    "slo_met": 3,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "A:ungoverned": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 8,
+    "max_cloud_calls": 293,
+    "limit": 90
+   },
+   "B:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "B:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 290,
+    "limit": 90
+   },
+   "C:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 3,
+    "max_cloud_calls": 60,
+    "limit": 60
+   },
+   "C:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 114,
+    "limit": 60
+   },
+   "X:v3 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 2,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "V4N:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "V4N:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 5,
+    "max_cloud_calls": 291,
+    "limit": 90
+   },
+   "V4N:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 5,
+    "max_cloud_calls": 71,
+    "limit": 90
+   },
+   "V4F:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "V4F:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 291,
+    "limit": 90
+   },
+   "V4F:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 1,
+    "max_cloud_calls": 54,
+    "limit": 90
+   },
+   "V4D:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 42,
+    "limit": 60
+   },
+   "B_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "B_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 270,
+    "limit": 90
+   },
+   "C_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 1,
+    "max_cloud_calls": 60,
+    "limit": 60
+   },
+   "C_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 119,
+    "limit": 60
+   }
+  },
+  "1.1.0-quota30-billable": {
+   "A:v2 governed": {
+    "runs": 8,
+    "quota_compliant": 8,
+    "slo_met": 3,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "A:ungoverned": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 8,
+    "max_cloud_calls": 291,
+    "limit": 90
+   },
+   "B:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 0,
+    "max_cloud_calls": 84,
+    "limit": 90
+   },
+   "B:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 227,
+    "limit": 90
+   },
+   "C:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 3,
+    "max_cloud_calls": 60,
+    "limit": 60
+   },
+   "C:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 114,
+    "limit": 60
+   },
+   "X:v3 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 2,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "V4N:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 90,
+    "limit": 90
+   },
+   "V4N:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 5,
+    "max_cloud_calls": 287,
+    "limit": 90
+   },
+   "V4N:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 5,
+    "max_cloud_calls": 71,
+    "limit": 90
+   },
+   "V4F:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 0,
+    "max_cloud_calls": 86,
+    "limit": 90
+   },
+   "V4F:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 228,
+    "limit": 90
+   },
+   "V4F:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 1,
+    "max_cloud_calls": 39,
+    "limit": 90
+   },
+   "V4D:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 41,
+    "limit": 60
+   },
+   "B_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 0,
+    "max_cloud_calls": 83,
+    "limit": 90
+   },
+   "B_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 208,
+    "limit": 90
+   },
+   "C_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 1,
+    "max_cloud_calls": 60,
+    "limit": 60
+   },
+   "C_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 116,
+    "limit": 60
+   }
+  },
+  "1.1.0-quota40-all_dispatches": {
+   "A:v2 governed": {
+    "runs": 8,
+    "quota_compliant": 8,
+    "slo_met": 3,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "A:ungoverned": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 8,
+    "max_cloud_calls": 293,
+    "limit": 120
+   },
+   "B:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "B:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 290,
+    "limit": 120
+   },
+   "C:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 3,
+    "max_cloud_calls": 60,
+    "limit": 80
+   },
+   "C:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 114,
+    "limit": 80
+   },
+   "X:v3 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 2,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "V4N:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "V4N:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 5,
+    "max_cloud_calls": 291,
+    "limit": 120
+   },
+   "V4N:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 5,
+    "max_cloud_calls": 71,
+    "limit": 120
+   },
+   "V4F:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "V4F:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 291,
+    "limit": 120
+   },
+   "V4F:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 1,
+    "max_cloud_calls": 54,
+    "limit": 120
+   },
+   "V4D:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 42,
+    "limit": 80
+   },
+   "B_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "B_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 270,
+    "limit": 120
+   },
+   "C_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 1,
+    "max_cloud_calls": 60,
+    "limit": 80
+   },
+   "C_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 119,
+    "limit": 80
+   }
+  },
+  "1.1.0-quota40-billable": {
+   "A:v2 governed": {
+    "runs": 8,
+    "quota_compliant": 8,
+    "slo_met": 3,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "A:ungoverned": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 8,
+    "max_cloud_calls": 291,
+    "limit": 120
+   },
+   "B:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 0,
+    "max_cloud_calls": 84,
+    "limit": 120
+   },
+   "B:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 227,
+    "limit": 120
+   },
+   "C:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 3,
+    "max_cloud_calls": 60,
+    "limit": 80
+   },
+   "C:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 114,
+    "limit": 80
+   },
+   "X:v3 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 2,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "V4N:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 90,
+    "limit": 120
+   },
+   "V4N:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 5,
+    "max_cloud_calls": 287,
+    "limit": 120
+   },
+   "V4N:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 5,
+    "max_cloud_calls": 71,
+    "limit": 120
+   },
+   "V4F:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 0,
+    "max_cloud_calls": 86,
+    "limit": 120
+   },
+   "V4F:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 228,
+    "limit": 120
+   },
+   "V4F:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 1,
+    "max_cloud_calls": 39,
+    "limit": 120
+   },
+   "V4D:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 41,
+    "limit": 80
+   },
+   "B_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 0,
+    "max_cloud_calls": 83,
+    "limit": 120
+   },
+   "B_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 208,
+    "limit": 120
+   },
+   "C_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 1,
+    "max_cloud_calls": 60,
+    "limit": 80
+   },
+   "C_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 116,
+    "limit": 80
+   }
+  },
+  "1.1.0-quota50-all_dispatches": {
+   "A:v2 governed": {
+    "runs": 8,
+    "quota_compliant": 8,
+    "slo_met": 3,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "A:ungoverned": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 8,
+    "max_cloud_calls": 293,
+    "limit": 150
+   },
+   "B:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "B:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 290,
+    "limit": 150
+   },
+   "C:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 3,
+    "max_cloud_calls": 60,
+    "limit": 100
+   },
+   "C:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 114,
+    "limit": 100
+   },
+   "X:v3 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 2,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "V4N:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "V4N:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 5,
+    "max_cloud_calls": 291,
+    "limit": 150
+   },
+   "V4N:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 5,
+    "max_cloud_calls": 71,
+    "limit": 150
+   },
+   "V4F:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "V4F:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 291,
+    "limit": 150
+   },
+   "V4F:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 1,
+    "max_cloud_calls": 54,
+    "limit": 150
+   },
+   "V4D:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 42,
+    "limit": 100
+   },
+   "B_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 0,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "B_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 270,
+    "limit": 150
+   },
+   "C_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 1,
+    "max_cloud_calls": 60,
+    "limit": 100
+   },
+   "C_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 119,
+    "limit": 100
+   }
+  },
+  "1.1.0-quota50-billable": {
+   "A:v2 governed": {
+    "runs": 8,
+    "quota_compliant": 8,
+    "slo_met": 3,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "A:ungoverned": {
+    "runs": 8,
+    "quota_compliant": 0,
+    "slo_met": 8,
+    "max_cloud_calls": 291,
+    "limit": 150
+   },
+   "B:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 0,
+    "max_cloud_calls": 84,
+    "limit": 150
+   },
+   "B:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 1,
+    "slo_met": 0,
+    "max_cloud_calls": 227,
+    "limit": 150
+   },
+   "C:v2 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 3,
+    "max_cloud_calls": 60,
+    "limit": 100
+   },
+   "C:ungoverned": {
+    "runs": 3,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 114,
+    "limit": 100
+   },
+   "X:v3 governed": {
+    "runs": 3,
+    "quota_compliant": 3,
+    "slo_met": 2,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "V4N:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 90,
+    "limit": 150
+   },
+   "V4N:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 0,
+    "slo_met": 5,
+    "max_cloud_calls": 287,
+    "limit": 150
+   },
+   "V4N:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 5,
+    "max_cloud_calls": 71,
+    "limit": 150
+   },
+   "V4F:v2 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 0,
+    "max_cloud_calls": 86,
+    "limit": 150
+   },
+   "V4F:ungoverned": {
+    "runs": 5,
+    "quota_compliant": 1,
+    "slo_met": 0,
+    "max_cloud_calls": 228,
+    "limit": 150
+   },
+   "V4F:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 1,
+    "max_cloud_calls": 39,
+    "limit": 150
+   },
+   "V4D:v4 governed": {
+    "runs": 5,
+    "quota_compliant": 5,
+    "slo_met": 4,
+    "max_cloud_calls": 41,
+    "limit": 100
+   },
+   "B_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 0,
+    "max_cloud_calls": 83,
+    "limit": 150
+   },
+   "B_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 208,
+    "limit": 150
+   },
+   "C_ext:v2 governed": {
+    "runs": 2,
+    "quota_compliant": 2,
+    "slo_met": 1,
+    "max_cloud_calls": 60,
+    "limit": 100
+   },
+   "C_ext:ungoverned": {
+    "runs": 2,
+    "quota_compliant": 0,
+    "slo_met": 0,
+    "max_cloud_calls": 116,
+    "limit": 100
+   }
+  }
+ }
+}

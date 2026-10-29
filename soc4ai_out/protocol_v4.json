@@ -1,0 +1,855 @@
+{
+ "created_utc": "2026-09-15T22:32:40.956549+00:00",
+ "status": "preregistered confirmatory test of candidate v4 (hashed before any v4 run)",
+ "parent_protocols_sha256": {
+  "main": "647b314d2aafff10af6d0e20689b3e6964e4bb9735ff2af062bef66b05f2402c",
+  "exploratory_x": "99019c5e480b577cac16038f3325cd418f896722415d28466636dd5663072062"
+ },
+ "fresh_seeds": [
+  [
+   257,
+   "synthetic"
+  ],
+  [
+   263,
+   "real_sample"
+  ],
+  [
+   269,
+   "reasoning_coding"
+  ],
+  [
+   271,
+   "synthetic"
+  ],
+  [
+   277,
+   "real_sample"
+  ]
+ ],
+ "incumbent": {
+  "arm": "v2",
+  "artifact": "ml/artifacts/governor_v2.json",
+  "sha256": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+  "agreement": "governance/agreement.yaml"
+ },
+ "candidate": {
+  "arm": "v4",
+  "artifact": "ml/artifacts/governor_v4.json",
+  "sha256": "d3b48bfa0f66dcfba0b4005bdb1d0ea30b60b2d773c416b8f8730996092ff27d",
+  "agreement": "governance/agreement_v4.yaml",
+  "changes": {
+   "budget": "paced: released = min(cap, floor(0.30 * arrivals) + ceil(0.05 * episode))",
+   "hard_override": "rolling-P95 hard breach applies only when the local tier is busy (pending >= 1 or all concurrency slots active); queue hard cap unchanged",
+   "probe_accounting": "half-open breaker probes are not charged to the quota; failed charged cloud calls are refunded"
+  }
+ },
+ "comparator": {
+  "arm": "ungoverned",
+  "policy": "tail_aware",
+  "note": "same expert weights and threshold, no breaker or quota"
+ },
+ "primary_analysis": {
+  "block": "V4N (nominal, bursty n=300, live Gemini)",
+  "comparison": "v4 (candidate) vs v2 (incumbent) on identical traces",
+  "gates": {
+   "G1_seed_support": "v4 violation <= v2 violation in >= 4 of 5 seeds",
+   "G2_slo_bound": "upper 95% CI of pooled violation difference (v4 - v2, points) <= +1.0",
+   "G3_tail_gain": "pooled P95 TTFT ratio v4/v2 <= 0.95 and CI upper bound < 1.00",
+   "G4_no_regression": "no seed more than 5 points worse",
+   "G5_decision_cap": "median decision time v4 - v2 <= 5 ms"
+  },
+  "bootstrap": {
+   "unit": "seed (resampled with replacement, requests pooled)",
+   "B": 10000,
+   "rng_seed": 20260916
+  },
+  "verdict": "promote only if all five gates pass"
+ },
+ "secondary_analyses": [
+  "V4N: v4 vs ungoverned violation difference and P95 ratio with the same bootstrap; cloud share, spend, cost per SLO-met request, GPU energy per SLO-met request",
+  "agreement audit: v4 under agreement_v4 (billable quota counting), v2 under agreement (all dispatches)",
+  "V4F: per-seed and pooled violation, failed requests, wasted spend, breaker detection and recovery, for v4, v2, ungoverned, with seed bootstrap CIs",
+  "B and C extended to 5 seeds (existing seeds 7/13/42 plus 23/101): seed bootstrap CIs for violation and failed requests, same conditions as the main protocol",
+  "V4D: v4 on the drift trace for seeds 7/13/42/23/101, compared with v2 and ungoverned from C and C_ext: degraded-phase violation with seed bootstrap CIs; for every governed drift run, whether the breaker opened during the degraded phase and the trace position at which the quota was exhausted (if ever)",
+  "exact sign-flip permutation test (2^k sign assignments) on per-seed violation differences, reported next to the bootstrap CI for v4 vs v2 and v4 vs ungoverned",
+  "for every governed run: trace position of quota exhaustion, refunds and exempt probes are reconstructed from events (budget_remaining, reason codes)"
+ ],
+ "ext_seed_note": "seeds 23 and 101 were offline shadow-corpus seeds only; never used live",
+ "truncation_rule": "blocks run in priority order V4N, V4F, V4D, B_ext, C_ext. If the batch is stopped for time (not for any outcome), analysis proceeds once soc4ai_out/V4_STOPPED exists; V4N must be complete for the primary verdict; incomplete secondary blocks are reported with the seeds that completed, and missing runs are listed.",
+ "sla_ttft_ms": 3839.5,
+ "sla_violation_rule": "apex.core.ttft_breach(end_to_end_ttft_ms, sla, ok) for every route; failed requests violate",
+ "failed_request_ttft_rule": "failed requests use end_to_end_ttft_ms = max(end_to_end_ms or 0, sla_ttft_ms)",
+ "heuristic_weights_values": {
+  "queue": 1.819875177716568,
+  "active": 1.23338239807058,
+  "ttft_tail": 0.022982278207114293,
+  "service_tail": 1.5896378933294235,
+  "burst": 0.10174387258949813,
+  "vram": 0.9929725626375048,
+  "work": 1.8853362600406736
+ },
+ "tail_aware_threshold": 4.986486535529362,
+ "frozen_cloud_p95_ms": 3069.585699999152,
+ "breaker": {
+  "consecutive_failure_limit": 3,
+  "failure_window": 20,
+  "failure_window_limit": 5,
+  "latency_success_minimum": 10,
+  "latency_window": 10,
+  "latency_breach_limit": 5,
+  "latency_multiplier": 2.0,
+  "cooldown_seconds": 30.0,
+  "cooldown_arrivals": 10,
+  "half_open_successes_to_close": 3,
+  "latency_limit_ms": 6139.171399998304
+ },
+ "fault_model": {
+  "outage_latency_ms": 250.0,
+  "spike_delay_ms": 7673.96424999788,
+  "degraded_delay_ms": 7673.96424999788,
+  "spike_exceeds_breaker_limit_by_ms": 1534.792849999576,
+  "window_rationale": "bursty cycle is 24 requests (positions i%24<6 arrive at 1.5/s); outage [96,156) and spike [192,252) both start at a burst boundary; drift degradation applies to the transition trace's cloud_degradation phase, which is otherwise only a label"
+ },
+ "blind_rule": "progress log carries no outcome metrics; no block analysed before all runs in the protocol complete",
+ "run_order": "V4N then V4F then V4D then B_ext then C_ext; within a seed the arm order rotates",
+ "environment": {
+  "ollama_version": "ollama version is 0.20.3",
+  "model": "llama3.1:8b",
+  "model_id": "46e0c10c039e",
+  "gpu_driver": "592.15, NVIDIA GeForce RTX 5060 Laptop GPU"
+ },
+ "original_repo": {
+  "head": "3696f34",
+  "clean": true
+ },
+ "code_sha256": {
+  "soc4ai/__init__.py": "80fad8555519c8a2cdd74c7be39b59e8d3cc77c47df7d39931a4242a28eefcd4",
+  "soc4ai/analyze_live.py": "23c812cab97c316a2c52be1206012ee0f3b53417437abeba9f65a432a37bb3ec",
+  "soc4ai/audit.py": "73b537e994ddc24f83281b8992e34e82317abc219b594a9699410001db744d80",
+  "soc4ai/creds.py": "bd226f9f22abd24bbc3282dab69572ddb7b406db9e204bf2c59fe3b11f353ee5",
+  "soc4ai/exploratory.py": "5fdc3a0436e0edcef0fdcbdd3bd612717505c4c4ded8bc15cb856dfbe74c4a9d",
+  "soc4ai/ledger.py": "7676b24198178fad4e1aedcdbe371cf7d3c78a1b2cf42c6e6eb329e2f5b86c50",
+  "soc4ai/paced.py": "0fbf398924441230ef49d56e98a5372498f39459da2c3b0437f121c2b9b6e890",
+  "soc4ai/paper_numbers.py": "720efba2f4ffb5e1ef80bc98ef70d3259cd2cfb3d5f8867ab671843bd7c2bcee",
+  "soc4ai/providers.py": "e4739e5ddfa02285e3d73e64a5aec8668a58aace3c709f4f89b88f3134f0e663",
+  "soc4ai/study.py": "3e5b511b75b9290100b2c6ab9415aa6085e0657e63e5e518565712fc768fff45",
+  "soc4ai/telemetry.py": "cfb1c7fd2b719043885133eb5f454b9ed799ff7605dba3ed9f18c78559e48837",
+  "soc4ai/v4.py": "796ddfcc9aafed46f044adc5aa48a21daefd6945661a4828f43b7054ceed6005",
+  "soc4ai/v4study.py": "e7ff1bdbac2b004e8128bbe06ab9634c48ed199238eff1f277e52ba44aa738e0",
+  "apex/policies.py": "ae4c5520eb7d7a8aeb383019e77c66c545f459db209e71f51240f8d450b404cc",
+  "apex/gateway.py": "ed58070cc9a5673613b9182ab78bf8d4a454a77235415509b690dffd8db19123",
+  "apex/workload.py": "b5c56d8a7af810ad9ead106d5f100e321704b4b1abbfda942270f3314914c09c",
+  "ml/artifacts/governor_v4.json": "d3b48bfa0f66dcfba0b4005bdb1d0ea30b60b2d773c416b8f8730996092ff27d",
+  "ml/artifacts/governor_v2.json": "eb1d60530925b935b07632e704631c81d35985f589c53b7bc8ff76ef2db7883e",
+  "governance/agreement.yaml": "b913fe0a1d7e6bb0ae756a67bacc0ce971606936e7acda34eac169be2adcaccc",
+  "governance/agreement_v4.yaml": "f9df82a37ee90baaeb0ace5674af3e1b5d712d51f1ae48c5a719db312c1717e7"
+ },
+ "runs": [
+  {
+   "experiment": "V4N",
+   "key": "V4N_s257_synthetic_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 257,
+   "mix": "synthetic",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s257_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 257,
+   "mix": "synthetic",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s257_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 257,
+   "mix": "synthetic",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s263_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 263,
+   "mix": "real_sample",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s263_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 263,
+   "mix": "real_sample",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s263_real_sample_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 263,
+   "mix": "real_sample",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s269_reasoning_coding_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 269,
+   "mix": "reasoning_coding",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s269_reasoning_coding_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 269,
+   "mix": "reasoning_coding",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s269_reasoning_coding_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 269,
+   "mix": "reasoning_coding",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s271_synthetic_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 271,
+   "mix": "synthetic",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s271_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 271,
+   "mix": "synthetic",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s271_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 271,
+   "mix": "synthetic",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s277_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 277,
+   "mix": "real_sample",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s277_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 277,
+   "mix": "real_sample",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4N",
+   "key": "V4N_s277_real_sample_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 277,
+   "mix": "real_sample",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "nominal",
+   "faults": {}
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s257_synthetic_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 257,
+   "mix": "synthetic",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s257_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 257,
+   "mix": "synthetic",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s257_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 257,
+   "mix": "synthetic",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s263_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 263,
+   "mix": "real_sample",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s263_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 263,
+   "mix": "real_sample",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s263_real_sample_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 263,
+   "mix": "real_sample",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s269_reasoning_coding_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 269,
+   "mix": "reasoning_coding",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s269_reasoning_coding_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 269,
+   "mix": "reasoning_coding",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s269_reasoning_coding_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 269,
+   "mix": "reasoning_coding",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s271_synthetic_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 271,
+   "mix": "synthetic",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s271_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 271,
+   "mix": "synthetic",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s271_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 271,
+   "mix": "synthetic",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s277_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 277,
+   "mix": "real_sample",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s277_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 277,
+   "mix": "real_sample",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4F",
+   "key": "V4F_s277_real_sample_v4_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 277,
+   "mix": "real_sample",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "V4D",
+   "key": "V4D_s7_transition_v4_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 7,
+   "mix": "phased",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "V4D",
+   "key": "V4D_s13_transition_v4_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 13,
+   "mix": "phased",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "V4D",
+   "key": "V4D_s42_transition_v4_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 42,
+   "mix": "phased",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "V4D",
+   "key": "V4D_s23_transition_v4_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 23,
+   "mix": "phased",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "V4D",
+   "key": "V4D_s101_transition_v4_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 101,
+   "mix": "phased",
+   "arm": "v4",
+   "policy": "v4_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "B_ext",
+   "key": "B_s23_synthetic_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 23,
+   "mix": "synthetic",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "B_ext",
+   "key": "B_s23_synthetic_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 23,
+   "mix": "synthetic",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "B_ext",
+   "key": "B_s101_real_sample_tail_aware",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 101,
+   "mix": "real_sample",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "B_ext",
+   "key": "B_s101_real_sample_guarded_governor",
+   "trace": "bursty",
+   "n": 300,
+   "seed": 101,
+   "mix": "real_sample",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "chaos",
+   "faults": {
+    "outage": [
+     96,
+     156
+    ],
+    "spike": [
+     192,
+     252
+    ]
+   }
+  },
+  {
+   "experiment": "C_ext",
+   "key": "C_s23_transition_guarded_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 23,
+   "mix": "phased",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "C_ext",
+   "key": "C_s23_transition_tail_aware",
+   "trace": "transition",
+   "n": 200,
+   "seed": 23,
+   "mix": "phased",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "C_ext",
+   "key": "C_s101_transition_tail_aware",
+   "trace": "transition",
+   "n": 200,
+   "seed": 101,
+   "mix": "phased",
+   "arm": "ungoverned",
+   "policy": "tail_aware",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  },
+  {
+   "experiment": "C_ext",
+   "key": "C_s101_transition_guarded_governor",
+   "trace": "transition",
+   "n": 200,
+   "seed": 101,
+   "mix": "phased",
+   "arm": "v2",
+   "policy": "guarded_governor",
+   "condition": "drift",
+   "faults": {
+    "degraded_phase": true
+   }
+  }
+ ]
+}

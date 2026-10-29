@@ -1,0 +1,39 @@
+{
+  "schema_version": "governor-v1",
+  "artifact_id": "apex-guarded-tail-aware-matched30-2026-09-15",
+  "created_utc": "2026-09-15T15:12:43.229424+00:00",
+  "regime_map": {
+    "low": "tail_aware",
+    "medium": "tail_aware",
+    "high": "tail_aware",
+    "burst": "tail_aware"
+  },
+  "thresholds": {
+    "tail_aware": 4.986486535529362,
+    "ml_ttft": 0.5,
+    "ml_dual_risk": 0.5
+  },
+  "promotion_status": {
+    "status": "no_richer_expert_promoted",
+    "reason": "Expert unchanged (tail-aware in every regime). Threshold recalibrated: the v1 threshold offloads every development request on the tuned score scale.",
+    "confirmatory_data_used": false,
+    "threshold_recalibration": {
+      "from": 1.0,
+      "to": 4.986486535529362,
+      "rule": "70th percentile of the tuned tail-aware score on the 4,500-request July development shadow corpus (matched 30% offload)",
+      "v1_offload_share_on_development_corpus": 1.0,
+      "v2_offload_share_on_development_corpus": 0.3,
+      "heuristic_weights": "tuned",
+      "n_rows": 4500
+    },
+    "derived_from_artifact_sha256": "55a51a14f3146b9dba9250480fefad34e8ada1f220e319693d22660650b08a77"
+  },
+  "development_seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+  ],
+  "protocol_sha256": "ba93bb5c812280942075df31eaeb328b7fb73bcef5fa04d58908f973ef14a74e"
+}

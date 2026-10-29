@@ -1,0 +1,27 @@
+{
+  "provider": "Google Vertex AI",
+  "requested_model": "gemini-2.5-flash",
+  "resolved_model_identifier": "gemini-2.5-flash",
+  "region": "us-central1",
+  "created_utc": "2026-07-13T13:57:57.845850+00:00",
+  "validity_metrics": {
+    "p50_ttft_relative_error": 0.5179972414611357,
+    "p95_ttft_relative_error": 0.9401478807745786,
+    "failure_rate_absolute_error_pp": 1.6666666666666718,
+    "median_ttft_relative_error_by_prompt_band": {
+      "short": 1.1558461538461537,
+      "medium": 1.110307692307692,
+      "long": 0.9709230769230768
+    },
+    "live_median_concurrency_difference": 0.0020757654385055837,
+    "nominal_90_interval_coverage": 0.0
+  },
+  "n_attempted": 60,
+  "n_successful": 59,
+  "sdk_version": "2.10.0",
+  "endpoint_configuration": "Vertex AI streaming generate_content",
+  "max_output_tokens": 128,
+  "thinking_budget": 0,
+  "estimated_cost_usd": 0.0202365,
+  "private_rows": "analysis/private/<redacted>"
+}

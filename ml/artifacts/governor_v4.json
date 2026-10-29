@@ -1,0 +1,35 @@
+{
+  "schema_version": "governor-v1",
+  "artifact_id": "apex-v4-paced-fresh-refund-2026-09-16",
+  "created_utc": "2026-09-15T22:24:08.863895+00:00",
+  "regime_map": {
+    "low": "tail_aware",
+    "medium": "tail_aware",
+    "high": "tail_aware",
+    "burst": "tail_aware"
+  },
+  "thresholds": {
+    "tail_aware": 4.986486535529362,
+    "ml_ttft": 0.5,
+    "ml_dual_risk": 0.5
+  },
+  "promotion_status": {
+    "status": "candidate_under_preregistered_confirmatory_test",
+    "reason": "Candidate addresses the three mechanisms localised by the agreement audits of experiments A and B; promotion requires all five gates on fresh seeds.",
+    "changes": {
+      "budget": "paced: released = min(cap, floor(0.30 * arrivals) + ceil(0.05 * episode))",
+      "hard_override": "rolling-P95 hard breach applies only when the local tier is busy (pending >= 1 or all concurrency slots active); queue hard cap unchanged",
+      "probe_accounting": "half-open breaker probes are not charged to the quota; failed charged cloud calls are refunded"
+    },
+    "derived_from_artifact_sha256": "84aa5b721d31044f11c951f612d1972cd1982bb03bdcf9a474aeeb1698aee007",
+    "confirmatory_data_used": false
+  },
+  "development_seeds": [
+    7,
+    13,
+    23,
+    42,
+    101
+  ],
+  "protocol_sha256": "ba93bb5c812280942075df31eaeb328b7fb73bcef5fa04d58908f973ef14a74e"
+}
